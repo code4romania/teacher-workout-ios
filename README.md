@@ -28,7 +28,7 @@ If you would like to suggest new functionality, open an Issue and mark it as a _
 
 ## Built With
 
-- love ❤️
+- Love ❤️
 
 ### Programming languages
 
@@ -45,9 +45,9 @@ If you would like to suggest new functionality, open an Issue and mark it as a _
 
 ## Repos and projects
 
-- [backend](https://github.com/code4romania/teacher-workout-backend)
-- [android](https://github.com/code4romania/teacher-workout-android)
-- [web](https://github.com/code4romania/teacher-workout-client)
+- [Backend](https://github.com/code4romania/teacher-workout-backend)
+- [Android](https://github.com/code4romania/teacher-workout-android)
+- [Web app](https://github.com/code4romania/teacher-workout-client)
 
 
 ## Deployment
