@@ -28,19 +28,27 @@ If you would like to suggest new functionality, open an Issue and mark it as a _
 
 ## Built With
 
+- Love ❤️
+
 ### Programming languages
 
-### Platforms
+- [Swift](https://developer.apple.com/swift/)
 
-### Frontend framework
+### Frontend frameworks
+
+- [UIKit](https://developer.apple.com/documentation/uikit)
+- [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 
 ### Package managers
 
-### Database technology & provider
+- [Swift Package Manager](https://swift.org/package-manager/)
 
 ## Repos and projects
 
-Mention all related repos and projects.
+- [Backend](https://github.com/code4romania/teacher-workout-backend)
+- [Android](https://github.com/code4romania/teacher-workout-android)
+- [Web app](https://github.com/code4romania/teacher-workout-client)
+
 
 ## Deployment
 
