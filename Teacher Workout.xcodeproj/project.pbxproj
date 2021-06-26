@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,13 @@
 		BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CE1268701B500663EEC /* LaunchScreen.storyboard */; };
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
 		BB1F1CF9268701B500663EEC /* Teacher_WorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CF8268701B500663EEC /* Teacher_WorkoutUITests.swift */; };
+		BB381255268726E70008FDC6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BB381254268726E70008FDC6 /* Apollo */; };
+		BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381259268727A00008FDC6 /* DataProviderProtocol.swift */; };
+		BB38125D268728200008FDC6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38125C268728200008FDC6 /* Config.swift */; };
+		BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38125E268728440008FDC6 /* GraphAPIService.swift */; };
+		BB38126326872D980008FDC6 /* ThemesQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BB38126226872D980008FDC6 /* ThemesQuery.graphql */; };
+		BB381265268739580008FDC6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381264268739580008FDC6 /* API.swift */; };
+		BB381269268739A60008FDC6 /* LessonsQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BB381267268739A60008FDC6 /* LessonsQuery.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,12 @@
 		BB1F1CF4268701B500663EEC /* Teacher WorkoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Teacher WorkoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1F1CF8268701B500663EEC /* Teacher_WorkoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher_WorkoutUITests.swift; sourceTree = "<group>"; };
 		BB1F1CFA268701B500663EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB381259268727A00008FDC6 /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
+		BB38125C268728200008FDC6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BB38125E268728440008FDC6 /* GraphAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphAPIService.swift; sourceTree = "<group>"; };
+		BB38126226872D980008FDC6 /* ThemesQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThemesQuery.graphql; sourceTree = "<group>"; };
+		BB381264268739580008FDC6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BB381267268739A60008FDC6 /* LessonsQuery.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LessonsQuery.graphql; sourceTree = "<group>"; };
 		DE60B19326871D9700EB01F8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		DE60B19426871DA900EB01F8 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB381255268726E70008FDC6 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +95,10 @@
 		BB1F1CCA268701B400663EEC = {
 			isa = PBXGroup;
 			children = (
-				DE60B19226871D7400EB01F8 /* BuildTools */,
 				BB1F1CD5268701B400663EEC /* Teacher Workout */,
 				BB1F1CEC268701B500663EEC /* Teacher WorkoutTests */,
 				BB1F1CF7268701B500663EEC /* Teacher WorkoutUITests */,
+				DE60B19226871D7400EB01F8 /* BuildTools */,
 				BB1F1CD4268701B400663EEC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +118,7 @@
 			children = (
 				BB1F1D06268701D900663EEC /* AppDelegate */,
 				BB1F1D072687020E00663EEC /* Features */,
+				BB3812562687272B0008FDC6 /* NetworkingLayer */,
 				BB1F1D082687021A00663EEC /* Resources */,
 			);
 			path = "Teacher Workout";
@@ -171,6 +186,35 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BB3812562687272B0008FDC6 /* NetworkingLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BB381258268727840008FDC6 /* APIService */,
+				BB3812572687273A0008FDC6 /* GraphQL */,
+			);
+			path = NetworkingLayer;
+			sourceTree = "<group>";
+		};
+		BB3812572687273A0008FDC6 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				BB381264268739580008FDC6 /* API.swift */,
+				BB38125E268728440008FDC6 /* GraphAPIService.swift */,
+				BB38126226872D980008FDC6 /* ThemesQuery.graphql */,
+				BB381267268739A60008FDC6 /* LessonsQuery.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		BB381258268727840008FDC6 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				BB38125C268728200008FDC6 /* Config.swift */,
+				BB381259268727A00008FDC6 /* DataProviderProtocol.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
 		DE60B19226871D7400EB01F8 /* BuildTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,12 +235,16 @@
 				BB1F1CCF268701B400663EEC /* Sources */,
 				BB1F1CD0268701B400663EEC /* Frameworks */,
 				BB1F1CD1268701B400663EEC /* Resources */,
+				BB38126126872C830008FDC6 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Teacher Workout";
+			packageProductDependencies = (
+				BB381254268726E70008FDC6 /* Apollo */,
+			);
 			productName = "Teacher Workout";
 			productReference = BB1F1CD3268701B400663EEC /* Teacher Workout.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +316,9 @@
 				Base,
 			);
 			mainGroup = BB1F1CCA268701B400663EEC;
+			packageReferences = (
+				BB381253268726E70008FDC6 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = BB1F1CD4268701B400663EEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,7 +337,9 @@
 			files = (
 				BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */,
 				BB1F1CE0268701B500663EEC /* Assets.xcassets in Resources */,
+				BB381269268739A60008FDC6 /* LessonsQuery.graphql in Resources */,
 				BB1F1CDE268701B400663EEC /* Main.storyboard in Resources */,
+				BB38126326872D980008FDC6 /* ThemesQuery.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +360,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BB38126126872C830008FDC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}/NetworkingLayer/GraphQL\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n\n";
+		};
 		DE60B19526871DB300EB01F8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,9 +401,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */,
 				BB1F1CDB268701B400663EEC /* ViewController.swift in Sources */,
+				BB38125D268728200008FDC6 /* Config.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
 				BB1F1CD9268701B400663EEC /* SceneDelegate.swift in Sources */,
+				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
+				BB381265268739580008FDC6 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +520,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -500,6 +575,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -517,7 +593,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code.Teacher-Workout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -535,7 +610,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code.Teacher-Workout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -547,7 +621,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Teacher WorkoutTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +628,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code.Teacher-WorkoutTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teacher Workout.app/Teacher Workout";
 			};
@@ -568,7 +640,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Teacher WorkoutTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,7 +647,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code.Teacher-WorkoutTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teacher Workout.app/Teacher Workout";
 			};
@@ -595,7 +665,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code.Teacher-WorkoutUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Teacher Workout";
 			};
@@ -614,7 +683,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code.Teacher-WorkoutUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Teacher Workout";
 			};
@@ -660,6 +728,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB381253268726E70008FDC6 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.44.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB381254268726E70008FDC6 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB381253268726E70008FDC6 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB1F1CCB268701B400663EEC /* Project object */;
 }

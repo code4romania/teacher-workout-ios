@@ -1,0 +1,9 @@
+query Lessons($themeId: ID) {
+  lessons(themeId: $themeId) {
+    id,
+    title,
+    duration {
+      displayValue
+    }
+  }
+}
