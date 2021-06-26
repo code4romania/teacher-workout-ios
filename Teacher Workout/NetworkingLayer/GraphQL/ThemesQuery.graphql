@@ -1,0 +1,6 @@
+query ThemesQuery {
+  themes {
+    id,
+    title,
+  }
+}
