@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZYK-UY-dy8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mulish-Bold.ttf">
+            <string>Mulish-Bold</string>
+        </array>
+        <array key="Mulish-Regular.ttf">
+            <string>Mulish-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="9Pv-S7-nTd">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ZYK-UY-dy8" customClass="OnboardingPageViewController" customModule="Teacher_Workout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7m-Mv-uF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="78"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="bwT-nO-Q7d">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="FwY-Y4-GE6" customClass="OnboardingViewController" customModule="Teacher_Workout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dji-5z-W8B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8v-OC-pE2" userLabel="OnbordingHeroView" customClass="OnboardingHeroView" customModule="Teacher_Workout" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="elz-wu-giR">
+                                        <rect key="frame" x="146" y="416" width="122" height="28"/>
+                                        <color key="pageIndicatorTintColor" systemColor="systemGray2Color"/>
+                                        <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-sc-Rwa">
+                                        <rect key="frame" x="349" y="69" width="33" height="31"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="15"/>
+                                        <state key="normal" title="SKIP">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="skipButtonPressed" destination="h8v-OC-pE2" eventType="touchUpInside" id="cDe-Nj-W2C"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_one" translatesAutoresizingMaskIntoConstraints="NO" id="Qx4-zv-1rL" userLabel="OnboardingImage">
+                                        <rect key="frame" x="96" y="127" width="222" height="234"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="234" id="vuc-Zj-Uj4"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="SecondaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="464" id="0mB-l7-hJc"/>
+                                    <constraint firstItem="3Pg-sc-Rwa" firstAttribute="top" secondItem="h8v-OC-pE2" secondAttribute="top" constant="69" id="CIj-jx-mfv"/>
+                                    <constraint firstItem="elz-wu-giR" firstAttribute="centerX" secondItem="h8v-OC-pE2" secondAttribute="centerX" id="hIf-2f-D7J"/>
+                                    <constraint firstItem="Qx4-zv-1rL" firstAttribute="leading" secondItem="h8v-OC-pE2" secondAttribute="leading" constant="96" id="p33-Ra-Jkh"/>
+                                    <constraint firstItem="elz-wu-giR" firstAttribute="top" secondItem="Qx4-zv-1rL" secondAttribute="bottom" constant="55" id="sMX-jE-j9d"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Pg-sc-Rwa" secondAttribute="trailing" constant="32" id="tOm-GK-3NC"/>
+                                    <constraint firstAttribute="bottom" secondItem="elz-wu-giR" secondAttribute="bottom" constant="20" id="uDV-gC-7QD"/>
+                                    <constraint firstItem="Qx4-zv-1rL" firstAttribute="centerX" secondItem="h8v-OC-pE2" secondAttribute="centerX" id="ylB-UJ-Qrs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="onboardingImageView" destination="Qx4-zv-1rL" id="zqc-Q5-dif"/>
+                                    <outlet property="pageControl" destination="elz-wu-giR" id="kSn-jl-2sW"/>
+                                    <outlet property="skipButton" destination="3Pg-sc-Rwa" id="6af-GE-gfc"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPX-bK-a8i">
+                                <rect key="frame" x="40" y="496" width="158.5" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="32"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PU-sH-4Ia">
+                                <rect key="frame" x="327" y="784" width="53" height="30"/>
+                                <state key="normal" title="NEXT &gt;"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit adipiscing sit enim enim id iaculis tristique. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8c-Nz-5zC">
+                                <rect key="frame" x="40" y="558.5" width="334" height="60.5"/>
+                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ORU-gP-tg8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y8c-Nz-5zC" firstAttribute="top" secondItem="cPX-bK-a8i" secondAttribute="bottom" constant="22" id="14O-jI-FbM"/>
+                            <constraint firstItem="cPX-bK-a8i" firstAttribute="top" secondItem="h8v-OC-pE2" secondAttribute="bottom" constant="32" id="6J1-xe-KNf"/>
+                            <constraint firstItem="ORU-gP-tg8" firstAttribute="trailing" secondItem="6PU-sH-4Ia" secondAttribute="trailing" constant="34" id="7wx-gw-EAg"/>
+                            <constraint firstItem="h8v-OC-pE2" firstAttribute="top" secondItem="dji-5z-W8B" secondAttribute="top" id="A8b-Dp-Xo6"/>
+                            <constraint firstItem="Y8c-Nz-5zC" firstAttribute="leading" secondItem="ORU-gP-tg8" secondAttribute="leading" constant="40" id="TxS-xT-7H4"/>
+                            <constraint firstItem="h8v-OC-pE2" firstAttribute="leading" secondItem="ORU-gP-tg8" secondAttribute="leading" id="UtD-du-dW7"/>
+                            <constraint firstItem="h8v-OC-pE2" firstAttribute="trailing" secondItem="ORU-gP-tg8" secondAttribute="trailing" id="jNq-CE-nC4"/>
+                            <constraint firstItem="ORU-gP-tg8" firstAttribute="bottom" secondItem="6PU-sH-4Ia" secondAttribute="bottom" constant="48" id="orB-x9-uTR"/>
+                            <constraint firstItem="cPX-bK-a8i" firstAttribute="leading" secondItem="ORU-gP-tg8" secondAttribute="leading" constant="40" id="qP3-P1-HqZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Y8c-Nz-5zC" secondAttribute="trailing" constant="40" id="tPM-UA-tmS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="6PU-sH-4Ia" id="PYc-1m-Vwr"/>
+                        <outlet property="onboardingDescription" destination="Y8c-Nz-5zC" id="z8Q-l0-mqb"/>
+                        <outlet property="onboardingHeroView" destination="h8v-OC-pE2" id="UvJ-Cu-PEZ"/>
+                        <outlet property="onboardingTitleLabel" destination="cPX-bK-a8i" id="SHY-1T-LKM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XwE-zk-akf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboarding_one" width="164" height="234"/>
+        <namedColor name="AccentColor">
+            <color red="0.030999999493360519" green="0.5690000057220459" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
+            <color red="0.92549019607843142" green="0.99215686274509807" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
