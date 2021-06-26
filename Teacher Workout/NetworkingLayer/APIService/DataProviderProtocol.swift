@@ -1,3 +1,5 @@
 import Foundation
 
-protocol DataProviderProtocol {}
+protocol DataProviderProtocol {
+    func getThemes(completion: @escaping (Result<[Theme], Error>) -> Void)
+}

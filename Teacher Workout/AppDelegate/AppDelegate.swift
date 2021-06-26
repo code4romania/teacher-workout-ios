@@ -14,9 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func customizeAppearance() {
+        let accentColor = UIColor(named: "AccentColor")!
+
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().backgroundImage = UIImage()
-        UITabBar.appearance().tintColor = UIColor(named: "AccentColor")
+        UITabBar.appearance().tintColor = accentColor
         UITabBar.appearance().unselectedItemTintColor = UIColor(named: "secondaryColor")
+
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: accentColor]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: accentColor]
     }
 }

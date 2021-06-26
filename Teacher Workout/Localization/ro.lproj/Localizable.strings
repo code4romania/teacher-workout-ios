@@ -35,3 +35,5 @@
 "Authentication.Password.inputConfirmLabel" = "Repetă parola";
 
 "Authentication.Password.inputPlaceholder" = "parola";
+
+"Discover.navigationTitle" = "Descoperă lecțiile";
