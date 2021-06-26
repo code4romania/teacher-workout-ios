@@ -29,23 +29,20 @@ final class MenuCoordinator: NSObject, Coordinator {
     }
 
     private func createHome() -> UIViewController {
-        let viewController = HomeViewController()
-        viewController.tabBarItem.title = AppStrings.Menu.home.localized()
-        viewController.tabBarItem.image = UIImage(systemName: "house")
-        return viewController
+        let coordinator = HomeCoordinator()
+        addChildCoordinator(coordinator)
+        return coordinator.navigationController
     }
 
     private func createDiscover() -> UIViewController {
-        let viewController = DiscoverViewController()
-        viewController.tabBarItem.title = AppStrings.Menu.discover.localized()
-        viewController.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-        return viewController
+        let coordinator = DiscoverCoordinator()
+        addChildCoordinator(coordinator)
+        return coordinator.navigationController
     }
 
     private func createProfile() -> UIViewController {
-        let viewController = ProfileViewController()
-        viewController.tabBarItem.title = AppStrings.Menu.profile.localized()
-        viewController.tabBarItem.image = UIImage(systemName: "person.circle")
-        return viewController
+        let coordinator = ProfileCoordinator()
+        addChildCoordinator(coordinator)
+        return coordinator.navigationController
     }
 }
