@@ -8,14 +8,14 @@ class OnboardingViewModel {
     }
 
     var pageImage: String {
-        return page.image
+        page.image
     }
 
     var pageTitle: String {
-        return page.title
+        page.title
     }
 
     var pageDescription: String {
-        return page.description
+        page.description
     }
 }

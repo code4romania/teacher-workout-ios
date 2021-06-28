@@ -6,7 +6,7 @@ protocol OnboardingViewControllerDelegate {
     func onboardingViewControllerDidPressNext(_ viewController: OnboardingViewController, currentIndex index: Int)
 }
 
-class OnboardingViewController: UIViewController, OnboardingHeroViewDelegate {
+final class OnboardingViewController: UIViewController, OnboardingHeroViewDelegate {
     @IBOutlet var onboardingHeroView: OnboardingHeroView!
     @IBOutlet var onboardingTitleLabel: UILabel!
     @IBOutlet var onboardingDescription: UILabel!

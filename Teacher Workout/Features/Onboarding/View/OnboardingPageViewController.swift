@@ -1,8 +1,8 @@
 import UIKit
 
-class OnboardingPageViewController: UIPageViewController, OnboardingViewControllerDelegate {
-    let pages = OnboardingPage.mockedData
-    var currentIndex: Int = 0
+final class OnboardingPageViewController: UIPageViewController, OnboardingViewControllerDelegate {
+    private let pages = OnboardingPage.mockedData
+    private var currentIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()

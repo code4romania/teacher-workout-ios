@@ -5,7 +5,7 @@ protocol OnboardingHeroViewDelegate {
     func onboardingHeroViewDidPressSkip(_ view: OnboardingHeroView)
 }
 
-class OnboardingHeroView: UIView {
+final class OnboardingHeroView: UIView {
     @IBOutlet var onboardingImageView: UIImageView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var skipButton: UIButton!
