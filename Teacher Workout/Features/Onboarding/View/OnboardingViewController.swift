@@ -1,17 +1,27 @@
 import UIKit
 
-class OnboardingViewController: UIViewController {
+protocol OnboardingViewControllerDelegate {
+    func onboardingViewController(_ viewController: OnboardingViewController, didSelectPageIndex index: Int)
+    func onboardingViewControllerDidSkip(_ viewController: OnboardingViewController)
+    func onboardingViewControllerDidPressNext(_ viewController: OnboardingViewController, currentIndex index: Int)
+}
+
+class OnboardingViewController: UIViewController, OnboardingHeroViewDelegate {
     @IBOutlet var onboardingHeroView: OnboardingHeroView!
     @IBOutlet var onboardingTitleLabel: UILabel!
     @IBOutlet var onboardingDescription: UILabel!
     @IBOutlet var nextButton: UIButton!
 
+    var heroDelegate: OnboardingHeroViewDelegate?
+    var delegate: OnboardingViewControllerDelegate?
+
     var viewModel: OnboardingViewModel!
 
-    var index: Int = 0
+    var currentPageIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        onboardingHeroView.delegate = self
         setupUI()
     }
 
@@ -26,7 +36,23 @@ class OnboardingViewController: UIViewController {
     }
 
     private func setupHeroView() {
-        onboardingHeroView.pageControl.currentPage = index
+        onboardingHeroView.pageControl.currentPage = currentPageIndex
         onboardingHeroView.onboardingImageView.image = UIImage(named: viewModel.pageImage)
+    }
+
+    // MARK: - Actions
+
+    @IBAction func didTapNextButton(_: UIButton) {
+        delegate?.onboardingViewControllerDidPressNext(self, currentIndex: currentPageIndex)
+    }
+
+    // MARK: - OnboardingHeroViewDelegate
+
+    func onboardingHeroView(_: OnboardingHeroView, didSelectPageIndex index: Int) {
+        delegate?.onboardingViewController(self, didSelectPageIndex: index)
+    }
+
+    func onboardingHeroViewDidPressSkip(_: OnboardingHeroView) {
+        delegate?.onboardingViewControllerDidSkip(self)
     }
 }

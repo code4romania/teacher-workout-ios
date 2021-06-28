@@ -40,15 +40,18 @@
                                         <rect key="frame" x="146" y="416" width="122" height="28"/>
                                         <color key="pageIndicatorTintColor" systemColor="systemGray2Color"/>
                                         <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="pageControlPressed:" destination="h8v-OC-pE2" eventType="valueChanged" id="6td-8O-U7H"/>
+                                        </connections>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-sc-Rwa">
-                                        <rect key="frame" x="349" y="69" width="33" height="31"/>
+                                        <rect key="frame" x="348" y="69" width="34" height="30"/>
                                         <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="15"/>
                                         <state key="normal" title="SKIP">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="skipButtonPressed" destination="h8v-OC-pE2" eventType="touchUpInside" id="cDe-Nj-W2C"/>
+                                            <action selector="skipButtonPressed:" destination="h8v-OC-pE2" eventType="touchUpInside" id="XCb-8i-Jc6"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_one" translatesAutoresizingMaskIntoConstraints="NO" id="Qx4-zv-1rL" userLabel="OnboardingImage">
@@ -76,7 +79,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPX-bK-a8i">
-                                <rect key="frame" x="40" y="496" width="158.5" height="40.5"/>
+                                <rect key="frame" x="40" y="496" width="147" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="32"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,9 +87,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PU-sH-4Ia">
                                 <rect key="frame" x="327" y="784" width="53" height="30"/>
                                 <state key="normal" title="NEXT &gt;"/>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="FwY-Y4-GE6" eventType="touchUpInside" id="k1I-sm-1fr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit adipiscing sit enim enim id iaculis tristique. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8c-Nz-5zC">
-                                <rect key="frame" x="40" y="558.5" width="334" height="60.5"/>
+                                <rect key="frame" x="40" y="555.5" width="334" height="56"/>
                                 <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
