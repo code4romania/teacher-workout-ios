@@ -45,7 +45,7 @@
                                         </connections>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-sc-Rwa">
-                                        <rect key="frame" x="348" y="69" width="34" height="30"/>
+                                        <rect key="frame" x="349" y="69" width="33" height="31"/>
                                         <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="15"/>
                                         <state key="normal" title="SKIP">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +61,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" name="SecondaryColor"/>
+                                <color key="backgroundColor" name="emeraldFaded"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="464" id="0mB-l7-hJc"/>
                                     <constraint firstItem="3Pg-sc-Rwa" firstAttribute="top" secondItem="h8v-OC-pE2" secondAttribute="top" constant="69" id="CIj-jx-mfv"/>
@@ -79,7 +79,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPX-bK-a8i">
-                                <rect key="frame" x="40" y="496" width="147" height="37.5"/>
+                                <rect key="frame" x="40" y="496" width="158.5" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="32"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit adipiscing sit enim enim id iaculis tristique. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8c-Nz-5zC">
-                                <rect key="frame" x="40" y="555.5" width="334" height="56"/>
+                                <rect key="frame" x="40" y="558.5" width="334" height="60.5"/>
                                 <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
         <namedColor name="AccentColor">
             <color red="0.030999999493360519" green="0.5690000057220459" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="SecondaryColor">
+        <namedColor name="emeraldFaded">
             <color red="0.92549019607843142" green="0.99215686274509807" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">

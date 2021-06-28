@@ -32,7 +32,7 @@ final class OnboardingViewController: UIViewController, OnboardingHeroViewDelega
         nextButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 20, bottom: 16, right: 20)
         nextButton.layer.cornerRadius = 24
         nextButton.layer.borderWidth = 0.5
-        nextButton.layer.borderColor = UIColor(red: 0.031, green: 0.569, blue: 0.698, alpha: 1).cgColor
+        nextButton.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
     }
 
     private func setupHeroView() {
