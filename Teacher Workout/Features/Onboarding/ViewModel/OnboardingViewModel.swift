@@ -2,6 +2,7 @@ import Foundation
 
 class OnboardingViewModel {
     var page: OnboardingPage
+    var isLastPage: Bool = false
 
     init(page: OnboardingPage) {
         self.page = page
@@ -17,5 +18,10 @@ class OnboardingViewModel {
 
     var pageDescription: String {
         page.description
+    }
+
+    var onboardingButtonTitle: String {
+        let title = isLastPage ? AppStrings.Onboarding.doneButton.localized() : AppStrings.Onboarding.nextButton.localized()
+        return title.uppercased()
     }
 }

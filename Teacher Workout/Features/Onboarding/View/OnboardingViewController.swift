@@ -27,17 +27,22 @@ final class OnboardingViewController: UIViewController, OnboardingHeroViewDelega
 
     private func setupUI() {
         setupHeroView()
+        setupNextButton()
         onboardingTitleLabel.text = viewModel.pageTitle
         onboardingDescription.text = viewModel.pageDescription
-        nextButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 20, bottom: 16, right: 20)
-        nextButton.layer.cornerRadius = 24
-        nextButton.layer.borderWidth = 0.5
-        nextButton.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
     }
 
     private func setupHeroView() {
         onboardingHeroView.pageControl.currentPage = currentPageIndex
         onboardingHeroView.onboardingImageView.image = UIImage(named: viewModel.pageImage)
+    }
+
+    private func setupNextButton() {
+        nextButton.setTitle(viewModel.onboardingButtonTitle, for: .normal)
+        nextButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 20, bottom: 16, right: 20)
+        nextButton.layer.cornerRadius = 24
+        nextButton.layer.borderWidth = 0.5
+        nextButton.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
     }
 
     // MARK: - Actions

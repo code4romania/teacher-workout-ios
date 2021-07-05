@@ -31,7 +31,9 @@ final class OnboardingPageViewController: UIPageViewController, OnboardingViewCo
 
         let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
         if let onboardingPageViewController = storyboard.instantiateViewController(identifier: OnboardingViewController.className) as? OnboardingViewController {
+            let lastPageIndex = pages.count - 1
             let viewModel = OnboardingViewModel(page: pages[index])
+            viewModel.isLastPage = index == lastPageIndex
             onboardingPageViewController.currentPageIndex = index
             onboardingPageViewController.viewModel = viewModel
             onboardingPageViewController.delegate = self

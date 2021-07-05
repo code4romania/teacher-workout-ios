@@ -28,4 +28,9 @@ enum AppStrings: String, Localizable {
         case discover = "Menu.discover"
         case profile = "Menu.profile"
     }
+
+    enum Onboarding: String, Localizable {
+        case nextButton = "Onboarding.nextButton"
+        case doneButton = "Onboarding.doneButton"
+    }
 }
