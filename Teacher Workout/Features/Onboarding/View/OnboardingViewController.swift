@@ -1,6 +1,6 @@
 import UIKit
 
-protocol OnboardingViewControllerDelegate {
+protocol OnboardingViewControllerDelegate: AnyObject {
     func onboardingViewController(_ viewController: OnboardingViewController, didSelectPageIndex index: Int)
     func onboardingViewControllerDidSkip(_ viewController: OnboardingViewController)
     func onboardingViewControllerDidPressNext(_ viewController: OnboardingViewController, currentIndex index: Int)
@@ -12,8 +12,8 @@ final class OnboardingViewController: UIViewController, OnboardingHeroViewDelega
     @IBOutlet var onboardingDescription: UILabel!
     @IBOutlet var nextButton: UIButton!
 
-    var heroDelegate: OnboardingHeroViewDelegate?
-    var delegate: OnboardingViewControllerDelegate?
+    weak var heroDelegate: OnboardingHeroViewDelegate?
+    weak var delegate: OnboardingViewControllerDelegate?
 
     var viewModel: OnboardingViewModel!
 

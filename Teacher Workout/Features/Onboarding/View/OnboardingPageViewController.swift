@@ -1,8 +1,13 @@
 import UIKit
 
+protocol OnboardingPageViewControllerDelegate: AnyObject {
+    func onboardingPageViewControllerDidFinish(_ viewController: OnboardingPageViewController)
+}
+
 final class OnboardingPageViewController: UIPageViewController, OnboardingViewControllerDelegate {
     private let pages = OnboardingPage.mockedData
     private var currentIndex: Int = 0
+    weak var onboardingDelegate: OnboardingPageViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,20 +50,26 @@ final class OnboardingPageViewController: UIPageViewController, OnboardingViewCo
     }
 
     func onboardingViewControllerDidSkip(_: OnboardingViewController) {
-        dismiss(animated: true, completion: nil)
+        completeOnboarding()
     }
 
     func onboardingViewControllerDidPressNext(_: OnboardingViewController, currentIndex index: Int) {
         let nextIndex = index + 1
 
         guard nextIndex < pages.count else {
-            dismiss(animated: true, completion: nil)
+            completeOnboarding()
             return
         }
 
         if let nextViewController = instantiateOnboardingViewController(at: nextIndex) {
             setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
         }
+    }
+
+    func completeOnboarding() {
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "OnboardingDone")
+        onboardingDelegate?.onboardingPageViewControllerDidFinish(self)
     }
 }
 
@@ -74,10 +85,11 @@ extension OnboardingPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         currentIndex = (viewController as! OnboardingViewController).currentPageIndex
         currentIndex += 1
+
         if currentIndex >= pages.count {
-            dismiss(animated: true, completion: nil)
             return nil
         }
+
         return instantiateOnboardingViewController(at: currentIndex)
     }
 }

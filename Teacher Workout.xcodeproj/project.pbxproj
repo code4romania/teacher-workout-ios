@@ -12,6 +12,26 @@
 		BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CE1268701B500663EEC /* LaunchScreen.storyboard */; };
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
 		BB1F1CF9268701B500663EEC /* Teacher_WorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CF8268701B500663EEC /* Teacher_WorkoutUITests.swift */; };
+		BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3DD26876C4F0063C1A4 /* AppStrings.swift */; };
+		BB29A3E226876C800063C1A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB29A3E426876C800063C1A4 /* Localizable.strings */; };
+		BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E6268772B60063C1A4 /* DiscoverCoordinator.swift */; };
+		BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E8268773FC0063C1A4 /* HomeCoordinator.swift */; };
+		BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3EA268774590063C1A4 /* ProfileCoordinator.swift */; };
+		BB381255268726E70008FDC6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BB381254268726E70008FDC6 /* Apollo */; };
+		BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381259268727A00008FDC6 /* DataProviderProtocol.swift */; };
+		BB38125D268728200008FDC6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38125C268728200008FDC6 /* Config.swift */; };
+		BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38125E268728440008FDC6 /* GraphAPIService.swift */; };
+		BB38126326872D980008FDC6 /* ThemesQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BB38126226872D980008FDC6 /* ThemesQuery.graphql */; };
+		BB381265268739580008FDC6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381264268739580008FDC6 /* API.swift */; };
+		BB381269268739A60008FDC6 /* LessonsQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BB381267268739A60008FDC6 /* LessonsQuery.graphql */; };
+		BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126B268749CC0008FDC6 /* MenuTabBarController.swift */; };
+		BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */; };
+		BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127026874CFA0008FDC6 /* Coordinator.swift */; };
+		BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */; };
+		BB381280268751940008FDC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127F268751940008FDC6 /* HomeViewController.swift */; };
+		BB381282268751BB0008FDC6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381281268751BB0008FDC6 /* DiscoverViewController.swift */; };
+		BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381283268751CD0008FDC6 /* ProfileViewController.swift */; };
+		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
 		DE60B1992687376200EB01F8 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE60B1982687376200EB01F8 /* Onboarding.storyboard */; };
 		DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B19A268745C200EB01F8 /* OnboardingViewController.swift */; };
 		DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B19C2687466300EB01F8 /* OnboardingHeroView.swift */; };
@@ -35,26 +55,7 @@
 		DE60B1C6268755FB00EB01F8 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE60B1B6268755FB00EB01F8 /* Mulish-ExtraLight.ttf */; };
 		DE60B1C7268755FB00EB01F8 /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE60B1B7268755FB00EB01F8 /* Mulish-ExtraBold.ttf */; };
 		DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B1CB26875F9F00EB01F8 /* OnboardingPage.swift */; };
-		BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3DD26876C4F0063C1A4 /* AppStrings.swift */; };
-		BB29A3E226876C800063C1A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB29A3E426876C800063C1A4 /* Localizable.strings */; };
-		BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E6268772B60063C1A4 /* DiscoverCoordinator.swift */; };
-		BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E8268773FC0063C1A4 /* HomeCoordinator.swift */; };
-		BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3EA268774590063C1A4 /* ProfileCoordinator.swift */; };
-		BB381255268726E70008FDC6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BB381254268726E70008FDC6 /* Apollo */; };
-		BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381259268727A00008FDC6 /* DataProviderProtocol.swift */; };
-		BB38125D268728200008FDC6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38125C268728200008FDC6 /* Config.swift */; };
-		BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38125E268728440008FDC6 /* GraphAPIService.swift */; };
-		BB38126326872D980008FDC6 /* ThemesQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BB38126226872D980008FDC6 /* ThemesQuery.graphql */; };
-		BB381265268739580008FDC6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381264268739580008FDC6 /* API.swift */; };
-		BB381269268739A60008FDC6 /* LessonsQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BB381267268739A60008FDC6 /* LessonsQuery.graphql */; };
-		BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126B268749CC0008FDC6 /* MenuTabBarController.swift */; };
-		BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */; };
-		BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127026874CFA0008FDC6 /* Coordinator.swift */; };
-		BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */; };
-		BB381280268751940008FDC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127F268751940008FDC6 /* HomeViewController.swift */; };
-		BB381282268751BB0008FDC6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381281268751BB0008FDC6 /* DiscoverViewController.swift */; };
-		BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381283268751CD0008FDC6 /* ProfileViewController.swift */; };
-		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
+		DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		DE60B1B6268755FB00EB01F8 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
 		DE60B1B7268755FB00EB01F8 /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		DE60B1CB26875F9F00EB01F8 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +422,7 @@
 		DE60B1962687373A00EB01F8 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				DE9C0A8F2689CB2A00B6AFA0 /* Coordinator */,
 				DE60B1CA26875F9500EB01F8 /* Model */,
 				DE60B1A3268754BE00EB01F8 /* ViewModel */,
 				DE60B1972687375100EB01F8 /* View */,
@@ -491,6 +494,14 @@
 				DE60B1CB26875F9F00EB01F8 /* OnboardingPage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DE9C0A8F2689CB2A00B6AFA0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,7 +630,6 @@
 				DE60B1C3268755FB00EB01F8 /* Mulish-MediumItalic.ttf in Resources */,
 				DE60B1BF268755FB00EB01F8 /* Mulish-Italic.ttf in Resources */,
 				BB1F1CE0268701B500663EEC /* Assets.xcassets in Resources */,
-				BB1F1CDE268701B400663EEC /* Main.storyboard in Resources */,
 				DE60B1C6268755FB00EB01F8 /* Mulish-ExtraLight.ttf in Resources */,
 				DE60B1992687376200EB01F8 /* Onboarding.storyboard in Resources */,
 				DE60B1C5268755FB00EB01F8 /* Mulish-Regular.ttf in Resources */,
@@ -697,13 +707,13 @@
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
-				BB1F1CD9268701B400663EEC /* SceneDelegate.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
 				DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
 				BB381265268739580008FDC6 /* API.swift in Sources */,
 				BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */,
+				DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
 				BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */,

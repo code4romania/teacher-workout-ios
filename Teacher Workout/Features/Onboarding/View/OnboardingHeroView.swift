@@ -1,6 +1,6 @@
 import UIKit
 
-protocol OnboardingHeroViewDelegate {
+protocol OnboardingHeroViewDelegate: AnyObject {
     func onboardingHeroView(_ view: OnboardingHeroView, didSelectPageIndex index: Int)
     func onboardingHeroViewDidPressSkip(_ view: OnboardingHeroView)
 }
@@ -10,7 +10,7 @@ final class OnboardingHeroView: UIView {
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var skipButton: UIButton!
 
-    var delegate: OnboardingHeroViewDelegate?
+    weak var delegate: OnboardingHeroViewDelegate?
 
     // MARK: - Actions
 
