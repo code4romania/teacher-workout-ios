@@ -32,6 +32,7 @@
 		BB381282268751BB0008FDC6 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381281268751BB0008FDC6 /* DiscoverViewController.swift */; };
 		BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381283268751CD0008FDC6 /* ProfileViewController.swift */; };
 		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
+		DE4B86CD269DBEC100D7636E /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B86CC269DBEC100D7636E /* InputFieldView.swift */; };
 		DE60B1992687376200EB01F8 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE60B1982687376200EB01F8 /* Onboarding.storyboard */; };
 		DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B19A268745C200EB01F8 /* OnboardingViewController.swift */; };
 		DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B19C2687466300EB01F8 /* OnboardingHeroView.swift */; };
@@ -63,6 +64,11 @@
 		DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */; };
 		DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */; };
 		DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */; };
+		DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */; };
+		DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB0269E292F00E64AAE /* Text+Styling.swift */; };
+		DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */; };
+		DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */; };
+		DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +121,7 @@
 		BB381281268751BB0008FDC6 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		BB381283268751CD0008FDC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BB7699AB26875430009DF26F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DE4B86CC269DBEC100D7636E /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		DE60B19326871D9700EB01F8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		DE60B19426871DA900EB01F8 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		DE60B1982687376200EB01F8 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -148,6 +155,11 @@
 		DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingCloseButton.swift; sourceTree = "<group>"; };
+		DEDDCCB0269E292F00E64AAE /* Text+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Styling.swift"; sourceTree = "<group>"; };
+		DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersView.swift; sourceTree = "<group>"; };
+		DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDividerView.swift; sourceTree = "<group>"; };
+		DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
+				DE4B86CA269DBE9600D7636E /* Components */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
 				BB38126A268749730008FDC6 /* Menu */,
@@ -425,6 +438,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DE4B86CA269DBE9600D7636E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DEDDCCA9269E22A300E64AAE /* General */,
+				DE4B86CB269DBEA000D7636E /* Form */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DE4B86CB269DBEA000D7636E /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				DE4B86CC269DBEC100D7636E /* InputFieldView.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		DE60B19226871D7400EB01F8 /* BuildTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,7 +489,8 @@
 		DE60B1A026874A1700EB01F8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				DE60B1A126874A2700EB01F8 /* NSObject+Extensions.swift */,
+				DEDDCCAD269E274200E64AAE /* ViewModifiers */,
+				DEDDCCAC269E273900E64AAE /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -552,6 +583,7 @@
 			isa = PBXGroup;
 			children = (
 				DE943E12269D8B9C00DD2EC3 /* SignInView.swift */,
+				DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +617,7 @@
 			children = (
 				DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */,
 				DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */,
+				DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -595,6 +628,31 @@
 				DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DEDDCCA9269E22A300E64AAE /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */,
+				DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		DEDDCCAC269E273900E64AAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE60B1A126874A2700EB01F8 /* NSObject+Extensions.swift */,
+				DEDDCCB0269E292F00E64AAE /* Text+Styling.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DEDDCCAD269E274200E64AAE /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -798,13 +856,18 @@
 				DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
+				DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */,
+				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
 				DE943E11269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift in Sources */,
+				DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
+				DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */,
 				DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */,
+				DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
 				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
@@ -823,6 +886,7 @@
 				BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */,
 				DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */,
 				BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */,
+				DE4B86CD269DBEC100D7636E /* InputFieldView.swift in Sources */,
 				BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

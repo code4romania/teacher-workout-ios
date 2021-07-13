@@ -1,3 +1,5 @@
+"dividerLabel" = "sau";
+
 "Menu.home" = "Acasă";
 
 "Menu.discover" = "Descoperă";
@@ -7,3 +9,17 @@
 "Onboarding.nextButton" = "Următorul >";
 
 "Onboarding.doneButton" = "Gata";
+
+"Authentication.signInIntro" = "Autentifică-te";
+
+"Authentication.signInForgotPasswordLabel" = "Ți-ai uitat parola?";
+
+"Authentication.signInButtonTitle" = "Autentifică-te";
+
+"Authentication.Email.inputLabel" = "Email";
+
+"Authentication.Email.inputPlaceholder" = "name@email.com";
+
+"Authentication.Password.inputLabel" = "Parola";
+
+"Authentication.Password.inputPlaceholder" = "parola";
