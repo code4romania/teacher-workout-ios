@@ -55,6 +55,11 @@
 		DE60B1C6268755FB00EB01F8 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE60B1B6268755FB00EB01F8 /* Mulish-ExtraLight.ttf */; };
 		DE60B1C7268755FB00EB01F8 /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE60B1B7268755FB00EB01F8 /* Mulish-ExtraBold.ttf */; };
 		DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B1CB26875F9F00EB01F8 /* OnboardingPage.swift */; };
+		DE943E11269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E10269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift */; };
+		DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E12269D8B9C00DD2EC3 /* SignInView.swift */; };
+		DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */; };
+		DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */; };
+		DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1E269D8D6000DD2EC3 /* SignUpCoordinator.swift */; };
 		DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +138,11 @@
 		DE60B1B6268755FB00EB01F8 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
 		DE60B1B7268755FB00EB01F8 /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		DE60B1CB26875F9F00EB01F8 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		DE943E10269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		DE943E12269D8B9C00DD2EC3 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		DE943E1E269D8D6000DD2EC3 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,10 +237,11 @@
 		BB1F1D072687020E00663EEC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DE943E0C269D8A5300DD2EC3 /* Authentication */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
-				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38126A268749730008FDC6 /* Menu */,
+				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
 				BB1F1D092687022A00663EEC /* Splash */,
 				DE60B1A026874A1700EB01F8 /* Utils */,
@@ -496,6 +507,74 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DE943E0C269D8A5300DD2EC3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E0D269D8A7100DD2EC3 /* Coordinator */,
+				DE943E14269D8C9900DD2EC3 /* SignIn */,
+				DE943E15269D8CA500DD2EC3 /* SignUp */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		DE943E0D269D8A7100DD2EC3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E10269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DE943E14269D8C9900DD2EC3 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E17269D8CD000DD2EC3 /* Coordinator */,
+				DE943E16269D8CB900DD2EC3 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		DE943E15269D8CA500DD2EC3 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E18269D8CDA00DD2EC3 /* Coordinator */,
+				DE943E19269D8CDE00DD2EC3 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		DE943E16269D8CB900DD2EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E12269D8B9C00DD2EC3 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE943E17269D8CD000DD2EC3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DE943E18269D8CDA00DD2EC3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E1E269D8D6000DD2EC3 /* SignUpCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DE943E19269D8CDE00DD2EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DE9C0A8F2689CB2A00B6AFA0 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,19 +781,24 @@
 			files = (
 				BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */,
 				BB38125D268728200008FDC6 /* Config.swift in Sources */,
+				DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
+				DE943E11269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
 				DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
+				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
 				BB381265268739580008FDC6 /* API.swift in Sources */,
 				BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */,
 				DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */,
+				DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,
+				DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */,
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
 				BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */,
 				BB381282268751BB0008FDC6 /* DiscoverViewController.swift in Sources */,
