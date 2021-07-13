@@ -60,6 +60,8 @@
 		DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */; };
 		DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */; };
 		DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1E269D8D6000DD2EC3 /* SignUpCoordinator.swift */; };
+		DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */; };
+		DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */; };
 		DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +145,8 @@
 		DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		DE943E1E269D8D6000DD2EC3 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -513,6 +517,7 @@
 				DE943E0D269D8A7100DD2EC3 /* Coordinator */,
 				DE943E14269D8C9900DD2EC3 /* SignIn */,
 				DE943E15269D8CA500DD2EC3 /* SignUp */,
+				DE943E20269D8E7D00DD2EC3 /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -571,6 +576,15 @@
 			isa = PBXGroup;
 			children = (
 				DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE943E20269D8E7D00DD2EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */,
+				DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -788,6 +802,7 @@
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
 				DE943E11269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
+				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
 				DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
@@ -806,6 +821,7 @@
 				BB381280268751940008FDC6 /* HomeViewController.swift in Sources */,
 				BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */,
 				BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */,
+				DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */,
 				BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */,
 				BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */,
 			);
