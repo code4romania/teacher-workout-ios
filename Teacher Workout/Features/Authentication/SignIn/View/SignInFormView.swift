@@ -29,7 +29,7 @@ struct SignInFormView: View {
             })
 
             Button(action: {
-                print("signing in")
+                print("signing in with \(email) and password \(password)")
             }, label: {
                 Text(AppStrings.Authentication.signInButtonTitle.rawValue.localized())
                     .primaryButtonStyle()

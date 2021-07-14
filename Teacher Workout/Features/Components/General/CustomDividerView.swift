@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CustomDividerView: View {
     var label: String
-    var spacing: CGFloat = 8
+    var spacing: CGFloat
 
     var body: some View {
         VStack {
@@ -23,6 +23,6 @@ struct CustomDividerView: View {
 
 struct CustomDividerView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomDividerView(label: "sau")
+        CustomDividerView(label: "sau", spacing: 10)
     }
 }

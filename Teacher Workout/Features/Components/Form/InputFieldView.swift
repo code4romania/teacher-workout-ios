@@ -22,6 +22,7 @@ struct InputFieldView: View {
                     SecureField(placeholder, text: $fieldData)
                 } else {
                     TextField(placeholder, text: $fieldData)
+                        .keyboardType(.emailAddress)
                 }
             }
             .padding()

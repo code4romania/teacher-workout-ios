@@ -489,7 +489,7 @@
 		DE60B1A026874A1700EB01F8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				DEDDCCAD269E274200E64AAE /* ViewModifiers */,
+				DECD7A06269EC14F004FE9E3 /* ViewModifiers */,
 				DEDDCCAC269E273900E64AAE /* Extensions */,
 			);
 			path = Utils;
@@ -630,6 +630,13 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		DECD7A06269EC14F004FE9E3 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		DEDDCCA9269E22A300E64AAE /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,13 +653,6 @@
 				DEDDCCB0269E292F00E64AAE /* Text+Styling.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		DEDDCCAD269E274200E64AAE /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

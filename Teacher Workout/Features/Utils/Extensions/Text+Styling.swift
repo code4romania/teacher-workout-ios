@@ -13,4 +13,10 @@ extension Text {
             .background(Color.accentColor)
             .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
     }
+
+    func largeTitleStyle() -> Text {
+        font(Font.custom("Mulish-Regular", size: 32))
+            .fontWeight(.bold)
+            .foregroundColor(.accentColor)
+    }
 }

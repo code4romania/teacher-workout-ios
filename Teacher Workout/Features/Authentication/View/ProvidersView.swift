@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ProvidersView: View {
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             Button(action: {
                 print("signing in")
             }, label: {
