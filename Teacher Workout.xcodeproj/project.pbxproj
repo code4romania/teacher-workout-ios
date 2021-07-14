@@ -64,6 +64,8 @@
 		DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */; };
 		DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */; };
 		DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */; };
+		DECD7A0B269EFA70004FE9E3 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7A0A269EFA70004FE9E3 /* SignInViewModel.swift */; };
+		DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7A0C269F1179004FE9E3 /* Validator.swift */; };
 		DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */; };
 		DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB0269E292F00E64AAE /* Text+Styling.swift */; };
 		DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */; };
@@ -155,6 +157,8 @@
 		DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		DECD7A0A269EFA70004FE9E3 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		DECD7A0C269F1179004FE9E3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingCloseButton.swift; sourceTree = "<group>"; };
 		DEDDCCB0269E292F00E64AAE /* Text+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Styling.swift"; sourceTree = "<group>"; };
 		DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersView.swift; sourceTree = "<group>"; };
@@ -549,6 +553,7 @@
 				DE943E14269D8C9900DD2EC3 /* SignIn */,
 				DE943E15269D8CA500DD2EC3 /* SignUp */,
 				DE943E20269D8E7D00DD2EC3 /* View */,
+				DECD7A0C269F1179004FE9E3 /* Validator.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 			children = (
 				DE943E17269D8CD000DD2EC3 /* Coordinator */,
 				DE943E16269D8CB900DD2EC3 /* View */,
+				DECD7A09269EFA60004FE9E3 /* ViewModel */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -635,6 +641,14 @@
 			children = (
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		DECD7A09269EFA60004FE9E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7A0A269EFA70004FE9E3 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DEDDCCA9269E22A300E64AAE /* General */ = {
@@ -855,6 +869,7 @@
 				BB38125D268728200008FDC6 /* Config.swift in Sources */,
 				DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
+				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
 				DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */,
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
@@ -873,6 +888,7 @@
 				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
 				BB381265268739580008FDC6 /* API.swift in Sources */,
 				BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */,
+				DECD7A0B269EFA70004FE9E3 /* SignInViewModel.swift in Sources */,
 				DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */,
 				DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,

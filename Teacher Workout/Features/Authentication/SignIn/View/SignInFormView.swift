@@ -1,21 +1,23 @@
 import SwiftUI
 
 struct SignInFormView: View {
-    @Binding var email: String
-    @Binding var password: String
+    @ObservedObject var viewModel: SignInViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             InputFieldView(label: AppStrings.Authentication.Email.inputLabel.rawValue.localized(),
                            iconName: "envelope",
                            placeholder: AppStrings.Authentication.Email.inputPlaceholder.rawValue.localized(),
-                           fieldData: $email)
+                           errorMessage: AppStrings.Authentication.Email.invalidEmailMessage.rawValue.localized(),
+                           fieldData: $viewModel.email,
+                           showError: $viewModel.showEmailError)
 
             InputFieldView(label: AppStrings.Authentication.Password.inputLabel.rawValue.localized(),
                            iconName: "lock",
                            placeholder: AppStrings.Authentication.Password.inputPlaceholder.rawValue.localized(),
                            isSecureField: true,
-                           fieldData: $password)
+                           fieldData: $viewModel.password,
+                           showError: $viewModel.showPasswordError)
 
             Button(action: {
                 print("Forgot password")
@@ -29,7 +31,11 @@ struct SignInFormView: View {
             })
 
             Button(action: {
-                print("signing in with \(email) and password \(password)")
+                guard viewModel.isValidEmail(),
+                      viewModel.isValidPassword() else { return }
+
+                print("signing in with \(viewModel.email) and password \(viewModel.password)")
+
             }, label: {
                 Text(AppStrings.Authentication.signInButtonTitle.rawValue.localized())
                     .primaryButtonStyle()
@@ -39,10 +45,9 @@ struct SignInFormView: View {
 }
 
 struct SignInFormView_Previews: PreviewProvider {
-    @State static var email: String = ""
-    @State static var password: String = ""
+    @StateObject static var viewModel = SignInViewModel()
 
     static var previews: some View {
-        SignInFormView(email: $email, password: $password)
+        SignInFormView(viewModel: viewModel)
     }
 }

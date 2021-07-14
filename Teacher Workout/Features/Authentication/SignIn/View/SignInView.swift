@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @ObservedObject var viewModel = SignInViewModel()
 
     var body: some View {
         GeometryReader { _ in
@@ -15,7 +14,7 @@ struct SignInView: View {
                     .largeTitleStyle()
                     .padding(.bottom)
 
-                SignInFormView(email: $email, password: $password)
+                SignInFormView(viewModel: viewModel)
 
                 CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
                 ProvidersView()

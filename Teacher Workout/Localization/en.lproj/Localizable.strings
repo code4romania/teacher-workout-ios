@@ -20,6 +20,8 @@
 
 "Authentication.Email.inputPlaceholder" = "name@email.com";
 
+"Authentication.Email.invalidEmailMessage" = "Invalid email address.";
+
 "Authentication.Password.inputLabel" = "Password";
 
 "Authentication.Password.inputPlaceholder" = "password";

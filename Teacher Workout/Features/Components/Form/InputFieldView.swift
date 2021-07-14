@@ -5,8 +5,10 @@ struct InputFieldView: View {
     var iconName: String
     var placeholder: String
     var isSecureField: Bool = false
+    var errorMessage: String?
 
     @Binding var fieldData: String
+    @Binding var showError: Bool
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -20,27 +22,40 @@ struct InputFieldView: View {
 
                 if isSecureField {
                     SecureField(placeholder, text: $fieldData)
+                        .autocapitalization(.none)
                 } else {
                     TextField(placeholder, text: $fieldData)
+                        .autocapitalization(.none)
                         .keyboardType(.emailAddress)
                 }
             }
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .stroke(Color.secondary, lineWidth: 1)
+                    .stroke(showError ? Color.red : Color.secondary, lineWidth: 1)
             )
+
+            if let error = errorMessage,
+               showError
+            {
+                Text(error)
+                    .font(Font.custom("Mulish-Regular", size: 16))
+                    .foregroundColor(.red)
+            }
         }
     }
 }
 
 struct InputFieldView_Previews: PreviewProvider {
     @State static var email: String = ""
+    @State static var showError = false
 
     static var previews: some View {
         InputFieldView(label: "EMAIL",
                        iconName: "envelope",
                        placeholder: "name@email.com",
-                       fieldData: $email)
+                       errorMessage: "Error",
+                       fieldData: $email,
+                       showError: $showError)
     }
 }

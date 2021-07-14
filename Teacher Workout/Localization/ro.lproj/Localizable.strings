@@ -20,6 +20,8 @@
 
 "Authentication.Email.inputPlaceholder" = "name@email.com";
 
+"Authentication.Email.invalidEmailMessage" = "Adresa de e-mail introdusă este invalidă.";
+
 "Authentication.Password.inputLabel" = "Parola";
 
 "Authentication.Password.inputPlaceholder" = "parola";

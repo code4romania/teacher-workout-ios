@@ -43,6 +43,7 @@ enum AppStrings: String, Localizable {
         enum Email: String, Localizable {
             case inputLabel = "Authentication.Email.inputLabel"
             case inputPlaceholder = "Authentication.Email.inputPlaceholder"
+            case invalidEmailMessage = "Authentication.Email.invalidEmailMessage"
         }
 
         enum Password: String, Localizable {
