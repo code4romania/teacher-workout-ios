@@ -7,7 +7,7 @@ struct SignInView: View {
         GeometryReader { _ in
             VStack(alignment: .leading) {
                 TrailingCloseButton {
-                    //TODO: add the logic in the coordinator when closing the sign in view to show the onboarding flow
+                    // TODO: add the logic in the coordinator when closing the sign in view to show the onboarding flow
                 }
 
                 Text(AppStrings.Authentication.signInIntro.rawValue.localized())

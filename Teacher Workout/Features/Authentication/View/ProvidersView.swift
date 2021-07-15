@@ -1,25 +1,25 @@
 import SwiftUI
 
 struct ProvidersView: View {
-    //TODO: Implement providers buttons and actions.
+    // TODO: Implement providers buttons and actions.
     var body: some View {
         VStack(spacing: 10) {
             Button(action: {
-                //TODO: Implement sign in with apple.
+                // TODO: Implement sign in with apple.
             }, label: {
                 Text("Apple")
                     .primaryButtonStyle()
             })
 
             Button(action: {
-                //TODO: Implement sign in with google.
+                // TODO: Implement sign in with google.
             }, label: {
                 Text("Google")
                     .primaryButtonStyle()
             })
 
             Button(action: {
-                //TODO: Implement sign in with facebook.
+                // TODO: Implement sign in with facebook.
             }, label: {
                 Text("Facebook")
                     .primaryButtonStyle()
