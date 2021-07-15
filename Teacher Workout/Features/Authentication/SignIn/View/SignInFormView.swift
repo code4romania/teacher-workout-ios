@@ -32,7 +32,10 @@ struct SignInFormView: View {
 
             Button(action: {
                 guard viewModel.isValidEmail(),
-                      viewModel.isValidPassword() else { return }
+                      viewModel.isValidPassword()
+                else {
+                    return
+                }
 
                 print("signing in with \(viewModel.email) and password \(viewModel.password)")
 

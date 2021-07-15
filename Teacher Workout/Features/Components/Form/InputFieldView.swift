@@ -36,8 +36,7 @@ struct InputFieldView: View {
             )
 
             if let error = errorMessage,
-               showError
-            {
+               showError {
                 Text(error)
                     .font(Font.custom("Mulish-Regular", size: 16))
                     .foregroundColor(.red)
