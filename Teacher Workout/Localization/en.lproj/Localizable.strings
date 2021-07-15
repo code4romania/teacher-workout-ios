@@ -16,6 +16,10 @@
 
 "Authentication.signInButtonTitle" = "Sign In";
 
+"Authentication.signUpButtonTitle" = "Sign Up";
+
+"Authentication.alreadyHaveAccountLabel" = "Already have an account?";
+
 "Authentication.Email.inputLabel" = "Email";
 
 "Authentication.Email.inputPlaceholder" = "name@email.com";

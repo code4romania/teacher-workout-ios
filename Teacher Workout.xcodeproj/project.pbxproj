@@ -56,7 +56,9 @@
 		DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B1A126874A2700EB01F8 /* NSObject+Extensions.swift */; };
 		DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B1A4268754CB00EB01F8 /* OnboardingViewModel.swift */; };
 		DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60B1CB26875F9F00EB01F8 /* OnboardingPage.swift */; };
-		DE943E11269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E10269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift */; };
+		DE85640226A0521B004A83BF /* LandingPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85640126A0521B004A83BF /* LandingPageCoordinator.swift */; };
+		DE85640426A0525A004A83BF /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85640326A0525A004A83BF /* LandingPageView.swift */; };
+		DE85640626A05AA2004A83BF /* ExistingAccountFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85640526A05AA2004A83BF /* ExistingAccountFooterView.swift */; };
 		DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E12269D8B9C00DD2EC3 /* SignInView.swift */; };
 		DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */; };
 		DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */; };
@@ -149,7 +151,9 @@
 		DE60B1A126874A2700EB01F8 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		DE60B1A4268754CB00EB01F8 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		DE60B1CB26875F9F00EB01F8 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
-		DE943E10269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		DE85640126A0521B004A83BF /* LandingPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageCoordinator.swift; sourceTree = "<group>"; };
+		DE85640326A0525A004A83BF /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
+		DE85640526A05AA2004A83BF /* ExistingAccountFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingAccountFooterView.swift; sourceTree = "<group>"; };
 		DE943E12269D8B9C00DD2EC3 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DE943E1A269D8CFC00DD2EC3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
+				DE8563FE26A051F4004A83BF /* LandingPage */,
 				BB38126A268749730008FDC6 /* Menu */,
 				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
@@ -538,23 +543,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DE8563FE26A051F4004A83BF /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				DE8563FF26A05203004A83BF /* Coordinator */,
+				DE85640026A05208004A83BF /* View */,
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
+		DE8563FF26A05203004A83BF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE85640126A0521B004A83BF /* LandingPageCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DE85640026A05208004A83BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE85640326A0525A004A83BF /* LandingPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DE943E0C269D8A5300DD2EC3 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				DE943E0D269D8A7100DD2EC3 /* Coordinator */,
 				DE943E14269D8C9900DD2EC3 /* SignIn */,
 				DE943E15269D8CA500DD2EC3 /* SignUp */,
 				DE943E20269D8E7D00DD2EC3 /* View */,
 			);
 			path = Authentication;
-			sourceTree = "<group>";
-		};
-		DE943E0D269D8A7100DD2EC3 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				DE943E10269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		DE943E14269D8C9900DD2EC3 /* SignIn */ = {
@@ -640,6 +661,7 @@
 			children = (
 				DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */,
 				DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */,
+				DE85640526A05AA2004A83BF /* ExistingAccountFooterView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -858,7 +880,6 @@
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
-				DE943E11269D8AAB00DD2EC3 /* AuthenticationCoordinator.swift in Sources */,
 				DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
@@ -869,6 +890,8 @@
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
 				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
+				DE85640226A0521B004A83BF /* LandingPageCoordinator.swift in Sources */,
+				DE85640626A05AA2004A83BF /* ExistingAccountFooterView.swift in Sources */,
 				BB381265268739580008FDC6 /* API.swift in Sources */,
 				BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */,
 				DECD7A0B269EFA70004FE9E3 /* SignInViewModel.swift in Sources */,
@@ -876,6 +899,7 @@
 				DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,
 				DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */,
+				DE85640426A0525A004A83BF /* LandingPageView.swift in Sources */,
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
 				BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */,
 				BB381282268751BB0008FDC6 /* DiscoverViewController.swift in Sources */,

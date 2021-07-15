@@ -16,6 +16,10 @@
 
 "Authentication.signInButtonTitle" = "Autentifică-te";
 
+"Authentication.signUpButtonTitle" = "înregistrează-te";
+
+"Authentication.alreadyHaveAccountLabel" = "Ai deja cont?";
+
 "Authentication.Email.inputLabel" = "Email";
 
 "Authentication.Email.inputPlaceholder" = "name@email.com";

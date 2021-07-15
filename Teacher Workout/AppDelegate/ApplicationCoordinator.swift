@@ -11,16 +11,14 @@ final class ApplicationCoordinator: NSObject, Coordinator, OnboardingCoordinator
     }
 
     func start() {
-        // TODO: Add landing page view, then show it at app launch. https://github.com/code4romania/teacher-workout-ios/issues/24
-        let defaults = UserDefaults.standard
-        if let _ = defaults.object(forKey: "OnboardingDone") as? Bool {
-            showMenu()
-        } else {
-            let onboardingCoordinator = OnboardingCoordinator(navigationController: navigationController)
-            onboardingCoordinator.delegate = self
-            addChildCoordinator(onboardingCoordinator)
-            onboardingCoordinator.start()
-        }
+        showLandingPage()
+    }
+
+    private func showLandingPage() {
+        let landingPageCoordinator = LandingPageCoordinator(navigationController: navigationController)
+        addChildCoordinator(landingPageCoordinator)
+        landingPageCoordinator.deleage = self
+        landingPageCoordinator.start()
     }
 
     private func showMenu() {
@@ -29,8 +27,33 @@ final class ApplicationCoordinator: NSObject, Coordinator, OnboardingCoordinator
         menuCoordinator.start()
     }
 
+    private func showSignInPage() {
+        let coordinator = SignInCoordinator(navigationController: navigationController)
+        addChildCoordinator(coordinator)
+        coordinator.delegate = self
+        coordinator.start()
+    }
+
     func onboardingCoordinatorDidFinish(_ coordinator: OnboardingCoordinator) {
         removeChildCoordinator(coordinator)
         showMenu()
+    }
+}
+
+extension ApplicationCoordinator: LandingPageCoordinatorDelegate {
+    func landingPageCoordinatorShouldPresentSignIn(_ coordinator: LandingPageCoordinator) {
+        removeChildCoordinator(coordinator)
+        showSignInPage()
+    }
+
+    func landingPageCoordinatorShouldPresentSignUp(_ coordinator: LandingPageCoordinator) {
+        removeChildCoordinator(coordinator)
+        showMenu()
+    }
+}
+
+extension ApplicationCoordinator: SignInCoordinatorDelegate {
+    func signInCoordinatorDidClose(_ coordinator: SignInCoordinator) {
+        removeChildCoordinator(coordinator)
     }
 }
