@@ -1,10 +1,3 @@
-//
-//  ResetPasswordView.swift
-//  Teacher Workout
-//
-//  Created by Vlad Stanescu on 13.07.2021.
-//
-
 import SwiftUI
 
 struct ResetPasswordView: View {

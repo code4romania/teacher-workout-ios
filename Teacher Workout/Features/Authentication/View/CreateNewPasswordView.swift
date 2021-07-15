@@ -1,10 +1,3 @@
-//
-//  CreateNewPasswordView.swift
-//  Teacher Workout
-//
-//  Created by Vlad Stanescu on 13.07.2021.
-//
-
 import SwiftUI
 
 struct CreateNewPasswordView: View {
