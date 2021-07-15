@@ -22,6 +22,7 @@ extension String {
 
 enum AppStrings: String, Localizable {
     case dummy = ""
+    case dividerLabel
 
     enum Menu: String, Localizable {
         case home = "Menu.home"
@@ -32,5 +33,22 @@ enum AppStrings: String, Localizable {
     enum Onboarding: String, Localizable {
         case nextButton = "Onboarding.nextButton"
         case doneButton = "Onboarding.doneButton"
+    }
+
+    enum Authentication: String, Localizable {
+        case signInIntro = "Authentication.signInIntro"
+        case signInForgotPasswordLabel = "Authentication.signInForgotPasswordLabel"
+        case signInButtonTitle = "Authentication.signInButtonTitle"
+
+        enum Email: String, Localizable {
+            case inputLabel = "Authentication.Email.inputLabel"
+            case inputPlaceholder = "Authentication.Email.inputPlaceholder"
+            case invalidEmailMessage = "Authentication.Email.invalidEmailMessage"
+        }
+
+        enum Password: String, Localizable {
+            case inputLabel = "Authentication.Password.inputLabel"
+            case inputPlaceholder = "Authentication.Password.inputPlaceholder"
+        }
     }
 }

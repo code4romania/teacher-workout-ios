@@ -11,6 +11,7 @@ final class ApplicationCoordinator: NSObject, Coordinator, OnboardingCoordinator
     }
 
     func start() {
+        // TODO: Add landing page view, then show it at app launch. https://github.com/code4romania/teacher-workout-ios/issues/24
         let defaults = UserDefaults.standard
         if let _ = defaults.object(forKey: "OnboardingDone") as? Bool {
             showMenu()

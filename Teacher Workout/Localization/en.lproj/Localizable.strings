@@ -1,3 +1,5 @@
+"dividerLabel" = "or";
+
 "Menu.home" = "Home";
 
 "Menu.discover" = "Discover";
@@ -7,3 +9,19 @@
 "Onboarding.nextButton" = "Next >";
 
 "Onboarding.doneButton" = "Done";
+
+"Authentication.signInIntro" = "Sign In";
+
+"Authentication.signInForgotPasswordLabel" = "Forgot password?";
+
+"Authentication.signInButtonTitle" = "Sign In";
+
+"Authentication.Email.inputLabel" = "Email";
+
+"Authentication.Email.inputPlaceholder" = "name@email.com";
+
+"Authentication.Email.invalidEmailMessage" = "Invalid email address.";
+
+"Authentication.Password.inputLabel" = "Password";
+
+"Authentication.Password.inputPlaceholder" = "password";
