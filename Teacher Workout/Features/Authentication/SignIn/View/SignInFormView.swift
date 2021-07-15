@@ -27,7 +27,6 @@ struct SignInFormView: View {
                         .font(Font.custom("Mulish-Bold", size: 16))
                         .foregroundColor(.accentColor)
                 }
-
             })
 
             Button(action: {
