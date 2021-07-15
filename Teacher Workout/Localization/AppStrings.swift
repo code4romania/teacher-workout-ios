@@ -39,6 +39,8 @@ enum AppStrings: String, Localizable {
         case signInIntro = "Authentication.signInIntro"
         case signInForgotPasswordLabel = "Authentication.signInForgotPasswordLabel"
         case signInButtonTitle = "Authentication.signInButtonTitle"
+        case signUpButtonTitle = "Authentication.signUpButtonTitle"
+        case alreadyHaveAccountLabel = "Authentication.alreadyHaveAccountLabel"
 
         enum Email: String, Localizable {
             case inputLabel = "Authentication.Email.inputLabel"
