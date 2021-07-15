@@ -3,3 +3,6 @@
 --allman false
 --elseposition same-line
 --disable wrapMultilineStatementBraces
+
+# file options
+--exclude NetworkingLayer/GraphQL
