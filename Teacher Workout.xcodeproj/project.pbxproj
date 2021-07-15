@@ -216,11 +216,12 @@
 			isa = PBXGroup;
 			children = (
 				BB1F1D06268701D900663EEC /* AppDelegate */,
-				BB1F1D072687020E00663EEC /* Features */,
-				BB3812562687272B0008FDC6 /* NetworkingLayer */,
 				BB38126F26874CE40008FDC6 /* Components */,
+				BB1F1D072687020E00663EEC /* Features */,
 				BB29A3DC26876C420063C1A4 /* Localization */,
+				BB3812562687272B0008FDC6 /* NetworkingLayer */,
 				BB1F1D082687021A00663EEC /* Resources */,
+				DE60B1A026874A1700EB01F8 /* Utils */,
 			);
 			path = "Teacher Workout";
 			sourceTree = "<group>";
@@ -257,14 +258,12 @@
 			isa = PBXGroup;
 			children = (
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
-				DE4B86CA269DBE9600D7636E /* Components */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
 				BB38126A268749730008FDC6 /* Menu */,
 				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
 				BB1F1D092687022A00663EEC /* Splash */,
-				DE60B1A026874A1700EB01F8 /* Utils */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -346,6 +345,8 @@
 		BB38126F26874CE40008FDC6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DE4B86CB269DBEA000D7636E /* Form */,
+				DEDDCCA9269E22A300E64AAE /* General */,
 				BB38127226874D000008FDC6 /* Protocols */,
 			);
 			path = Components;
@@ -441,15 +442,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DE4B86CA269DBE9600D7636E /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				DEDDCCA9269E22A300E64AAE /* General */,
-				DE4B86CB269DBEA000D7636E /* Form */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		DE4B86CB269DBEA000D7636E /* Form */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,7 +484,6 @@
 		DE60B1A026874A1700EB01F8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				DECD7A06269EC14F004FE9E3 /* ViewModifiers */,
 				DEDDCCAC269E273900E64AAE /* Extensions */,
 			);
 			path = Utils;
@@ -633,13 +624,6 @@
 				DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		DECD7A06269EC14F004FE9E3 /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		DECD7A09269EFA60004FE9E3 /* ViewModel */ = {
