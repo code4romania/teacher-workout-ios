@@ -20,7 +20,7 @@ struct SignInFormView: View {
                            showError: $viewModel.showPasswordError)
 
             Button(action: {
-                print("Forgot password")
+                //TODO: Implement forgot password action
             }, label: {
                 VStack {
                     Text(AppStrings.Authentication.signInForgotPasswordLabel.rawValue.localized())
@@ -36,7 +36,7 @@ struct SignInFormView: View {
                     return
                 }
 
-                print("signing in with \(viewModel.email) and password \(viewModel.password)")
+                //TODO: Implement sign in action
 
             }, label: {
                 Text(AppStrings.Authentication.signInButtonTitle.rawValue.localized())
