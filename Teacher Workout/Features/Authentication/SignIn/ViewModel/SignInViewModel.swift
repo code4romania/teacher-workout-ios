@@ -6,7 +6,7 @@ class SignInViewModel: ObservableObject {
     @Published var showEmailError: Bool = false
     @Published var showPasswordError: Bool = false
 
-    let validator = Validator.shared
+    private let validator = Validator.shared
 
     func isValidEmail() -> Bool {
         let validationState = validator.isValidData(data: email, type: .email)
