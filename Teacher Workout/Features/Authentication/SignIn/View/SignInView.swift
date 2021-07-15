@@ -1,13 +1,18 @@
 import SwiftUI
 
+protocol SignInViewDelegate {
+    func signInViewDidTapClose(_ view: SignInView)
+}
+
 struct SignInView: View {
     @ObservedObject var viewModel = SignInViewModel()
+    var delegate: SignInViewDelegate
 
     var body: some View {
         GeometryReader { _ in
             VStack(alignment: .leading) {
                 TrailingCloseButton {
-                    // TODO: add the logic in the coordinator when closing the sign in view to show the onboarding flow
+                    self.delegate.signInViewDidTapClose(self)
                 }
 
                 Text(AppStrings.Authentication.signInIntro.rawValue.localized())
@@ -23,11 +28,5 @@ struct SignInView: View {
         }
         .padding(20)
         .navigationBarHidden(true)
-    }
-}
-
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView()
     }
 }

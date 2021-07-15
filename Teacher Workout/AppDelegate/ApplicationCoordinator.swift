@@ -17,6 +17,7 @@ final class ApplicationCoordinator: NSObject, Coordinator, OnboardingCoordinator
     private func showLandingPage() {
         let landingPageCoordinator = LandingPageCoordinator(navigationController: navigationController)
         addChildCoordinator(landingPageCoordinator)
+        landingPageCoordinator.deleage = self
         landingPageCoordinator.start()
     }
 
@@ -26,8 +27,33 @@ final class ApplicationCoordinator: NSObject, Coordinator, OnboardingCoordinator
         menuCoordinator.start()
     }
 
+    private func showSignInPage() {
+        let coordinator = SignInCoordinator(navigationController: navigationController)
+        addChildCoordinator(coordinator)
+        coordinator.delegate = self
+        coordinator.start()
+    }
+
     func onboardingCoordinatorDidFinish(_ coordinator: OnboardingCoordinator) {
         removeChildCoordinator(coordinator)
         showMenu()
+    }
+}
+
+extension ApplicationCoordinator: LandingPageCoordinatorDelegate {
+    func landingPageCoordinatorShouldPresentSignIn(_ coordinator: LandingPageCoordinator) {
+        removeChildCoordinator(coordinator)
+        showSignInPage()
+    }
+
+    func landingPageCoordinatorShouldPresentSignUp(_ coordinator: LandingPageCoordinator) {
+        removeChildCoordinator(coordinator)
+        showMenu()
+    }
+}
+
+extension ApplicationCoordinator: SignInCoordinatorDelegate {
+    func signInCoordinatorDidClose(_ coordinator: SignInCoordinator) {
+        removeChildCoordinator(coordinator)
     }
 }

@@ -1,6 +1,13 @@
 import SwiftUI
 
+protocol LandingPageViewDelegate {
+    func landingPageViewDidTapSignIn(_ view: LandingPageView)
+    func landingPageViewDidTapSignUp(_ view: LandingPageView)
+}
+
 struct LandingPageView: View {
+    var delegate: LandingPageViewDelegate
+
     var body: some View {
         ZStack {
             Color("emeraldFaded")
@@ -15,13 +22,13 @@ struct LandingPageView: View {
                 Spacer()
                 VStack(spacing: 36) {
                     Button(action: {
-                        // TODO: Implement sign up action
+                        self.delegate.landingPageViewDidTapSignUp(self)
                     }, label: {
                         Text(AppStrings.Authentication.signUpButtonTitle.rawValue.localized())
                             .primaryButtonStyle()
                     })
 
-                    ExistingAccountFooterView()
+                    ExistingAccountFooterView(delegate: self)
                 }
             }
             .padding(.horizontal, 20)
@@ -31,8 +38,8 @@ struct LandingPageView: View {
     }
 }
 
-struct LandingPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        LandingPageView()
+extension LandingPageView: ExistingAccountFooterViewDelegate {
+    func existingAccountFooterViewDidTapSignIn(_: ExistingAccountFooterView) {
+        delegate.landingPageViewDidTapSignIn(self)
     }
 }
