@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CD6268701B400663EEC /* AppDelegate.swift */; };
-		BB1F1CE0268701B500663EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CDF268701B500663EEC /* Assets.xcassets */; };
 		BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CE1268701B500663EEC /* LaunchScreen.storyboard */; };
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
 		BB1F1CF9268701B500663EEC /* Teacher_WorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CF8268701B500663EEC /* Teacher_WorkoutUITests.swift */; };
@@ -794,14 +793,12 @@
 				DE60B1BA268755FB00EB01F8 /* Mulish-LightItalic.ttf in Resources */,
 				DE60B1C3268755FB00EB01F8 /* Mulish-MediumItalic.ttf in Resources */,
 				DE60B1BF268755FB00EB01F8 /* Mulish-Italic.ttf in Resources */,
-				BB1F1CE0268701B500663EEC /* Assets.xcassets in Resources */,
 				DE60B1C6268755FB00EB01F8 /* Mulish-ExtraLight.ttf in Resources */,
 				DE60B1992687376200EB01F8 /* Onboarding.storyboard in Resources */,
 				DE60B1C5268755FB00EB01F8 /* Mulish-Regular.ttf in Resources */,
 				DE60B1BE268755FB00EB01F8 /* Mulish-BoldItalic.ttf in Resources */,
 				DE60B1B8268755FB00EB01F8 /* Mulish-SemiBold.ttf in Resources */,
 				BB29A3E226876C800063C1A4 /* Localizable.strings in Resources */,
-				BB1F1CE0268701B500663EEC /* Assets.xcassets in Resources */,
 				BB381269268739A60008FDC6 /* LessonsQuery.graphql in Resources */,
 				BB38126326872D980008FDC6 /* ThemesQuery.graphql in Resources */,
 			);
