@@ -485,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				DEDDCCAC269E273900E64AAE /* Extensions */,
+				DECD7A0C269F1179004FE9E3 /* Validator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -543,7 +544,6 @@
 				DE943E14269D8C9900DD2EC3 /* SignIn */,
 				DE943E15269D8CA500DD2EC3 /* SignUp */,
 				DE943E20269D8E7D00DD2EC3 /* View */,
-				DECD7A0C269F1179004FE9E3 /* Validator.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
