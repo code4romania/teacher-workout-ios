@@ -66,7 +66,7 @@
 		DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */; };
 		DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */; };
 		DE96A06A26B5454E0071188D /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96A06926B5454E0071188D /* SignUpFormView.swift */; };
-		DE96A06D26B545E40071188D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96A06C26B545E40071188D /* SignUpViewModel.swift */; };
+		DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96A06C26B545E40071188D /* SignUpFormViewModel.swift */; };
 		DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */; };
 		DECD7A0B269EFA70004FE9E3 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7A0A269EFA70004FE9E3 /* SignInViewModel.swift */; };
 		DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7A0C269F1179004FE9E3 /* Validator.swift */; };
@@ -163,7 +163,7 @@
 		DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DE96A06926B5454E0071188D /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
-		DE96A06C26B545E40071188D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		DE96A06C26B545E40071188D /* SignUpFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewModel.swift; sourceTree = "<group>"; };
 		DE9C0A902689CB3E00B6AFA0 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		DECD7A0A269EFA70004FE9E3 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		DECD7A0C269F1179004FE9E3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -649,7 +649,7 @@
 		DE96A06B26B545C60071188D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DE96A06C26B545E40071188D /* SignUpViewModel.swift */,
+				DE96A06C26B545E40071188D /* SignUpFormViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -893,7 +893,7 @@
 				DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */,
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
-				DE96A06D26B545E40071188D /* SignUpViewModel.swift in Sources */,
+				DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
 				DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,

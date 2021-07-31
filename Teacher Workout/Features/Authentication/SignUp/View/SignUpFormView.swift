@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpFormView: View {
-    @ObservedObject var viewModel: SignUpViewModel
+    @StateObject var viewModel = SignUpFormViewModel()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -32,6 +32,8 @@ struct SignUpFormView: View {
                            isSecureField: true,
                            fieldData: $viewModel.confirmPassword,
                            showError: $viewModel.showConfirmPasswordError)
+            
+            
 
             Button(action: {
                 guard viewModel.isValidEmail(),

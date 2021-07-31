@@ -6,7 +6,6 @@ protocol SignUpViewDelegate {
 }
 
 struct SignUpView: View {
-    @StateObject var viewModel = SignUpViewModel()
     var delegate: SignUpViewDelegate
 
     var body: some View {
@@ -15,13 +14,13 @@ struct SignUpView: View {
                 TrailingCloseButton {
                     self.delegate.signUpViewDidTapClose(self)
                 }
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading) {
                         Text("Creează-ți contul")
                             .largeTitleStyle()
                             .padding(.bottom)
 
-                        SignUpFormView(viewModel: viewModel)
+                        SignUpFormView()
 
                         CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
                         ProvidersView()
