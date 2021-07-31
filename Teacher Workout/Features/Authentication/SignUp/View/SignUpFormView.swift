@@ -19,7 +19,7 @@ struct SignUpFormView: View {
                            fieldData: $viewModel.password,
                            showError: $viewModel.showPasswordError)
 
-            InputFieldView(label: "Repeta parola",
+            InputFieldView(label: AppStrings.Authentication.Password.inputConfirmLabel.localized(),
                            iconName: "lock",
                            placeholder: AppStrings.Authentication.Password.inputPlaceholder.rawValue.localized(),
                            isSecureField: true,
@@ -27,7 +27,7 @@ struct SignUpFormView: View {
                            showError: $viewModel.showConfirmPasswordError)
 
             CheckboxFieldView(isSelected: $viewModel.areTermsAndConditionsAccepted,
-                              content: "Sunt de acord cu termenii si conditiile acestei aplicatii GDPR si alte detalii go BRRR and you know it")
+                              content: AppStrings.Authentication.termsAndConditionsLabel.localized())
 
             Button(action: {
                 guard viewModel.isValidEmail(),
@@ -39,7 +39,7 @@ struct SignUpFormView: View {
                 // TODO: Implement sign up action
 
             }, label: {
-                Text("înregistrează-te")
+                Text(AppStrings.Authentication.signUpButtonTitle.localized())
                     .primaryButtonStyle()
             })
         }

@@ -16,7 +16,7 @@ struct SignUpView: View {
                 }
                 ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading) {
-                        Text("Creează-ți contul")
+                        Text(AppStrings.Authentication.signUpIntro.localized())
                             .largeTitleStyle()
                             .padding(.bottom)
 
