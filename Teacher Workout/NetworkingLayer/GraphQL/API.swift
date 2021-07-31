@@ -8,14 +8,20 @@ public final class LessonsQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query Lessons($themeId: ID) {
+    query Lessons($themeId: ID!) {
       lessons(themeId: $themeId) {
         __typename
-        id
-        title
-        duration {
+        edges {
           __typename
-          displayValue
+          node {
+            __typename
+            id
+            title
+            duration {
+              __typename
+              displayValue
+            }
+          }
         }
       }
     }
@@ -23,9 +29,9 @@ public final class LessonsQuery: GraphQLQuery {
 
   public let operationName: String = "Lessons"
 
-  public var themeId: GraphQLID?
+  public var themeId: GraphQLID
 
-  public init(themeId: GraphQLID? = nil) {
+  public init(themeId: GraphQLID) {
     self.themeId = themeId
   }
 
@@ -38,7 +44,7 @@ public final class LessonsQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("lessons", arguments: ["themeId": GraphQLVariable("themeId")], type: .list(.object(Lesson.selections))),
+        GraphQLField("lessons", arguments: ["themeId": GraphQLVariable("themeId")], type: .object(Lesson.selections)),
       ]
     }
 
@@ -48,28 +54,26 @@ public final class LessonsQuery: GraphQLQuery {
       self.resultMap = unsafeResultMap
     }
 
-    public init(lessons: [Lesson?]? = nil) {
-      self.init(unsafeResultMap: ["__typename": "Query", "lessons": lessons.flatMap { (value: [Lesson?]) -> [ResultMap?] in value.map { (value: Lesson?) -> ResultMap? in value.flatMap { (value: Lesson) -> ResultMap in value.resultMap } } }])
+    public init(lessons: Lesson? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "lessons": lessons.flatMap { (value: Lesson) -> ResultMap in value.resultMap }])
     }
 
-    public var lessons: [Lesson?]? {
+    public var lessons: Lesson? {
       get {
-        return (resultMap["lessons"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Lesson?] in value.map { (value: ResultMap?) -> Lesson? in value.flatMap { (value: ResultMap) -> Lesson in Lesson(unsafeResultMap: value) } } }
+        return (resultMap["lessons"] as? ResultMap).flatMap { Lesson(unsafeResultMap: $0) }
       }
       set {
-        resultMap.updateValue(newValue.flatMap { (value: [Lesson?]) -> [ResultMap?] in value.map { (value: Lesson?) -> ResultMap? in value.flatMap { (value: Lesson) -> ResultMap in value.resultMap } } }, forKey: "lessons")
+        resultMap.updateValue(newValue?.resultMap, forKey: "lessons")
       }
     }
 
     public struct Lesson: GraphQLSelectionSet {
-      public static let possibleTypes: [String] = ["Lesson"]
+      public static let possibleTypes: [String] = ["LessonConnection"]
 
       public static var selections: [GraphQLSelection] {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("id", type: .scalar(GraphQLID.self)),
-          GraphQLField("title", type: .nonNull(.scalar(String.self))),
-          GraphQLField("duration", type: .nonNull(.object(Duration.selections))),
+          GraphQLField("edges", type: .list(.object(Edge.selections))),
         ]
       }
 
@@ -79,8 +83,8 @@ public final class LessonsQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(id: GraphQLID? = nil, title: String, duration: Duration) {
-        self.init(unsafeResultMap: ["__typename": "Lesson", "id": id, "title": title, "duration": duration.resultMap])
+      public init(edges: [Edge?]? = nil) {
+        self.init(unsafeResultMap: ["__typename": "LessonConnection", "edges": edges.flatMap { (value: [Edge?]) -> [ResultMap?] in value.map { (value: Edge?) -> ResultMap? in value.flatMap { (value: Edge) -> ResultMap in value.resultMap } } }])
       }
 
       public var __typename: String {
@@ -92,42 +96,23 @@ public final class LessonsQuery: GraphQLQuery {
         }
       }
 
-      public var id: GraphQLID? {
+      /// A list of all of the edges returned in the connection.
+      public var edges: [Edge?]? {
         get {
-          return resultMap["id"] as? GraphQLID
+          return (resultMap["edges"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Edge?] in value.map { (value: ResultMap?) -> Edge? in value.flatMap { (value: ResultMap) -> Edge in Edge(unsafeResultMap: value) } } }
         }
         set {
-          resultMap.updateValue(newValue, forKey: "id")
+          resultMap.updateValue(newValue.flatMap { (value: [Edge?]) -> [ResultMap?] in value.map { (value: Edge?) -> ResultMap? in value.flatMap { (value: Edge) -> ResultMap in value.resultMap } } }, forKey: "edges")
         }
       }
 
-      /// The title of the Lesson
-      public var title: String {
-        get {
-          return resultMap["title"]! as! String
-        }
-        set {
-          resultMap.updateValue(newValue, forKey: "title")
-        }
-      }
-
-      /// The duration of the Lesson
-      public var duration: Duration {
-        get {
-          return Duration(unsafeResultMap: resultMap["duration"]! as! ResultMap)
-        }
-        set {
-          resultMap.updateValue(newValue.resultMap, forKey: "duration")
-        }
-      }
-
-      public struct Duration: GraphQLSelectionSet {
-        public static let possibleTypes: [String] = ["Duration"]
+      public struct Edge: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["LessonEdge"]
 
         public static var selections: [GraphQLSelection] {
           return [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-            GraphQLField("displayValue", type: .nonNull(.scalar(String.self))),
+            GraphQLField("node", type: .nonNull(.object(Node.selections))),
           ]
         }
 
@@ -137,8 +122,8 @@ public final class LessonsQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(displayValue: String) {
-          self.init(unsafeResultMap: ["__typename": "Duration", "displayValue": displayValue])
+        public init(node: Node) {
+          self.init(unsafeResultMap: ["__typename": "LessonEdge", "node": node.resultMap])
         }
 
         public var __typename: String {
@@ -150,13 +135,114 @@ public final class LessonsQuery: GraphQLQuery {
           }
         }
 
-        /// Formatted duration.
-        public var displayValue: String {
+        /// The item at the end of the edge
+        public var node: Node {
           get {
-            return resultMap["displayValue"]! as! String
+            return Node(unsafeResultMap: resultMap["node"]! as! ResultMap)
           }
           set {
-            resultMap.updateValue(newValue, forKey: "displayValue")
+            resultMap.updateValue(newValue.resultMap, forKey: "node")
+          }
+        }
+
+        public struct Node: GraphQLSelectionSet {
+          public static let possibleTypes: [String] = ["Lesson"]
+
+          public static var selections: [GraphQLSelection] {
+            return [
+              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("id", type: .scalar(GraphQLID.self)),
+              GraphQLField("title", type: .nonNull(.scalar(String.self))),
+              GraphQLField("duration", type: .nonNull(.object(Duration.selections))),
+            ]
+          }
+
+          public private(set) var resultMap: ResultMap
+
+          public init(unsafeResultMap: ResultMap) {
+            self.resultMap = unsafeResultMap
+          }
+
+          public init(id: GraphQLID? = nil, title: String, duration: Duration) {
+            self.init(unsafeResultMap: ["__typename": "Lesson", "id": id, "title": title, "duration": duration.resultMap])
+          }
+
+          public var __typename: String {
+            get {
+              return resultMap["__typename"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var id: GraphQLID? {
+            get {
+              return resultMap["id"] as? GraphQLID
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "id")
+            }
+          }
+
+          /// The title of the Lesson
+          public var title: String {
+            get {
+              return resultMap["title"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "title")
+            }
+          }
+
+          /// The duration of the Lesson
+          public var duration: Duration {
+            get {
+              return Duration(unsafeResultMap: resultMap["duration"]! as! ResultMap)
+            }
+            set {
+              resultMap.updateValue(newValue.resultMap, forKey: "duration")
+            }
+          }
+
+          public struct Duration: GraphQLSelectionSet {
+            public static let possibleTypes: [String] = ["Duration"]
+
+            public static var selections: [GraphQLSelection] {
+              return [
+                GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                GraphQLField("displayValue", type: .nonNull(.scalar(String.self))),
+              ]
+            }
+
+            public private(set) var resultMap: ResultMap
+
+            public init(unsafeResultMap: ResultMap) {
+              self.resultMap = unsafeResultMap
+            }
+
+            public init(displayValue: String) {
+              self.init(unsafeResultMap: ["__typename": "Duration", "displayValue": displayValue])
+            }
+
+            public var __typename: String {
+              get {
+                return resultMap["__typename"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "__typename")
+              }
+            }
+
+            /// Formatted duration.
+            public var displayValue: String {
+              get {
+                return resultMap["displayValue"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "displayValue")
+              }
+            }
           }
         }
       }
@@ -171,8 +257,14 @@ public final class ThemesQueryQuery: GraphQLQuery {
     query ThemesQuery {
       themes {
         __typename
-        id
-        title
+        edges {
+          __typename
+          node {
+            __typename
+            id
+            title
+          }
+        }
       }
     }
     """
@@ -187,7 +279,7 @@ public final class ThemesQueryQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("themes", type: .list(.object(Theme.selections))),
+        GraphQLField("themes", type: .object(Theme.selections)),
       ]
     }
 
@@ -197,27 +289,26 @@ public final class ThemesQueryQuery: GraphQLQuery {
       self.resultMap = unsafeResultMap
     }
 
-    public init(themes: [Theme?]? = nil) {
-      self.init(unsafeResultMap: ["__typename": "Query", "themes": themes.flatMap { (value: [Theme?]) -> [ResultMap?] in value.map { (value: Theme?) -> ResultMap? in value.flatMap { (value: Theme) -> ResultMap in value.resultMap } } }])
+    public init(themes: Theme? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "themes": themes.flatMap { (value: Theme) -> ResultMap in value.resultMap }])
     }
 
-    public var themes: [Theme?]? {
+    public var themes: Theme? {
       get {
-        return (resultMap["themes"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Theme?] in value.map { (value: ResultMap?) -> Theme? in value.flatMap { (value: ResultMap) -> Theme in Theme(unsafeResultMap: value) } } }
+        return (resultMap["themes"] as? ResultMap).flatMap { Theme(unsafeResultMap: $0) }
       }
       set {
-        resultMap.updateValue(newValue.flatMap { (value: [Theme?]) -> [ResultMap?] in value.map { (value: Theme?) -> ResultMap? in value.flatMap { (value: Theme) -> ResultMap in value.resultMap } } }, forKey: "themes")
+        resultMap.updateValue(newValue?.resultMap, forKey: "themes")
       }
     }
 
     public struct Theme: GraphQLSelectionSet {
-      public static let possibleTypes: [String] = ["Theme"]
+      public static let possibleTypes: [String] = ["ThemeConnection"]
 
       public static var selections: [GraphQLSelection] {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("id", type: .scalar(GraphQLID.self)),
-          GraphQLField("title", type: .nonNull(.scalar(String.self))),
+          GraphQLField("edges", type: .list(.object(Edge.selections))),
         ]
       }
 
@@ -227,8 +318,8 @@ public final class ThemesQueryQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(id: GraphQLID? = nil, title: String) {
-        self.init(unsafeResultMap: ["__typename": "Theme", "id": id, "title": title])
+      public init(edges: [Edge?]? = nil) {
+        self.init(unsafeResultMap: ["__typename": "ThemeConnection", "edges": edges.flatMap { (value: [Edge?]) -> [ResultMap?] in value.map { (value: Edge?) -> ResultMap? in value.flatMap { (value: Edge) -> ResultMap in value.resultMap } } }])
       }
 
       public var __typename: String {
@@ -240,22 +331,103 @@ public final class ThemesQueryQuery: GraphQLQuery {
         }
       }
 
-      public var id: GraphQLID? {
+      /// A list of all of the edges returned in the connection.
+      public var edges: [Edge?]? {
         get {
-          return resultMap["id"] as? GraphQLID
+          return (resultMap["edges"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Edge?] in value.map { (value: ResultMap?) -> Edge? in value.flatMap { (value: ResultMap) -> Edge in Edge(unsafeResultMap: value) } } }
         }
         set {
-          resultMap.updateValue(newValue, forKey: "id")
+          resultMap.updateValue(newValue.flatMap { (value: [Edge?]) -> [ResultMap?] in value.map { (value: Edge?) -> ResultMap? in value.flatMap { (value: Edge) -> ResultMap in value.resultMap } } }, forKey: "edges")
         }
       }
 
-      /// The title of the Theme
-      public var title: String {
-        get {
-          return resultMap["title"]! as! String
+      public struct Edge: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["ThemeEdge"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("node", type: .nonNull(.object(Node.selections))),
+          ]
         }
-        set {
-          resultMap.updateValue(newValue, forKey: "title")
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(node: Node) {
+          self.init(unsafeResultMap: ["__typename": "ThemeEdge", "node": node.resultMap])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        /// The item at the end of the edge
+        public var node: Node {
+          get {
+            return Node(unsafeResultMap: resultMap["node"]! as! ResultMap)
+          }
+          set {
+            resultMap.updateValue(newValue.resultMap, forKey: "node")
+          }
+        }
+
+        public struct Node: GraphQLSelectionSet {
+          public static let possibleTypes: [String] = ["Theme"]
+
+          public static var selections: [GraphQLSelection] {
+            return [
+              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("id", type: .scalar(GraphQLID.self)),
+              GraphQLField("title", type: .nonNull(.scalar(String.self))),
+            ]
+          }
+
+          public private(set) var resultMap: ResultMap
+
+          public init(unsafeResultMap: ResultMap) {
+            self.resultMap = unsafeResultMap
+          }
+
+          public init(id: GraphQLID? = nil, title: String) {
+            self.init(unsafeResultMap: ["__typename": "Theme", "id": id, "title": title])
+          }
+
+          public var __typename: String {
+            get {
+              return resultMap["__typename"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var id: GraphQLID? {
+            get {
+              return resultMap["id"] as? GraphQLID
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "id")
+            }
+          }
+
+          /// The title of the Theme
+          public var title: String {
+            get {
+              return resultMap["title"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "title")
+            }
+          }
         }
       }
     }

@@ -1,9 +1,13 @@
-query Lessons($themeId: ID) {
+query Lessons($themeId: ID!) {
   lessons(themeId: $themeId) {
-    id,
-    title,
-    duration {
-      displayValue
+   edges {
+      node {
+        id,
+        title,
+        duration {
+            displayValue
+            }
+        }
     }
   }
 }

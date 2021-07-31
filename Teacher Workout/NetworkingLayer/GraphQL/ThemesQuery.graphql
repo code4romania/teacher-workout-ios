@@ -1,6 +1,10 @@
 query ThemesQuery {
   themes {
-    id,
-    title,
+     edges {
+      node {
+        id,
+        title
+      }
+    }
   }
 }
