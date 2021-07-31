@@ -7,6 +7,7 @@ class SignUpFormViewModel: ObservableObject {
     @Published var showEmailError: Bool = false
     @Published var showPasswordError: Bool = false
     @Published var showConfirmPasswordError: Bool = false
+    @Published var areTermsAndConditionsAccepted: Bool = false
 
     private let validator = Validator.shared
 
@@ -21,4 +22,6 @@ class SignUpFormViewModel: ObservableObject {
         showPasswordError = !validationState
         return validationState
     }
+
+    // TODO: Validate confirm password
 }

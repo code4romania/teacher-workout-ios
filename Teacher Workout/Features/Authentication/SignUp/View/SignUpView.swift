@@ -25,12 +25,12 @@ struct SignUpView: View {
                         CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
                         ProvidersView()
                             .padding(.bottom, 20)
-                        ExistingAccountFooterView(delegate: self)
                     }
                 }
             }
         }
         .padding(20)
+        .ignoresSafeArea(.container, edges: .bottom)
         .navigationBarHidden(true)
     }
 }

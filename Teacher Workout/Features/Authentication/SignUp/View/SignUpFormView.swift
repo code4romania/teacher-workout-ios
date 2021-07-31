@@ -1,10 +1,3 @@
-//
-//  SignUpFormView.swift
-//  Teacher Workout
-//
-//  Created by Vlad Stanescu on 31.07.2021.
-//
-
 import SwiftUI
 
 struct SignUpFormView: View {
@@ -32,8 +25,8 @@ struct SignUpFormView: View {
                            isSecureField: true,
                            fieldData: $viewModel.confirmPassword,
                            showError: $viewModel.showConfirmPasswordError)
-            
-            
+
+            CheckboxFieldView(isSelected: $viewModel.areTermsAndConditionsAccepted)
 
             Button(action: {
                 guard viewModel.isValidEmail(),
