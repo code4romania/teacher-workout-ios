@@ -26,7 +26,8 @@ struct SignUpFormView: View {
                            fieldData: $viewModel.confirmPassword,
                            showError: $viewModel.showConfirmPasswordError)
 
-            CheckboxFieldView(isSelected: $viewModel.areTermsAndConditionsAccepted)
+            CheckboxFieldView(isSelected: $viewModel.areTermsAndConditionsAccepted,
+                              content: "Sunt de acord cu termenii si conditiile acestei aplicatii GDPR si alte detalii go BRRR and you know it")
 
             Button(action: {
                 guard viewModel.isValidEmail(),

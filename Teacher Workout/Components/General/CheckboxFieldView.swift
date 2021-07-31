@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CheckboxFieldView: View {
     @Binding var isSelected: Bool
+    var content: String
 
     var body: some View {
         HStack(spacing: 12) {
@@ -10,7 +11,7 @@ struct CheckboxFieldView: View {
                 .foregroundColor(isSelected ? .accentColor : .gray)
 
             // TODO: Add link to terms and conditions
-            Text("Sunt de acord cu termenii si conditiile acestei aplicatii GDPR si alte detalii go BRRR and you know it")
+            Text(content)
         }
         .padding(.horizontal, 4)
         .onTapGesture {
