@@ -25,6 +25,7 @@ struct SignUpView: View {
                         CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
                         ProvidersView()
                             .padding(.bottom, 20)
+                        ExistingAccountFooterView(delegate: self)
                     }
                 }
             }
