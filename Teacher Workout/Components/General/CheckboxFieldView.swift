@@ -1,10 +1,3 @@
-//
-//  SwiftUIView.swift
-//  Teacher Workout
-//
-//  Created by Vlad Stanescu on 31.07.2021.
-//
-
 import SwiftUI
 
 struct CheckboxFieldView: View {
