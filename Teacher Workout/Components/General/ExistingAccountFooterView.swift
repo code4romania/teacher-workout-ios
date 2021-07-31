@@ -20,5 +20,6 @@ struct ExistingAccountFooterView: View {
                     .font(Font.custom("Mulish-Bold", size: 16))
             })
         }
+        .frame(maxWidth: .infinity, alignment: .center)
     }
 }
