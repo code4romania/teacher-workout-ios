@@ -69,4 +69,8 @@ extension ApplicationCoordinator: SignUpCoordinatorDelegate {
     func signUpCoordinatorDidClose(_ coordinator: SignUpCoordinator) {
         removeChildCoordinator(coordinator)
     }
+
+    func signUpCoordinatorDidTapHaveAccount(_: SignUpCoordinator) {
+        showSignInPage()
+    }
 }
