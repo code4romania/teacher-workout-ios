@@ -22,7 +22,7 @@
 
 "Authentication.alreadyHaveAccountLabel" = "Ai deja cont?";
 
-"Authentication.termsAndConditionsLabel" = "Sunt de acord cu termenii si conditiile acestei aplicatii GDPR si alte detalii go BRRR and you know it";
+"Authentication.termsAndConditionsLabel" = "Sunt de acord cu termenii și condițiile acestei aplicații GDPR și alte detalii";
 
 "Authentication.Email.inputLabel" = "Email";
 
@@ -31,6 +31,7 @@
 "Authentication.Email.invalidEmailMessage" = "Adresa de e-mail introdusă este invalidă.";
 
 "Authentication.Password.inputLabel" = "Parola";
-"Authentication.Password.inputConfirmLabel" = "Repeta parola";
+
+"Authentication.Password.inputConfirmLabel" = "Repetă parola";
 
 "Authentication.Password.inputPlaceholder" = "parola";
