@@ -4,6 +4,7 @@ import UIKit
 
 protocol SignInCoordinatorDelegate: AnyObject {
     func signInCoordinatorDidClose(_ coordinator: SignInCoordinator)
+    func signInCoordinatorDidTapSignIn(_ coordinator: SignInCoordinator)
 }
 
 final class SignInCoordinator: NSObject, Coordinator {
@@ -27,5 +28,11 @@ extension SignInCoordinator: SignInViewDelegate {
     func signInViewDidTapClose(_: SignInView) {
         navigationController.dismiss(animated: true)
         delegate?.signInCoordinatorDidClose(self)
+    }
+
+    func signInViewDidTapSignIn(_: SignInView) {
+        navigationController.dismiss(animated: true)
+        delegate?.signInCoordinatorDidClose(self)
+        delegate?.signInCoordinatorDidTapSignIn(self)
     }
 }

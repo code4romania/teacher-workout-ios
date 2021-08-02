@@ -2,6 +2,7 @@ import SwiftUI
 
 protocol SignInViewDelegate {
     func signInViewDidTapClose(_ view: SignInView)
+    func signInViewDidTapSignIn(_ view: SignInView)
 }
 
 struct SignInView: View {
@@ -19,7 +20,7 @@ struct SignInView: View {
                     .largeTitleStyle()
                     .padding(.bottom)
 
-                SignInFormView(viewModel: viewModel)
+                SignInFormView(viewModel: viewModel, delegate: self)
 
                 CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
                 ProvidersView()
@@ -28,5 +29,11 @@ struct SignInView: View {
         }
         .padding(20)
         .navigationBarHidden(true)
+    }
+}
+
+extension SignInView: SignInFormViewDelegate {
+    func signInFormViewDidTapSignIn(_: SignInFormView) {
+        delegate.signInViewDidTapSignIn(self)
     }
 }

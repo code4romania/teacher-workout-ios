@@ -1,7 +1,12 @@
 import SwiftUI
 
+protocol SignInFormViewDelegate {
+    func signInFormViewDidTapSignIn(_ view: SignInFormView)
+}
+
 struct SignInFormView: View {
     @ObservedObject var viewModel: SignInViewModel
+    var delegate: SignInFormViewDelegate
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -37,19 +42,12 @@ struct SignInFormView: View {
                 }
 
                 // TODO: Implement sign in action
+                self.delegate.signInFormViewDidTapSignIn(self)
 
             }, label: {
                 Text(AppStrings.Authentication.signInButtonTitle.rawValue.localized())
                     .primaryButtonStyle()
             })
         }
-    }
-}
-
-struct SignInFormView_Previews: PreviewProvider {
-    @StateObject static var viewModel = SignInViewModel()
-
-    static var previews: some View {
-        SignInFormView(viewModel: viewModel)
     }
 }

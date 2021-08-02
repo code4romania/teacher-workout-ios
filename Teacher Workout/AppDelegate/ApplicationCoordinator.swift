@@ -63,6 +63,10 @@ extension ApplicationCoordinator: SignInCoordinatorDelegate {
     func signInCoordinatorDidClose(_ coordinator: SignInCoordinator) {
         removeChildCoordinator(coordinator)
     }
+
+    func signInCoordinatorDidTapSignIn(_: SignInCoordinator) {
+        showMenu()
+    }
 }
 
 extension ApplicationCoordinator: SignUpCoordinatorDelegate {
