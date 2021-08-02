@@ -1,7 +1,12 @@
 import SwiftUI
 
+protocol SignUpFormViewDelegate {
+    func signUpFormViewDidTapSignUp(_ view: SignUpFormView)
+}
+
 struct SignUpFormView: View {
     @StateObject var viewModel = SignUpFormViewModel()
+    var delegate: SignUpFormViewDelegate
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -34,12 +39,14 @@ struct SignUpFormView: View {
 
             Button(action: {
                 guard viewModel.isValidEmail(),
-                      viewModel.isValidPassword()
+                      viewModel.isValidPassword(),
+                      viewModel.areTermsAndConditionsAccepted
                 else {
                     return
                 }
 
                 // TODO: Implement sign up action
+                self.delegate.signUpFormViewDidTapSignUp(self)
 
             }, label: {
                 Text(AppStrings.Authentication.signUpButtonTitle.localized())

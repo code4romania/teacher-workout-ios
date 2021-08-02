@@ -3,6 +3,7 @@ import SwiftUI
 protocol SignUpViewDelegate {
     func signUpViewDidTapClose(_ view: SignUpView)
     func signUpViewDidTapHaveAccount(_ view: SignUpView)
+    func signUpViewDidTapSignUp(_ view: SignUpView)
 }
 
 struct SignUpView: View {
@@ -20,7 +21,7 @@ struct SignUpView: View {
                             .largeTitleStyle()
                             .padding(.bottom)
 
-                        SignUpFormView()
+                        SignUpFormView(delegate: self)
 
                         CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
                         ProvidersView()
@@ -39,5 +40,11 @@ struct SignUpView: View {
 extension SignUpView: ExistingAccountFooterViewDelegate {
     func existingAccountFooterViewDidTapSignIn(_: ExistingAccountFooterView) {
         delegate.signUpViewDidTapHaveAccount(self)
+    }
+}
+
+extension SignUpView: SignUpFormViewDelegate {
+    func signUpFormViewDidTapSignUp(_: SignUpFormView) {
+        delegate.signUpViewDidTapSignUp(self)
     }
 }

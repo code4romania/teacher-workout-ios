@@ -5,6 +5,7 @@ import UIKit
 protocol SignUpCoordinatorDelegate: AnyObject {
     func signUpCoordinatorDidClose(_ coordinator: SignUpCoordinator)
     func signUpCoordinatorDidTapHaveAccount(_ coordinator: SignUpCoordinator)
+    func signUpCoordinatorDidTapSignUp(_ coordinator: SignUpCoordinator)
 }
 
 final class SignUpCoordinator: NSObject, Coordinator {
@@ -34,5 +35,11 @@ extension SignUpCoordinator: SignUpViewDelegate {
         navigationController.dismiss(animated: true)
         delegate?.signUpCoordinatorDidClose(self)
         delegate?.signUpCoordinatorDidTapHaveAccount(self)
+    }
+
+    func signUpViewDidTapSignUp(_: SignUpView) {
+        navigationController.dismiss(animated: true)
+        delegate?.signUpCoordinatorDidClose(self)
+        delegate?.signUpCoordinatorDidTapSignUp(self)
     }
 }

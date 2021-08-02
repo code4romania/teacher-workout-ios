@@ -73,4 +73,8 @@ extension ApplicationCoordinator: SignUpCoordinatorDelegate {
     func signUpCoordinatorDidTapHaveAccount(_: SignUpCoordinator) {
         showSignInPage()
     }
+
+    func signUpCoordinatorDidTapSignUp(_: SignUpCoordinator) {
+        showMenu()
+    }
 }

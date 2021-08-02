@@ -18,10 +18,11 @@ class SignUpFormViewModel: ObservableObject {
     }
 
     func isValidPassword() -> Bool {
-        let validationState = validator.isValidData(data: password, type: .password)
-        showPasswordError = !validationState
-        return validationState
-    }
+        let isValidPassword = validator.isValidData(data: password, type: .password)
+        let areSamePasswords = validator.isSameData(first: password, second: confirmPassword)
 
-    // TODO: Validate confirm password
+        showPasswordError = !isValidPassword
+        showConfirmPasswordError = !areSamePasswords
+        return isValidPassword && areSamePasswords
+    }
 }
