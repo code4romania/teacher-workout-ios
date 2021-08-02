@@ -26,8 +26,11 @@ struct SignUpFormView: View {
                            fieldData: $viewModel.confirmPassword,
                            showError: $viewModel.showConfirmPasswordError)
 
-            CheckboxFieldView(isSelected: $viewModel.areTermsAndConditionsAccepted,
-                              content: AppStrings.Authentication.termsAndConditionsLabel.localized())
+            CheckboxFieldView(isSelected: $viewModel.areTermsAndConditionsAccepted) {
+                // TODO: Add link to terms and conditions
+                Text(AppStrings.Authentication.termsAndConditionsLabel.localized())
+                    .fixedSize(horizontal: false, vertical: true)
+            }
 
             Button(action: {
                 guard viewModel.isValidEmail(),
