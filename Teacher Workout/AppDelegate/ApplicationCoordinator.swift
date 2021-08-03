@@ -64,7 +64,8 @@ extension ApplicationCoordinator: SignInCoordinatorDelegate {
         removeChildCoordinator(coordinator)
     }
 
-    func signInCoordinatorDidTapSignIn(_: SignInCoordinator) {
+    func signInCoordinatorDidTapSignIn(_ coordinator: SignInCoordinator) {
+        removeChildCoordinator(coordinator)
         showMenu()
     }
 }
@@ -74,11 +75,13 @@ extension ApplicationCoordinator: SignUpCoordinatorDelegate {
         removeChildCoordinator(coordinator)
     }
 
-    func signUpCoordinatorDidTapHaveAccount(_: SignUpCoordinator) {
+    func signUpCoordinatorDidTapHaveAccount(_ coordinator: SignUpCoordinator) {
+        removeChildCoordinator(coordinator)
         showSignInPage()
     }
 
-    func signUpCoordinatorDidTapSignUp(_: SignUpCoordinator) {
+    func signUpCoordinatorDidTapSignUp(_ coordinator: SignUpCoordinator) {
+        removeChildCoordinator(coordinator)
         showMenu()
     }
 }

@@ -33,13 +33,11 @@ extension SignUpCoordinator: SignUpViewDelegate {
 
     func signUpViewDidTapHaveAccount(_: SignUpView) {
         navigationController.dismiss(animated: true)
-        delegate?.signUpCoordinatorDidClose(self)
         delegate?.signUpCoordinatorDidTapHaveAccount(self)
     }
 
     func signUpViewDidTapSignUp(_: SignUpView) {
         navigationController.dismiss(animated: true)
-        delegate?.signUpCoordinatorDidClose(self)
         delegate?.signUpCoordinatorDidTapSignUp(self)
     }
 }

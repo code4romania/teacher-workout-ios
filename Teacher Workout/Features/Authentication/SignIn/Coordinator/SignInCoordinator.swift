@@ -32,7 +32,6 @@ extension SignInCoordinator: SignInViewDelegate {
 
     func signInViewDidTapSignIn(_: SignInView) {
         navigationController.dismiss(animated: true)
-        delegate?.signInCoordinatorDidClose(self)
         delegate?.signInCoordinatorDidTapSignIn(self)
     }
 }
