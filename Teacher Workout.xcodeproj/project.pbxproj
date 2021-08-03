@@ -30,6 +30,7 @@
 		BB381280268751940008FDC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127F268751940008FDC6 /* HomeViewController.swift */; };
 		BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381283268751CD0008FDC6 /* ProfileViewController.swift */; };
 		BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */; };
+		BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990B26B9DD35007B44F9 /* SearchBar.swift */; };
 		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
 		BBC3A21626B54418009C6DDE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21426B54418009C6DDE /* APIError.swift */; };
 		BBC3A21726B54418009C6DDE /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21526B54418009C6DDE /* NetworkingConstants.swift */; };
@@ -134,6 +135,7 @@
 		BB38127F268751940008FDC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB381283268751CD0008FDC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
+		BB6E990B26B9DD35007B44F9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		BB7699AB26875430009DF26F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BBC3A21426B54418009C6DDE /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		BBC3A21526B54418009C6DDE /* NetworkingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 				DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */,
 				DE85640526A05AA2004A83BF /* ExistingAccountFooterView.swift */,
 				BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */,
+				BB6E990B26B9DD35007B44F9 /* SearchBar.swift */,
 				DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */,
 			);
 			path = General;
@@ -949,6 +952,7 @@
 				DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */,
 				BBC3A22026B545E6009C6DDE /* ThemesNode.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
+				BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */,
 				DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,

@@ -39,3 +39,7 @@
 "Discover.navigationTitle" = "Discover lessons";
 
 "Discover.listDescription" = "Lesson categories";
+
+"Search.placeholder" = "Find a topic";
+
+"Search.cancelButton" = "Cancel";

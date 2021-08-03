@@ -39,3 +39,7 @@
 "Discover.navigationTitle" = "Descoperă lecțiile";
 
 "Discover.listDescription" = "Categorii de lecții";
+
+"Search.placeholder" = "Caută un subiect";
+
+"Search.cancelButton" = "Anulează";
