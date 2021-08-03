@@ -12,6 +12,8 @@
 
 "Authentication.signInIntro" = "Autentifică-te";
 
+"Authentication.signUpIntro" = "Creează-ți contul";
+
 "Authentication.signInForgotPasswordLabel" = "Ți-ai uitat parola?";
 
 "Authentication.signInButtonTitle" = "Autentifică-te";
@@ -20,6 +22,8 @@
 
 "Authentication.alreadyHaveAccountLabel" = "Ai deja cont?";
 
+"Authentication.termsAndConditionsLabel" = "Sunt de acord cu termenii și condițiile acestei aplicații GDPR și alte detalii";
+
 "Authentication.Email.inputLabel" = "Email";
 
 "Authentication.Email.inputPlaceholder" = "name@email.com";
@@ -27,5 +31,7 @@
 "Authentication.Email.invalidEmailMessage" = "Adresa de e-mail introdusă este invalidă.";
 
 "Authentication.Password.inputLabel" = "Parola";
+
+"Authentication.Password.inputConfirmLabel" = "Repetă parola";
 
 "Authentication.Password.inputPlaceholder" = "parola";

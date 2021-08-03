@@ -12,6 +12,8 @@
 
 "Authentication.signInIntro" = "Sign In";
 
+"Authentication.signUpIntro" = "Sign Up";
+
 "Authentication.signInForgotPasswordLabel" = "Forgot password?";
 
 "Authentication.signInButtonTitle" = "Sign In";
@@ -20,6 +22,8 @@
 
 "Authentication.alreadyHaveAccountLabel" = "Already have an account?";
 
+"Authentication.termsAndConditionsLabel" = "I agree with the terms and conditions";
+
 "Authentication.Email.inputLabel" = "Email";
 
 "Authentication.Email.inputPlaceholder" = "name@email.com";
@@ -27,5 +31,7 @@
 "Authentication.Email.invalidEmailMessage" = "Invalid email address.";
 
 "Authentication.Password.inputLabel" = "Password";
+
+"Authentication.Password.inputConfirmLabel" = "Repeat Password";
 
 "Authentication.Password.inputPlaceholder" = "password";

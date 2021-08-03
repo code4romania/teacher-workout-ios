@@ -1,14 +1,50 @@
 import SwiftUI
 
+protocol SignUpViewDelegate {
+    func signUpViewDidTapClose(_ view: SignUpView)
+    func signUpViewDidTapHaveAccount(_ view: SignUpView)
+    func signUpViewDidTapSignUp(_ view: SignUpView)
+}
+
 struct SignUpView: View {
+    var delegate: SignUpViewDelegate
+
     var body: some View {
-        Text("Sign Up")
-            .navigationBarHidden(true)
+        GeometryReader { _ in
+            VStack {
+                TrailingCloseButton {
+                    self.delegate.signUpViewDidTapClose(self)
+                }
+                ScrollView(showsIndicators: false) {
+                    VStack(alignment: .leading) {
+                        Text(AppStrings.Authentication.signUpIntro.localized())
+                            .largeTitleStyle()
+                            .padding(.bottom)
+
+                        SignUpFormView(delegate: self)
+
+                        CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
+                        ProvidersView()
+                            .padding(.bottom, 20)
+                        ExistingAccountFooterView(delegate: self)
+                    }
+                }
+            }
+        }
+        .padding(20)
+        .ignoresSafeArea(.container, edges: .bottom)
+        .navigationBarHidden(true)
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUpView()
+extension SignUpView: ExistingAccountFooterViewDelegate {
+    func existingAccountFooterViewDidTapSignIn(_: ExistingAccountFooterView) {
+        delegate.signUpViewDidTapHaveAccount(self)
+    }
+}
+
+extension SignUpView: SignUpFormViewDelegate {
+    func signUpFormViewDidTapSignUp(_: SignUpFormView) {
+        delegate.signUpViewDidTapSignUp(self)
     }
 }

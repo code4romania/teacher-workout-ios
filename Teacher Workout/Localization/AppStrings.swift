@@ -37,10 +37,12 @@ enum AppStrings: String, Localizable {
 
     enum Authentication: String, Localizable {
         case signInIntro = "Authentication.signInIntro"
+        case signUpIntro = "Authentication.signUpIntro"
         case signInForgotPasswordLabel = "Authentication.signInForgotPasswordLabel"
         case signInButtonTitle = "Authentication.signInButtonTitle"
         case signUpButtonTitle = "Authentication.signUpButtonTitle"
         case alreadyHaveAccountLabel = "Authentication.alreadyHaveAccountLabel"
+        case termsAndConditionsLabel = "Authentication.termsAndConditionsLabel"
 
         enum Email: String, Localizable {
             case inputLabel = "Authentication.Email.inputLabel"
@@ -50,6 +52,7 @@ enum AppStrings: String, Localizable {
 
         enum Password: String, Localizable {
             case inputLabel = "Authentication.Password.inputLabel"
+            case inputConfirmLabel = "Authentication.Password.inputConfirmLabel"
             case inputPlaceholder = "Authentication.Password.inputPlaceholder"
         }
     }

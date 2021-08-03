@@ -11,7 +11,7 @@ final class LandingPageCoordinator: NSObject, Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
 
-    weak var deleage: LandingPageCoordinatorDelegate?
+    weak var delegate: LandingPageCoordinatorDelegate?
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -26,10 +26,10 @@ final class LandingPageCoordinator: NSObject, Coordinator {
 
 extension LandingPageCoordinator: LandingPageViewDelegate {
     func landingPageViewDidTapSignIn(_: LandingPageView) {
-        deleage?.landingPageCoordinatorShouldPresentSignIn(self)
+        delegate?.landingPageCoordinatorShouldPresentSignIn(self)
     }
 
     func landingPageViewDidTapSignUp(_: LandingPageView) {
-        deleage?.landingPageCoordinatorShouldPresentSignUp(self)
+        delegate?.landingPageCoordinatorShouldPresentSignUp(self)
     }
 }
