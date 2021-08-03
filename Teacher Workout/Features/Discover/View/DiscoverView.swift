@@ -5,14 +5,16 @@ struct DiscoverView: View {
 
     var body: some View {
         ScrollView {
+            ListHeaderView(label: AppStrings.Discover.listDescription.localized())
+
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                 ForEach(viewModel.themes) { theme in
                     ThemeItemCell(item: theme)
                         .frame(height: 57)
                 }
-            }.padding(.horizontal, 16)
-                .padding(.top, 16)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .navigationBarTitle(AppStrings.Discover.navigationTitle.localized(),
                             displayMode: .large)

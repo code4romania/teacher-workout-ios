@@ -59,5 +59,6 @@ enum AppStrings: String, Localizable {
 
     enum Discover: String, Localizable {
         case navigationTitle = "Discover.navigationTitle"
+        case listDescription = "Discover.listDescription"
     }
 }
