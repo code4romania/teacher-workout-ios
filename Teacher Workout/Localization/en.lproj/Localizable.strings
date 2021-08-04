@@ -35,3 +35,11 @@
 "Authentication.Password.inputConfirmLabel" = "Repeat Password";
 
 "Authentication.Password.inputPlaceholder" = "password";
+
+"Discover.navigationTitle" = "Discover lessons";
+
+"Discover.listDescription" = "Lesson categories";
+
+"Search.placeholder" = "Find a topic";
+
+"Search.cancelButton" = "Cancel";

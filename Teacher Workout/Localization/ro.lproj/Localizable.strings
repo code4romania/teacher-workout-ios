@@ -35,3 +35,11 @@
 "Authentication.Password.inputConfirmLabel" = "Repetă parola";
 
 "Authentication.Password.inputPlaceholder" = "parola";
+
+"Discover.navigationTitle" = "Descoperă lecțiile";
+
+"Discover.listDescription" = "Categorii de lecții";
+
+"Search.placeholder" = "Caută un subiect";
+
+"Search.cancelButton" = "Anulează";

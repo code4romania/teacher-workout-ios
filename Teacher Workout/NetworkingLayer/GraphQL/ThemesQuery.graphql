@@ -1,9 +1,13 @@
-query ThemesQuery {
+query Themes {
   themes {
      edges {
       node {
         id,
-        title
+        title,
+        thumbnail {
+          url,
+          description
+        }
       }
     }
   }

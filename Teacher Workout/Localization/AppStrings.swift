@@ -56,4 +56,14 @@ enum AppStrings: String, Localizable {
             case inputPlaceholder = "Authentication.Password.inputPlaceholder"
         }
     }
+
+    enum Discover: String, Localizable {
+        case navigationTitle = "Discover.navigationTitle"
+        case listDescription = "Discover.listDescription"
+    }
+
+    enum Search: String, Localizable {
+        case placeholder = "Search.placeholder"
+        case cancelButton = "Search.cancelButton"
+    }
 }

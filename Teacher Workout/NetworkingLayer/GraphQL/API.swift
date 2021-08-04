@@ -250,11 +250,11 @@ public final class LessonsQuery: GraphQLQuery {
   }
 }
 
-public final class ThemesQueryQuery: GraphQLQuery {
+public final class ThemesQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query ThemesQuery {
+    query Themes {
       themes {
         __typename
         edges {
@@ -263,13 +263,18 @@ public final class ThemesQueryQuery: GraphQLQuery {
             __typename
             id
             title
+            thumbnail {
+              __typename
+              url
+              description
+            }
           }
         }
       }
     }
     """
 
-  public let operationName: String = "ThemesQuery"
+  public let operationName: String = "Themes"
 
   public init() {
   }
@@ -388,6 +393,7 @@ public final class ThemesQueryQuery: GraphQLQuery {
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
               GraphQLField("id", type: .scalar(GraphQLID.self)),
               GraphQLField("title", type: .nonNull(.scalar(String.self))),
+              GraphQLField("thumbnail", type: .nonNull(.object(Thumbnail.selections))),
             ]
           }
 
@@ -397,8 +403,8 @@ public final class ThemesQueryQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID? = nil, title: String) {
-            self.init(unsafeResultMap: ["__typename": "Theme", "id": id, "title": title])
+          public init(id: GraphQLID? = nil, title: String, thumbnail: Thumbnail) {
+            self.init(unsafeResultMap: ["__typename": "Theme", "id": id, "title": title, "thumbnail": thumbnail.resultMap])
           }
 
           public var __typename: String {
@@ -426,6 +432,67 @@ public final class ThemesQueryQuery: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "title")
+            }
+          }
+
+          /// The thumbnail of the Theme
+          public var thumbnail: Thumbnail {
+            get {
+              return Thumbnail(unsafeResultMap: resultMap["thumbnail"]! as! ResultMap)
+            }
+            set {
+              resultMap.updateValue(newValue.resultMap, forKey: "thumbnail")
+            }
+          }
+
+          public struct Thumbnail: GraphQLSelectionSet {
+            public static let possibleTypes: [String] = ["Image"]
+
+            public static var selections: [GraphQLSelection] {
+              return [
+                GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                GraphQLField("url", type: .nonNull(.scalar(String.self))),
+                GraphQLField("description", type: .nonNull(.scalar(String.self))),
+              ]
+            }
+
+            public private(set) var resultMap: ResultMap
+
+            public init(unsafeResultMap: ResultMap) {
+              self.resultMap = unsafeResultMap
+            }
+
+            public init(url: String, description: String) {
+              self.init(unsafeResultMap: ["__typename": "Image", "url": url, "description": description])
+            }
+
+            public var __typename: String {
+              get {
+                return resultMap["__typename"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "__typename")
+              }
+            }
+
+            /// URL to the image.
+            public var url: String {
+              get {
+                return resultMap["url"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "url")
+              }
+            }
+
+            /// Image description for accessibility.
+            public var description: String {
+              get {
+                return resultMap["description"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "description")
+              }
             }
           }
         }
