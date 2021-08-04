@@ -26,7 +26,7 @@ final class HomeViewModel: ObservableObject {
     }
 
     func loadLessons() {
-        dataProvider.getLessons { [weak self] result in
+        dataProvider.getLessons(themeID: nil) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(value):
