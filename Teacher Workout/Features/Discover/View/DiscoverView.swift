@@ -13,7 +13,7 @@ struct DiscoverView: View {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                 ForEach(viewModel.themes) { theme in
                     ThemeItemCell(item: theme)
-                        .frame(height: 57)
+                        .frame(maxHeight: 57)
                 }
             }
             .padding(.horizontal, 16)
