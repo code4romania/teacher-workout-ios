@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ThemeDetails: View {
-    @StateObject var viewModel: ThemeDetailsViewModel
+    @ObservedObject var viewModel: ThemeDetailsViewModel
 
     var body: some View {
         ScrollView {
