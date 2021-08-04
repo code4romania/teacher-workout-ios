@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */; };
+		BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */; };
 		BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CD6268701B400663EEC /* AppDelegate.swift */; };
 		BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CE1268701B500663EEC /* LaunchScreen.storyboard */; };
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
@@ -27,7 +29,6 @@
 		BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */; };
 		BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127026874CFA0008FDC6 /* Coordinator.swift */; };
 		BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */; };
-		BB381280268751940008FDC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127F268751940008FDC6 /* HomeViewController.swift */; };
 		BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381283268751CD0008FDC6 /* ProfileViewController.swift */; };
 		BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */; };
 		BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990B26B9DD35007B44F9 /* SearchBar.swift */; };
@@ -105,6 +106,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB1F1CD3268701B400663EEC /* Teacher Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teacher Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1F1CD6268701B400663EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB1F1CE2268701B500663EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,7 +135,6 @@
 		BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BB38127026874CFA0008FDC6 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
-		BB38127F268751940008FDC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB381283268751CD0008FDC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		BB6E990B26B9DD35007B44F9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB13A3AA26BAAD4800E0A7D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BB1F1CCA268701B400663EEC = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +331,7 @@
 			children = (
 				BB38127726874F3E0008FDC6 /* Coordinator */,
 				BB38127826874F450008FDC6 /* View */,
+				BB13A3AA26BAAD4800E0A7D5 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -420,7 +431,7 @@
 		BB38127826874F450008FDC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB38127F268751940008FDC6 /* HomeViewController.swift */,
+				BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -955,6 +966,7 @@
 				BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */,
 				DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
+				BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */,
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
@@ -980,9 +992,9 @@
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
 				BBC3A22226B54988009C6DDE /* DiscoverView.swift in Sources */,
 				BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */,
+				BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */,
 				BBC3A21726B54418009C6DDE /* NetworkingConstants.swift in Sources */,
 				BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */,
-				BB381280268751940008FDC6 /* HomeViewController.swift in Sources */,
 				BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */,
 				BBC3A21C26B5444E009C6DDE /* Theme.swift in Sources */,
 				BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */,

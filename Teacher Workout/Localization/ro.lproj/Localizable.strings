@@ -43,3 +43,9 @@
 "Search.placeholder" = "Caută un subiect";
 
 "Search.cancelButton" = "Anulează";
+
+"Home.navigationTitle" = "Caută o lecție";
+
+"Home.lessonsInProgress" = "Lecții în curs";
+
+"Home.newLessons" = "Lecții nou adăugate";
