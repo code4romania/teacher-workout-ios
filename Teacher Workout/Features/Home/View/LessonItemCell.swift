@@ -14,8 +14,19 @@ struct LessonItemCell: View {
                     .clipped()
             }
 
-            Text(item.title)
-                .font(Font.custom("Mulish-Regular", size: 14))
+            VStack(alignment: .leading, spacing: 5) {
+                Text(item.title)
+                    .font(Font.custom("Mulish-Regular", size: 14))
+
+                Text(item.themeTitle)
+                    .foregroundColor(Color("AccentColor"))
+                    .font(Font.custom("Mulish-SemiBold", size: 12))
+
+                HStack(spacing: 4) {
+                    Image(systemName: "clock")
+                    Text(item.duration)
+                }.font(Font.custom("Mulish-SemiBold", size: 12))
+            }
             Spacer()
         }
         .clipShape(RoundedRectangle(cornerRadius: 8))

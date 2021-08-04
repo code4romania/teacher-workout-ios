@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = accentColor
         UITabBar.appearance().unselectedItemTintColor = UIColor(named: "secondaryColor")
 
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: accentColor]
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: accentColor]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: accentColor, .font: UIFont(name: "Mulish-Bold", size: 32)!]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: accentColor, .font: UIFont(name: "Mulish-SemiBold", size: 18)!]
     }
 }

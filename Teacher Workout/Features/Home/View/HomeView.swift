@@ -19,6 +19,8 @@ struct HomeView: View {
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())
 
             ThemesGrid(themes: viewModel.themes)
+
+            Spacer(minLength: 30)
         }
         .navigationBarTitle(AppStrings.Home.navigationTitle.localized(),
                             displayMode: .large)
