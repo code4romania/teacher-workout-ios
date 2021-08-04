@@ -10,7 +10,7 @@ struct SearchBar: View {
             TextField(AppStrings.Search.placeholder.localized(), text: $text)
                 .foregroundColor(Color("AccentColor"))
                 .font(Font.custom("Mulish-SemiBold", size: 16))
-                .frame(height: 40)
+                .frame(height: 34)
                 .padding(7)
                 .padding(.horizontal, 25)
                 .background(Color(.white))
