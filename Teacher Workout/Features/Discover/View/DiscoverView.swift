@@ -2,11 +2,10 @@ import SwiftUI
 
 struct DiscoverView: View {
     @StateObject var viewModel = DiscoverViewModel()
-    @State private var searchText = ""
 
     var body: some View {
         ScrollView {
-            SearchBar(text: $searchText)
+            SearchBar(text: $viewModel.searchText)
                 .padding(.top, 16)
 
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())

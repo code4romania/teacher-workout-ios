@@ -2,6 +2,7 @@ import Foundation
 
 final class DiscoverViewModel: ObservableObject {
     @Published var themes: [Theme] = []
+    var searchText = ""
 
     private let dataProvider: DataProviderProtocol
 
