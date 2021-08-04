@@ -10,36 +10,15 @@ struct HomeView: View {
 
             ListHeaderView(label: AppStrings.Home.lessonsInProgress.localized())
 
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 290), spacing: 15)], spacing: 15) {
-                ForEach(viewModel.inProgressLessons) { lesson in
-                    LessonItemCell(item: lesson)
-                        .frame(maxHeight: 74)
-                }
-            }
-            .padding(.horizontal, 16)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            LessonsList(lessons: viewModel.inProgressLessons)
 
             ListHeaderView(label: AppStrings.Home.newLessons.localized())
 
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 290), spacing: 15)], spacing: 15) {
-                ForEach(viewModel.newLessons) { lesson in
-                    LessonItemCell(item: lesson)
-                        .frame(maxHeight: 74)
-                }
-            }
-            .padding(.horizontal, 16)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            LessonsList(lessons: viewModel.newLessons)
 
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())
 
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(viewModel.themes) { theme in
-                    ThemeItemCell(item: theme)
-                        .frame(maxHeight: 57)
-                }
-            }
-            .padding(.horizontal, 16)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            ThemesGrid(themes: viewModel.themes)
         }
         .navigationBarTitle(AppStrings.Home.navigationTitle.localized(),
                             displayMode: .large)

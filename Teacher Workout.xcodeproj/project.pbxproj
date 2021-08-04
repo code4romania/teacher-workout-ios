@@ -12,6 +12,8 @@
 		BB13A3AF26BAB3B300E0A7D5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */; };
 		BB13A3B126BAB45500E0A7D5 /* LessonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B026BAB45500E0A7D5 /* LessonNode.swift */; };
 		BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */; };
+		BB13A3B526BABF0800E0A7D5 /* LessonsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B426BABF0800E0A7D5 /* LessonsList.swift */; };
+		BB13A3B726BABF8100E0A7D5 /* ThemesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B626BABF8100E0A7D5 /* ThemesGrid.swift */; };
 		BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CD6268701B400663EEC /* AppDelegate.swift */; };
 		BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CE1268701B500663EEC /* LaunchScreen.storyboard */; };
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
@@ -114,6 +116,8 @@
 		BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		BB13A3B026BAB45500E0A7D5 /* LessonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonNode.swift; sourceTree = "<group>"; };
 		BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonItemCell.swift; sourceTree = "<group>"; };
+		BB13A3B426BABF0800E0A7D5 /* LessonsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsList.swift; sourceTree = "<group>"; };
+		BB13A3B626BABF8100E0A7D5 /* ThemesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesGrid.swift; sourceTree = "<group>"; };
 		BB1F1CD3268701B400663EEC /* Teacher Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teacher Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1F1CD6268701B400663EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB1F1CE2268701B500663EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -448,6 +452,7 @@
 			children = (
 				BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */,
 				BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */,
+				BB13A3B426BABF0800E0A7D5 /* LessonsList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 			children = (
 				BBC3A22126B54988009C6DDE /* DiscoverView.swift */,
 				BBC3A22326B55BAC009C6DDE /* ThemeItemCell.swift */,
+				BB13A3B626BABF8100E0A7D5 /* ThemesGrid.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -975,6 +981,7 @@
 				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
 				DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */,
+				BB13A3B526BABF0800E0A7D5 /* LessonsList.swift in Sources */,
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */,
@@ -1023,6 +1030,7 @@
 				DE4B86CD269DBEC100D7636E /* InputFieldView.swift in Sources */,
 				BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */,
 				BBC3A21626B54418009C6DDE /* APIError.swift in Sources */,
+				BB13A3B726BABF8100E0A7D5 /* ThemesGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

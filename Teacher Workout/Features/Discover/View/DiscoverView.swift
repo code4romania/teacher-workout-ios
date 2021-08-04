@@ -10,14 +10,7 @@ struct DiscoverView: View {
 
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())
 
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(viewModel.themes) { theme in
-                    ThemeItemCell(item: theme)
-                        .frame(maxHeight: 57)
-                }
-            }
-            .padding(.horizontal, 16)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            ThemesGrid(themes: viewModel.themes)
         }
         .navigationBarTitle(AppStrings.Discover.navigationTitle.localized(),
                             displayMode: .large)
