@@ -41,6 +41,30 @@ class GraphAPIService: DataProviderProtocol {
             }
         }
     }
+
+    func getLessons(completion: @escaping (Result<[Lesson], Error>) -> Void) {
+        let query = LessonsQuery()
+        apolloClient.fetch(query: query) { result in
+            switch result {
+            case let .failure(error):
+                let queryResult = Result<[Lesson], Error>.failure(error)
+                completion(queryResult)
+            case let .success(value):
+                guard let themesResponse = value.data?.lessons?.edges else {
+                    let queryResult = Result<[Lesson], Error>.failure(APIError.invalidContent)
+                    completion(queryResult)
+                    return
+                }
+
+                let themesQueryResponse = themesResponse.compactMap { edge in
+                    Lesson(lessonNode: edge?.node)
+                }
+
+                let queryResult = Result<[Lesson], Error>.success(themesQueryResponse)
+                completion(queryResult)
+            }
+        }
+    }
 }
 
 class NetworkInterceptorProvider: DefaultInterceptorProvider {

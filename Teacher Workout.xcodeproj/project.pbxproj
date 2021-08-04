@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */; };
 		BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */; };
+		BB13A3AF26BAB3B300E0A7D5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */; };
+		BB13A3B126BAB45500E0A7D5 /* LessonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B026BAB45500E0A7D5 /* LessonNode.swift */; };
+		BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */; };
 		BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CD6268701B400663EEC /* AppDelegate.swift */; };
 		BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CE1268701B500663EEC /* LaunchScreen.storyboard */; };
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
@@ -108,6 +111,9 @@
 /* Begin PBXFileReference section */
 		BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		BB13A3B026BAB45500E0A7D5 /* LessonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonNode.swift; sourceTree = "<group>"; };
+		BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonItemCell.swift; sourceTree = "<group>"; };
 		BB1F1CD3268701B400663EEC /* Teacher Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teacher Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1F1CD6268701B400663EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB1F1CE2268701B500663EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -230,6 +236,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BB13A3AD26BAB39E00E0A7D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BB1F1CCA268701B400663EEC = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				BB38127726874F3E0008FDC6 /* Coordinator */,
+				BB13A3AD26BAB39E00E0A7D5 /* Model */,
 				BB38127826874F450008FDC6 /* View */,
 				BB13A3AA26BAAD4800E0A7D5 /* ViewModel */,
 			);
@@ -432,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */,
+				BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -509,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC3A21F26B545E6009C6DDE /* ThemesNode.swift */,
+				BB13A3B026BAB45500E0A7D5 /* LessonNode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -968,6 +985,7 @@
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
 				BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */,
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,
+				BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
 				DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */,
@@ -988,6 +1006,7 @@
 				DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,
 				DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */,
+				BB13A3B126BAB45500E0A7D5 /* LessonNode.swift in Sources */,
 				DE85640426A0525A004A83BF /* LandingPageView.swift in Sources */,
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
 				BBC3A22226B54988009C6DDE /* DiscoverView.swift in Sources */,
@@ -995,6 +1014,7 @@
 				BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */,
 				BBC3A21726B54418009C6DDE /* NetworkingConstants.swift in Sources */,
 				BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */,
+				BB13A3AF26BAB3B300E0A7D5 /* Lesson.swift in Sources */,
 				BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */,
 				BBC3A21C26B5444E009C6DDE /* Theme.swift in Sources */,
 				BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */,

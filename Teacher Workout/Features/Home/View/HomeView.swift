@@ -10,7 +10,25 @@ struct HomeView: View {
 
             ListHeaderView(label: AppStrings.Home.lessonsInProgress.localized())
 
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 290), spacing: 15)], spacing: 15) {
+                ForEach(viewModel.inProgressLessons) { lesson in
+                    LessonItemCell(item: lesson)
+                        .frame(maxHeight: 74)
+                }
+            }
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+
             ListHeaderView(label: AppStrings.Home.newLessons.localized())
+
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 290), spacing: 15)], spacing: 15) {
+                ForEach(viewModel.newLessons) { lesson in
+                    LessonItemCell(item: lesson)
+                        .frame(maxHeight: 74)
+                }
+            }
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())
 
@@ -27,6 +45,7 @@ struct HomeView: View {
                             displayMode: .large)
         .onAppear {
             viewModel.loadThemes()
+            viewModel.loadLessons()
         }
     }
 }
