@@ -66,4 +66,10 @@ enum AppStrings: String, Localizable {
         case placeholder = "Search.placeholder"
         case cancelButton = "Search.cancelButton"
     }
+
+    enum Home: String, Localizable {
+        case navigationTitle = "Home.navigationTitle"
+        case lessonsInProgress = "Home.lessonsInProgress"
+        case newLessons = "Home.newLessons"
+    }
 }

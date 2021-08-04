@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 import UIKit
 
 final class HomeCoordinator: NSObject, Coordinator {
@@ -6,10 +7,10 @@ final class HomeCoordinator: NSObject, Coordinator {
     var navigationController: UINavigationController
 
     override init() {
-        let viewController = HomeViewController()
+        let viewController = UIHostingController(rootView: HomeView())
         viewController.tabBarItem.title = AppStrings.Menu.home.localized()
         viewController.tabBarItem.image = UIImage(systemName: "house")
         navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.navigationBar.prefersLargeTitles = true
     }
 }

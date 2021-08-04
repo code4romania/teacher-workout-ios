@@ -8,7 +8,7 @@ public final class LessonsQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query Lessons($themeId: ID!) {
+    query Lessons($themeId: ID) {
       lessons(themeId: $themeId) {
         __typename
         edges {
@@ -17,6 +17,15 @@ public final class LessonsQuery: GraphQLQuery {
             __typename
             id
             title
+            thumbnail {
+              __typename
+              url
+              description
+            }
+            theme {
+              __typename
+              title
+            }
             duration {
               __typename
               displayValue
@@ -29,9 +38,9 @@ public final class LessonsQuery: GraphQLQuery {
 
   public let operationName: String = "Lessons"
 
-  public var themeId: GraphQLID
+  public var themeId: GraphQLID?
 
-  public init(themeId: GraphQLID) {
+  public init(themeId: GraphQLID? = nil) {
     self.themeId = themeId
   }
 
@@ -153,6 +162,8 @@ public final class LessonsQuery: GraphQLQuery {
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
               GraphQLField("id", type: .scalar(GraphQLID.self)),
               GraphQLField("title", type: .nonNull(.scalar(String.self))),
+              GraphQLField("thumbnail", type: .nonNull(.object(Thumbnail.selections))),
+              GraphQLField("theme", type: .nonNull(.object(Theme.selections))),
               GraphQLField("duration", type: .nonNull(.object(Duration.selections))),
             ]
           }
@@ -163,8 +174,8 @@ public final class LessonsQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID? = nil, title: String, duration: Duration) {
-            self.init(unsafeResultMap: ["__typename": "Lesson", "id": id, "title": title, "duration": duration.resultMap])
+          public init(id: GraphQLID? = nil, title: String, thumbnail: Thumbnail, theme: Theme, duration: Duration) {
+            self.init(unsafeResultMap: ["__typename": "Lesson", "id": id, "title": title, "thumbnail": thumbnail.resultMap, "theme": theme.resultMap, "duration": duration.resultMap])
           }
 
           public var __typename: String {
@@ -195,6 +206,26 @@ public final class LessonsQuery: GraphQLQuery {
             }
           }
 
+          /// The thumbnail of the Lesson
+          public var thumbnail: Thumbnail {
+            get {
+              return Thumbnail(unsafeResultMap: resultMap["thumbnail"]! as! ResultMap)
+            }
+            set {
+              resultMap.updateValue(newValue.resultMap, forKey: "thumbnail")
+            }
+          }
+
+          /// The Theme of the Lesson
+          public var theme: Theme {
+            get {
+              return Theme(unsafeResultMap: resultMap["theme"]! as! ResultMap)
+            }
+            set {
+              resultMap.updateValue(newValue.resultMap, forKey: "theme")
+            }
+          }
+
           /// The duration of the Lesson
           public var duration: Duration {
             get {
@@ -202,6 +233,97 @@ public final class LessonsQuery: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue.resultMap, forKey: "duration")
+            }
+          }
+
+          public struct Thumbnail: GraphQLSelectionSet {
+            public static let possibleTypes: [String] = ["Image"]
+
+            public static var selections: [GraphQLSelection] {
+              return [
+                GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                GraphQLField("url", type: .nonNull(.scalar(String.self))),
+                GraphQLField("description", type: .nonNull(.scalar(String.self))),
+              ]
+            }
+
+            public private(set) var resultMap: ResultMap
+
+            public init(unsafeResultMap: ResultMap) {
+              self.resultMap = unsafeResultMap
+            }
+
+            public init(url: String, description: String) {
+              self.init(unsafeResultMap: ["__typename": "Image", "url": url, "description": description])
+            }
+
+            public var __typename: String {
+              get {
+                return resultMap["__typename"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "__typename")
+              }
+            }
+
+            /// URL to the image.
+            public var url: String {
+              get {
+                return resultMap["url"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "url")
+              }
+            }
+
+            /// Image description for accessibility.
+            public var description: String {
+              get {
+                return resultMap["description"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "description")
+              }
+            }
+          }
+
+          public struct Theme: GraphQLSelectionSet {
+            public static let possibleTypes: [String] = ["Theme"]
+
+            public static var selections: [GraphQLSelection] {
+              return [
+                GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                GraphQLField("title", type: .nonNull(.scalar(String.self))),
+              ]
+            }
+
+            public private(set) var resultMap: ResultMap
+
+            public init(unsafeResultMap: ResultMap) {
+              self.resultMap = unsafeResultMap
+            }
+
+            public init(title: String) {
+              self.init(unsafeResultMap: ["__typename": "Theme", "title": title])
+            }
+
+            public var __typename: String {
+              get {
+                return resultMap["__typename"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "__typename")
+              }
+            }
+
+            /// The title of the Theme
+            public var title: String {
+              get {
+                return resultMap["title"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "title")
+              }
             }
           }
 

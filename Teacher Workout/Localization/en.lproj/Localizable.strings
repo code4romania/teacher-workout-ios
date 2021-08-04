@@ -43,3 +43,9 @@
 "Search.placeholder" = "Find a topic";
 
 "Search.cancelButton" = "Cancel";
+
+"Home.navigationTitle" = "Find a lesson";
+
+"Home.lessonsInProgress" = "Lessons in progress";
+
+"Home.newLessons" = "Newly added lessons";
