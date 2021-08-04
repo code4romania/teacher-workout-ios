@@ -13,8 +13,20 @@ struct HomeView: View {
             ListHeaderView(label: AppStrings.Home.newLessons.localized())
 
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())
+
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
+                ForEach(viewModel.themes) { theme in
+                    ThemeItemCell(item: theme)
+                        .frame(maxHeight: 57)
+                }
+            }
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .navigationBarTitle(AppStrings.Home.navigationTitle.localized(),
                             displayMode: .large)
+        .onAppear {
+            viewModel.loadThemes()
+        }
     }
 }
