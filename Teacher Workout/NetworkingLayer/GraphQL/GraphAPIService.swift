@@ -42,8 +42,8 @@ class GraphAPIService: DataProviderProtocol {
         }
     }
 
-    func getLessons(completion: @escaping (Result<[Lesson], Error>) -> Void) {
-        let query = LessonsQuery()
+    func getLessons(themeID: String?, completion: @escaping (Result<[Lesson], Error>) -> Void) {
+        let query = LessonsQuery(themeId: themeID)
         apolloClient.fetch(query: query) { result in
             switch result {
             case let .failure(error):

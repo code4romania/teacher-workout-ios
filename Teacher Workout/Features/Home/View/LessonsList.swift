@@ -4,7 +4,7 @@ struct LessonsList: View {
     var lessons: [Lesson]
 
     var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 290), spacing: 15)], spacing: 15) {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 290), spacing: 15)], spacing: 20) {
             ForEach(lessons) { lesson in
                 LessonItemCell(item: lesson)
                     .frame(maxHeight: 74)

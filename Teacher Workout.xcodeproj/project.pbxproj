@@ -14,6 +14,8 @@
 		BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */; };
 		BB13A3B526BABF0800E0A7D5 /* LessonsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B426BABF0800E0A7D5 /* LessonsList.swift */; };
 		BB13A3B726BABF8100E0A7D5 /* ThemesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B626BABF8100E0A7D5 /* ThemesGrid.swift */; };
+		BB13A3BA26BAE03100E0A7D5 /* ThemeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3B926BAE03100E0A7D5 /* ThemeDetails.swift */; };
+		BB13A3BE26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3BD26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift */; };
 		BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CD6268701B400663EEC /* AppDelegate.swift */; };
 		BB1F1CE3268701B500663EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1F1CE1268701B500663EEC /* LaunchScreen.storyboard */; };
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
@@ -118,6 +120,8 @@
 		BB13A3B226BABDC400E0A7D5 /* LessonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonItemCell.swift; sourceTree = "<group>"; };
 		BB13A3B426BABF0800E0A7D5 /* LessonsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsList.swift; sourceTree = "<group>"; };
 		BB13A3B626BABF8100E0A7D5 /* ThemesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesGrid.swift; sourceTree = "<group>"; };
+		BB13A3B926BAE03100E0A7D5 /* ThemeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDetails.swift; sourceTree = "<group>"; };
+		BB13A3BD26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDetailsViewModel.swift; sourceTree = "<group>"; };
 		BB1F1CD3268701B400663EEC /* Teacher Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teacher Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1F1CD6268701B400663EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB1F1CE2268701B500663EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -248,6 +252,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BB13A3B826BADE1600E0A7D5 /* ThemeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BB13A3BB26BAE07D00E0A7D5 /* View */,
+				BB13A3BC26BAE08400E0A7D5 /* ViewModel */,
+			);
+			path = ThemeDetails;
+			sourceTree = "<group>";
+		};
+		BB13A3BB26BAE07D00E0A7D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB13A3B926BAE03100E0A7D5 /* ThemeDetails.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB13A3BC26BAE08400E0A7D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB13A3BD26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BB1F1CCA268701B400663EEC = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +350,7 @@
 				BB38126A268749730008FDC6 /* Menu */,
 				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
+				BB13A3B826BADE1600E0A7D5 /* ThemeDetails */,
 				BB1F1D092687022A00663EEC /* Splash */,
 			);
 			path = Features;
@@ -976,6 +1006,7 @@
 				BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */,
 				BB38125D268728200008FDC6 /* Config.swift in Sources */,
 				DE96A06F26B56CF30071188D /* CheckboxFieldView.swift in Sources */,
+				BB13A3BE26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift in Sources */,
 				DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
 				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
@@ -991,6 +1022,7 @@
 				DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */,
 				DE60B19D2687466300EB01F8 /* OnboardingHeroView.swift in Sources */,
 				BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */,
+				BB13A3BA26BAE03100E0A7D5 /* ThemeDetails.swift in Sources */,
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,
 				BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,

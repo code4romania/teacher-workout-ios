@@ -1,7 +1,13 @@
 import SwiftUI
 
+protocol HomeViewDelegate {
+    func homeView(_ view: HomeView, didSelectTheme theme: Theme)
+}
+
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
+
+    var delegate: HomeViewDelegate?
 
     var body: some View {
         ScrollView {
@@ -18,7 +24,7 @@ struct HomeView: View {
 
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())
 
-            ThemesGrid(themes: viewModel.themes)
+            ThemesGrid(themes: viewModel.themes, delegate: self)
 
             Spacer(minLength: 30)
         }
@@ -28,5 +34,11 @@ struct HomeView: View {
             viewModel.loadThemes()
             viewModel.loadLessons()
         }
+    }
+}
+
+extension HomeView: ThemesGridDelegate {
+    func themesGrid(_: ThemesGrid, didSelectTheme theme: Theme) {
+        delegate?.homeView(self, didSelectTheme: theme)
     }
 }
