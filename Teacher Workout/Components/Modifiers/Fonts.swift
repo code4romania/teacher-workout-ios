@@ -46,6 +46,20 @@ struct TextSemibold: ViewModifier {
     }
 }
 
+struct RegularDescriptionFont: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .scaledFont(name: "Mulish-Regular", size: 16)
+    }
+}
+
+struct RegularButtonFont: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .scaledFont(name: "Mulish-Regular", size: 15)
+    }
+}
+
 extension View {
     func boldLargeFont(size: CGFloat = 26) -> some View {
         modifier(BoldLargeFont(size: size))
@@ -53,5 +67,13 @@ extension View {
 
     func semiBoldSmallFont(size: CGFloat = 12) -> some View {
         modifier(SemiBoldSmallFont(size: size))
+    }
+
+    func regularDescriptionFont() -> some View {
+        modifier(RegularDescriptionFont())
+    }
+
+    func regularButtonFont() -> some View {
+        modifier(RegularButtonFont())
     }
 }

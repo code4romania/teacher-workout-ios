@@ -34,6 +34,10 @@
 		9178190126C65F7F00106835 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 9178190026C65F7F00106835 /* ApolloSQLite */; };
 		9178190326C65F7F00106835 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 9178190226C65F7F00106835 /* ApolloUtils */; };
 		9178190526C65F7F00106835 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 9178190426C65F7F00106835 /* ApolloWebSocket */; };
+		9178192126C66A5C00106835 /* LessonSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178192026C66A5C00106835 /* LessonSlideView.swift */; };
+		9178192526C66C1F00106835 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178192426C66C1F00106835 /* ProgressBar.swift */; };
+		9178192926C67EA700106835 /* LessonTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178192826C67EA700106835 /* LessonTitleView.swift */; };
+		9178192D26C6848800106835 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178192C26C6848800106835 /* LessonCardView.swift */; };
 		BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */; };
 		BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */; };
 		BB13A3AF26BAB3B300E0A7D5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */; };
@@ -175,6 +179,10 @@
 		9178189326C4DF6600106835 /* SaveLessonMutation.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SaveLessonMutation.graphql; sourceTree = "<group>"; };
 		9178189826C4E31A00106835 /* LessonIntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonIntroViewModel.swift; sourceTree = "<group>"; };
 		9178189E26C6353A00106835 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9178192026C66A5C00106835 /* LessonSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSlideView.swift; sourceTree = "<group>"; };
+		9178192426C66C1F00106835 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		9178192826C67EA700106835 /* LessonTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTitleView.swift; sourceTree = "<group>"; };
+		9178192C26C6848800106835 /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
 		BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
@@ -325,18 +333,27 @@
 		9178187126C296B100106835 /* Lessons */ = {
 			isa = PBXGroup;
 			children = (
-				BB8032CB272D3745000F6746 /* Coordinator */,
+				9178187326C296D500106835 /* Model */,
 				9178187426C296DA00106835 /* View */,
 				9178187526C296DF00106835 /* ViewModel */,
 			);
 			path = Lessons;
 			sourceTree = "<group>";
 		};
+		9178187326C296D500106835 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9178187426C296DA00106835 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				9178187B26C2975D00106835 /* LessonIntroView.swift */,
-				BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */,
+				9178192026C66A5C00106835 /* LessonSlideView.swift */,
+				9178192826C67EA700106835 /* LessonTitleView.swift */,
+				9178192C26C6848800106835 /* LessonCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				9178189E26C6353A00106835 /* Fonts.swift */,
-				DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -473,17 +489,18 @@
 		BB1F1D072687020E00663EEC /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				9178187126C296B100106835 /* Lessons */,
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
 				DE8563FE26A051F4004A83BF /* LandingPage */,
+				9178187126C296B100106835 /* Lessons */,
 				BB38126A268749730008FDC6 /* Menu */,
 				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
 				BB2B8B7926CC52EB00C482FD /* ResetPassword */,
 				BB13A3B826BADE1600E0A7D5 /* ThemeDetails */,
 				BB1F1D092687022A00663EEC /* Splash */,
+				BB13A3B826BADE1600E0A7D5 /* ThemeDetails */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -978,6 +995,7 @@
 		DEDDCCA9269E22A300E64AAE /* General */ = {
 			isa = PBXGroup;
 			children = (
+				9178192426C66C1F00106835 /* ProgressBar.swift */,
 				DE96A06E26B56CF30071188D /* CheckboxFieldView.swift */,
 				DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */,
 				DE85640526A05AA2004A83BF /* ExistingAccountFooterView.swift */,
@@ -1246,6 +1264,7 @@
 				DE28A9D126FF22F5008B1096 /* SegmentedTab.swift in Sources */,
 				BB13A3BE26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift in Sources */,
 				DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */,
+				9178192926C67EA700106835 /* LessonTitleView.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
 				DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */,
 				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
@@ -1257,7 +1276,6 @@
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */,
-				DEEEA92B26FF51FF0067A2BC /* ResultsListViewModel.swift in Sources */,
 				9178187C26C2975D00106835 /* LessonIntroView.swift in Sources */,
 				BBC3A22026B545E6009C6DDE /* ThemesNode.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
@@ -1268,6 +1286,7 @@
 				BB13A3BA26BAE03100E0A7D5 /* ThemeDetails.swift in Sources */,
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,
 				DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */,
+				9178192526C66C1F00106835 /* ProgressBar.swift in Sources */,
 				BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */,
 				DEEEA93026FF548A0067A2BC /* ResultsListItem.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
@@ -1279,6 +1298,7 @@
 				DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
+				9178192D26C6848800106835 /* LessonCardView.swift in Sources */,
 				BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */,
 				DEEEA93226FF5F210067A2BC /* CustomProgressBarStyle.swift in Sources */,
 				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
@@ -1304,6 +1324,7 @@
 				BB13A3B126BAB45500E0A7D5 /* LessonNode.swift in Sources */,
 				DE85640426A0525A004A83BF /* LandingPageView.swift in Sources */,
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
+				9178192126C66A5C00106835 /* LessonSlideView.swift in Sources */,
 				BBC3A22226B54988009C6DDE /* DiscoverView.swift in Sources */,
 				BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */,
 				BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */,
