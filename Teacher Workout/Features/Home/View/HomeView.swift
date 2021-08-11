@@ -2,6 +2,7 @@ import SwiftUI
 
 protocol HomeViewDelegate {
     func homeView(_ view: HomeView, didSelectTheme theme: Theme)
+    func homeView(_ view: HomeView, didSelectLesson lesson: Lesson)
 }
 
 struct HomeView: View {
@@ -16,11 +17,11 @@ struct HomeView: View {
 
             ListHeaderView(label: AppStrings.Home.lessonsInProgress.localized())
 
-            LessonsList(lessons: viewModel.inProgressLessons)
+            LessonsList(lessons: viewModel.inProgressLessons, delegate: self)
 
             ListHeaderView(label: AppStrings.Home.newLessons.localized())
 
-            LessonsList(lessons: viewModel.newLessons)
+            LessonsList(lessons: viewModel.newLessons, delegate: self)
 
             ListHeaderView(label: AppStrings.Discover.listDescription.localized())
 
@@ -40,5 +41,11 @@ struct HomeView: View {
 extension HomeView: ThemesGridDelegate {
     func themesGrid(_: ThemesGrid, didSelectTheme theme: Theme) {
         delegate?.homeView(self, didSelectTheme: theme)
+    }
+}
+
+extension HomeView: LessonsListDelegate {
+    func lessonsList(_: LessonsList, didSelectLesson lesson: Lesson) {
+        delegate?.homeView(self, didSelectLesson: lesson)
     }
 }

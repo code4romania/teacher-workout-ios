@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9178187C26C2975D00106835 /* LessonIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178187B26C2975D00106835 /* LessonIntroView.swift */; };
 		BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */; };
 		BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */; };
 		BB13A3AF26BAB3B300E0A7D5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */; };
@@ -113,6 +114,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9178187B26C2975D00106835 /* LessonIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonIntroView.swift; sourceTree = "<group>"; };
 		BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
@@ -236,6 +238,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9178187126C296B100106835 /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				9178187326C296D500106835 /* Model */,
+				9178187426C296DA00106835 /* View */,
+				9178187526C296DF00106835 /* ViewModel */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
+		9178187326C296D500106835 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9178187426C296DA00106835 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9178187B26C2975D00106835 /* LessonIntroView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9178187526C296DF00106835 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BB13A3AA26BAAD4800E0A7D5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +377,7 @@
 		BB1F1D072687020E00663EEC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				9178187126C296B100106835 /* Lessons */,
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
@@ -1016,6 +1051,7 @@
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */,
+				9178187C26C2975D00106835 /* LessonIntroView.swift in Sources */,
 				BBC3A22026B545E6009C6DDE /* ThemesNode.swift in Sources */,
 				DE60B1A5268754CB00EB01F8 /* OnboardingViewModel.swift in Sources */,
 				BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */,

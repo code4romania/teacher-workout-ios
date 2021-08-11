@@ -1,6 +1,8 @@
 import Foundation
 
 class ThemeDetailsViewModel: ObservableObject {
+    var lessonSelected: ((Lesson) -> Void) = { _ in }
+
     @Published var lessons: [Lesson] = []
 
     private var theme: Theme

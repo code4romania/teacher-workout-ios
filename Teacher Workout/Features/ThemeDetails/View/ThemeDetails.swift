@@ -5,7 +5,7 @@ struct ThemeDetails: View {
 
     var body: some View {
         ScrollView {
-            LessonsList(lessons: viewModel.lessons)
+            LessonsList(lessons: viewModel.lessons, delegate: self)
                 .padding(.vertical, 20)
         }
         .navigationBarTitle(viewModel.themeTitle,
@@ -13,5 +13,11 @@ struct ThemeDetails: View {
         .onAppear {
             viewModel.loadLessons()
         }
+    }
+}
+
+extension ThemeDetails: LessonsListDelegate {
+    func lessonsList(_: LessonsList, didSelectLesson lesson: Lesson) {
+        viewModel.lessonSelected(lesson)
     }
 }
