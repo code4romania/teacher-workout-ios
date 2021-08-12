@@ -7,6 +7,8 @@ protocol LessonIntroViewDelegate {
 }
 
 struct LessonIntroView: View {
+    @ObservedObject var viewModel = LessonIntroViewModel()
+
     var lesson: Lesson
     var delegate: LessonIntroViewDelegate?
 
@@ -43,6 +45,7 @@ struct LessonIntroView: View {
                 .padding(6)
 
                 Button(action: {
+                    self.viewModel.saveLesson(lessonId: lesson.id)
                     self.delegate?.lessonIntroViewDidTapStartLesson(self)
                 }, label: {
                     Text(AppStrings.Lesson.Intro.startLesson.rawValue.localized())
@@ -50,6 +53,7 @@ struct LessonIntroView: View {
                         .padding()
                 })
                 Button(action: {
+                    self.viewModel.saveLesson(lessonId: lesson.id)
                     self.delegate?.lessonIntroViewDidTapSaveLesson(self)
                 }, label: {
                     Text(AppStrings.Lesson.Intro.saveLesson.rawValue.localized())

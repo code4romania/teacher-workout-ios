@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9178187C26C2975D00106835 /* LessonIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178187B26C2975D00106835 /* LessonIntroView.swift */; };
+		9178189426C4DF6600106835 /* SaveLessonMutation.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9178189326C4DF6600106835 /* SaveLessonMutation.graphql */; };
+		9178189926C4E31A00106835 /* LessonIntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178189826C4E31A00106835 /* LessonIntroViewModel.swift */; };
 		BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */; };
 		BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */; };
 		BB13A3AF26BAB3B300E0A7D5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */; };
@@ -115,6 +117,8 @@
 
 /* Begin PBXFileReference section */
 		9178187B26C2975D00106835 /* LessonIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonIntroView.swift; sourceTree = "<group>"; };
+		9178189326C4DF6600106835 /* SaveLessonMutation.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SaveLessonMutation.graphql; sourceTree = "<group>"; };
+		9178189826C4E31A00106835 /* LessonIntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonIntroViewModel.swift; sourceTree = "<group>"; };
 		BB13A3A826BAAC4400E0A7D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BB13A3AB26BAAD5A00E0A7D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB13A3AE26BAB3B300E0A7D5 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 		9178187526C296DF00106835 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9178189826C4E31A00106835 /* LessonIntroViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				BB38125E268728440008FDC6 /* GraphAPIService.swift */,
 				BB38126226872D980008FDC6 /* ThemesQuery.graphql */,
 				BB381267268739A60008FDC6 /* LessonsQuery.graphql */,
+				9178189326C4DF6600106835 /* SaveLessonMutation.graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -960,6 +966,7 @@
 				DE28F3C126A043D200D93BDD /* Mulish-Black.ttf in Resources */,
 				DE28F3CB26A043D200D93BDD /* Mulish-SemiBold.ttf in Resources */,
 				DE28F3C626A043D200D93BDD /* Mulish-Light.ttf in Resources */,
+				9178189426C4DF6600106835 /* SaveLessonMutation.graphql in Resources */,
 				DE28F3C526A043D200D93BDD /* Mulish-Bold.ttf in Resources */,
 				DE28F3AA26A03EEA00D93BDD /* Assets.xcassets in Resources */,
 				DE28F3C826A043D200D93BDD /* Mulish-ExtraLight.ttf in Resources */,
@@ -1081,6 +1088,7 @@
 				DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,
 				DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */,
+				9178189926C4E31A00106835 /* LessonIntroViewModel.swift in Sources */,
 				BB13A3B126BAB45500E0A7D5 /* LessonNode.swift in Sources */,
 				DE85640426A0525A004A83BF /* LandingPageView.swift in Sources */,
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
