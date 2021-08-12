@@ -72,4 +72,13 @@ enum AppStrings: String, Localizable {
         case lessonsInProgress = "Home.lessonsInProgress"
         case newLessons = "Home.newLessons"
     }
+
+    enum Lesson: String, Localizable {
+        case continua = "Lesson.continue"
+
+        enum Intro: String, Localizable {
+            case startLesson = "Lesson.Intro.startLesson"
+            case saveLesson = "Lesson.Intro.saveLesson"
+        }
+    }
 }

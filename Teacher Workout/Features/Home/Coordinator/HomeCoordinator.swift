@@ -27,9 +27,9 @@ extension HomeCoordinator: HomeViewDelegate {
         viewModel.lessonSelected = { [weak self] lesson in
             guard let self = self else { return }
 
-            let introView = LessonIntroView(lesson: lesson)
+            let introView = LessonIntroView(lesson: lesson, delegate: self)
             let viewController = UIHostingController(rootView: introView)
-            self.navigationController.pushViewController(viewController, animated: true)
+            self.navigationController.present(viewController, animated: true)
         }
 
         let viewController = UIHostingController(rootView: viewDetails)
@@ -37,8 +37,22 @@ extension HomeCoordinator: HomeViewDelegate {
     }
 
     func homeView(_: HomeView, didSelectLesson lesson: Lesson) {
-        let introView = LessonIntroView(lesson: lesson)
+        let introView = LessonIntroView(lesson: lesson, delegate: self)
         let viewController = UIHostingController(rootView: introView)
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController.present(viewController, animated: true)
+    }
+}
+
+extension HomeCoordinator: LessonIntroViewDelegate {
+    func lessonIntroViewDidTapClose(_: LessonIntroView) {
+        navigationController.dismiss(animated: true)
+    }
+
+    func lessonIntroViewDidTapStartLesson(_: LessonIntroView) {
+        navigationController.dismiss(animated: true)
+    }
+
+    func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
+        navigationController.dismiss(animated: true)
     }
 }

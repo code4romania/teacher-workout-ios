@@ -26,13 +26,27 @@ extension DiscoverCoordinator: DiscoverViewDelegate {
         viewModel.lessonSelected = { [weak self] lesson in
             guard let self = self else { return }
 
-            let introView = LessonIntroView(lesson: lesson)
+            let introView = LessonIntroView(lesson: lesson, delegate: self)
             let viewController = UIHostingController(rootView: introView)
-            self.navigationController.pushViewController(viewController, animated: true)
+            self.navigationController.present(viewController, animated: true)
         }
 
         let viewDetails = ThemeDetails(viewModel: viewModel)
         let viewController = UIHostingController(rootView: viewDetails)
         navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension DiscoverCoordinator: LessonIntroViewDelegate {
+    func lessonIntroViewDidTapClose(_: LessonIntroView) {
+        navigationController.dismiss(animated: true)
+    }
+
+    func lessonIntroViewDidTapStartLesson(_: LessonIntroView) {
+        navigationController.dismiss(animated: true)
+    }
+
+    func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
+        navigationController.dismiss(animated: true)
     }
 }
