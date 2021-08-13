@@ -23,6 +23,7 @@ final class DiscoverCoordinator: NSObject, Coordinator {
     func presentLessonIntroView(_ lesson: Lesson) {
         let introView = LessonIntroView(lesson: lesson, delegate: self)
         let viewController = UIHostingController(rootView: introView)
+        viewController.modalPresentationStyle = .fullScreen
         navigationController.present(viewController, animated: true)
     }
 }
