@@ -27,20 +27,20 @@ struct LessonIntroView: View {
                 Image("lesson_start_hero")
 
                 Text(lesson.title)
-                    .font(Font.custom("Mulish-Bold", size: 20))
+                    .boldLargeFont()
                     .padding(16)
                     .foregroundColor(Color.black)
 
                 Text(lesson.themeTitle)
                     .foregroundColor(Color("AccentColor"))
-                    .font(Font.custom("Mulish-SemiBold", size: 12))
+                    .semiBoldSmallFont()
                     .padding(.horizontal)
 
                 HStack(spacing: 4) {
                     Image(systemName: "clock")
                     Text(lesson.duration)
                 }
-                .font(Font.custom("Mulish-SemiBold", size: 12))
+                .semiBoldSmallFont()
                 .foregroundColor(Color("AccentColor"))
                 .padding(6)
 

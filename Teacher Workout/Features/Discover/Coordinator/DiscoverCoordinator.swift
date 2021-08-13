@@ -17,21 +17,20 @@ final class DiscoverCoordinator: NSObject, Coordinator {
         navigationController = UINavigationController(rootViewController: viewController)
         navigationController.navigationBar.prefersLargeTitles = true
     }
+
+    // MARK: - LessonIntroView Interaction
+
+    func presentLessonIntroView(_ lesson: Lesson) {
+        let introView = LessonIntroView(lesson: lesson, delegate: self)
+        let viewController = UIHostingController(rootView: introView)
+        navigationController.present(viewController, animated: true)
+    }
 }
 
 extension DiscoverCoordinator: DiscoverViewDelegate {
     func discoverView(_: DiscoverView, didSelectTheme theme: Theme) {
         let viewModel = ThemeDetailsViewModel(theme: theme)
-
-        viewModel.lessonSelected = { [weak self] lesson in
-            guard let self = self else { return }
-
-            let introView = LessonIntroView(lesson: lesson, delegate: self)
-            let viewController = UIHostingController(rootView: introView)
-            self.navigationController.present(viewController, animated: true)
-        }
-
-        let viewDetails = ThemeDetails(viewModel: viewModel)
+        let viewDetails = ThemeDetails(viewModel: viewModel, delegate: self)
         let viewController = UIHostingController(rootView: viewDetails)
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -48,5 +47,11 @@ extension DiscoverCoordinator: LessonIntroViewDelegate {
 
     func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
         navigationController.dismiss(animated: true)
+    }
+}
+
+extension DiscoverCoordinator: ThemeDetailsDelegate {
+    func themeDetails(_: ThemeDetails, didSelectLesson lesson: Lesson) {
+        presentLessonIntroView(lesson)
     }
 }

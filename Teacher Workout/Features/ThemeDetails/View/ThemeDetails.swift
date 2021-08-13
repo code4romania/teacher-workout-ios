@@ -1,7 +1,13 @@
 import SwiftUI
 
+protocol ThemeDetailsDelegate {
+    func themeDetails(_: ThemeDetails, didSelectLesson lesson: Lesson)
+}
+
 struct ThemeDetails: View {
     @ObservedObject var viewModel: ThemeDetailsViewModel
+
+    var delegate: ThemeDetailsDelegate?
 
     var body: some View {
         ScrollView {
@@ -18,6 +24,6 @@ struct ThemeDetails: View {
 
 extension ThemeDetails: LessonsListDelegate {
     func lessonsList(_: LessonsList, didSelectLesson lesson: Lesson) {
-        viewModel.lessonSelected(lesson)
+        delegate?.themeDetails(self, didSelectLesson: lesson)
     }
 }
