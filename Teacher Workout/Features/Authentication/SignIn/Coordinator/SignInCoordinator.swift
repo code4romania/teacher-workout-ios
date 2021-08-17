@@ -28,7 +28,7 @@ final class SignInCoordinator: NSObject, Coordinator {
     }
 }
 
-extension SignInCoordinator: SignInViewDelegate, ResetPasswordViewDelegate {
+extension SignInCoordinator: SignInViewDelegate, ResetPasswordViewDelegate, NoticeViewDelegate {
     func signInViewDidTapClose(_: SignInView) {
         navigationController.dismiss(animated: true)
         delegate?.signInCoordinatorDidClose(self)
@@ -49,6 +49,12 @@ extension SignInCoordinator: SignInViewDelegate, ResetPasswordViewDelegate {
     }
 
     func resetPasswordViewDidTapReset(_: ResetPasswordView, for _: String) {
-        // TODO: present confirmation screen
+        topNavigation?.dismiss(animated: true)
+        let viewController = UIHostingController(rootView: NoticeView(delegate: self))
+        topNavigation?.present(viewController, animated: false)
+    }
+
+    func noticeViewDidTapClose(_: NoticeView) {
+        topNavigation?.dismiss(animated: true)
     }
 }

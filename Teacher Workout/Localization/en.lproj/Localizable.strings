@@ -53,3 +53,5 @@
 "ForgotPassword.forgotIntro" = "Reset password";
 
 "ForgotPassword.resetButtonTitle" = "Reset";
+
+"ForgotPassword.confirmationIntro" = "Check your email";

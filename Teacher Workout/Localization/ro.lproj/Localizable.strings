@@ -53,3 +53,5 @@
 "ForgotPassword.forgotIntro" = "Resetează-ți parola";
 
 "ForgotPassword.resetButtonTitle" = "Resetează";
+
+"ForgotPassword.confirmationIntro" = "Verifică-ți e-mailul";
