@@ -47,4 +47,8 @@ extension SignInCoordinator: SignInViewDelegate, ResetPasswordViewDelegate {
     func resetPasswordViewDidTapClose(_: ResetPasswordView) {
         topNavigation?.dismiss(animated: true)
     }
+
+    func resetPasswordViewDidTapReset(_: ResetPasswordView, for _: String) {
+        // TODO: present confirmation screen
+    }
 }

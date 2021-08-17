@@ -51,3 +51,5 @@
 "Home.newLessons" = "Lecții nou adăugate";
 
 "ForgotPassword.forgotIntro" = "Resetează-ți parola";
+
+"ForgotPassword.resetButtonTitle" = "Resetează";
