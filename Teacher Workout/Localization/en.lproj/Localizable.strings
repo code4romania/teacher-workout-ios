@@ -49,3 +49,5 @@
 "Home.lessonsInProgress" = "Lessons in progress";
 
 "Home.newLessons" = "Newly added lessons";
+
+"ForgotPassword.forgotIntro" = "Reset password";

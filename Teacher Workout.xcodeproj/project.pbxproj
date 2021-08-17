@@ -343,6 +343,7 @@
 		BB1F1D072687020E00663EEC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BB2B8B7926CC52EB00C482FD /* ResetPassword */,
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
@@ -392,6 +393,22 @@
 				BB29A3E426876C800063C1A4 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		BB2B8B7926CC52EB00C482FD /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				BB2B8B7A26CC52F500C482FD /* View */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		BB2B8B7A26CC52F500C482FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BB3812562687272B0008FDC6 /* NetworkingLayer */ = {
@@ -754,7 +771,6 @@
 			isa = PBXGroup;
 			children = (
 				DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */,
-				DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */,
 				DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */,
 			);
 			path = View;

@@ -2,6 +2,7 @@ import SwiftUI
 
 protocol SignInFormViewDelegate {
     func signInFormViewDidTapSignIn(_ view: SignInFormView)
+    func signInFormViewDidTapForgotPassword(_ view: SignInFormView)
 }
 
 struct SignInFormView: View {
@@ -25,7 +26,7 @@ struct SignInFormView: View {
                            showError: $viewModel.showPasswordError)
 
             Button(action: {
-                // TODO: Implement forgot password action
+                self.delegate.signInFormViewDidTapForgotPassword(self)
             }, label: {
                 VStack {
                     Text(AppStrings.Authentication.signInForgotPasswordLabel.rawValue.localized())
@@ -43,7 +44,6 @@ struct SignInFormView: View {
 
                 // TODO: Implement sign in action
                 self.delegate.signInFormViewDidTapSignIn(self)
-
             }, label: {
                 Text(AppStrings.Authentication.signInButtonTitle.rawValue.localized())
                     .primaryButtonStyle()
