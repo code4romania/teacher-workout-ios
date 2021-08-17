@@ -13,9 +13,17 @@ struct NoticeView: View {
                 self.delegate?.noticeViewDidTapClose(self)
             }
 
-            Text(AppStrings.ForgotPassword.confirmationIntro.rawValue.localized())
+            Text(AppStrings.ForgotPassword.confirmationIntro.localized())
                 .largeTitleStyle()
-                .padding(.bottom)
+                .padding(.bottom, 30)
+
+            Image(systemName: "envelope.fill")
+                .font(.system(size: 48))
+                .foregroundColor(.accentColor)
+                .padding(.bottom, 26)
+
+            Text(AppStrings.ForgotPassword.confirmationDetails.localized())
+                .regularTextStyle()
 
             Spacer()
         }.padding(20)

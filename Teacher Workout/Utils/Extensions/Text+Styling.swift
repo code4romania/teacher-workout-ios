@@ -19,4 +19,10 @@ extension Text {
             .fontWeight(.bold)
             .foregroundColor(.accentColor)
     }
+
+    func regularTextStyle() -> some View {
+        font(Font.custom("Mulish-Regular", size: 16))
+            .foregroundColor(Color("neutral"))
+            .lineSpacing(8)
+    }
 }

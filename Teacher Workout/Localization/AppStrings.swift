@@ -61,6 +61,7 @@ enum AppStrings: String, Localizable {
         case forgotIntro = "ForgotPassword.forgotIntro"
         case resetButtonTitle = "ForgotPassword.resetButtonTitle"
         case confirmationIntro = "ForgotPassword.confirmationIntro"
+        case confirmationDetails = "ForgotPassword.confirmationDetails"
     }
 
     enum Discover: String, Localizable {

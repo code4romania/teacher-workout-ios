@@ -16,15 +16,15 @@ struct ResetPasswordView: View {
                 self.delegate?.resetPasswordViewDidTapClose(self)
             }
 
-            Text(AppStrings.ForgotPassword.forgotIntro.rawValue.localized())
+            Text(AppStrings.ForgotPassword.forgotIntro.localized())
                 .largeTitleStyle()
                 .padding(.bottom)
 
             VStack(alignment: .leading, spacing: 30) {
-                InputFieldView(label: AppStrings.Authentication.Email.inputLabel.rawValue.localized(),
+                InputFieldView(label: AppStrings.Authentication.Email.inputLabel.localized(),
                                iconName: "envelope",
-                               placeholder: AppStrings.Authentication.Email.inputPlaceholder.rawValue.localized(),
-                               errorMessage: AppStrings.Authentication.Email.invalidEmailMessage.rawValue.localized(),
+                               placeholder: AppStrings.Authentication.Email.inputPlaceholder.localized(),
+                               errorMessage: AppStrings.Authentication.Email.invalidEmailMessage.localized(),
                                fieldData: $viewModel.email,
                                showError: $viewModel.showEmailError)
 
@@ -35,7 +35,7 @@ struct ResetPasswordView: View {
 
                     self.delegate?.resetPasswordViewDidTapReset(self, for: viewModel.email)
                 }, label: {
-                    Text(AppStrings.ForgotPassword.resetButtonTitle.rawValue.localized())
+                    Text(AppStrings.ForgotPassword.resetButtonTitle.localized())
                         .primaryButtonStyle()
                 })
             }

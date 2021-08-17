@@ -55,3 +55,5 @@
 "ForgotPassword.resetButtonTitle" = "Resetează";
 
 "ForgotPassword.confirmationIntro" = "Verifică-ți e-mailul";
+
+"ForgotPassword.confirmationDetails" = "Un e-mail pentru resetarea parolei a fost trimis la adresa de e-mail introdusă.";

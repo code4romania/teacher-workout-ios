@@ -347,7 +347,6 @@
 		BB1F1D072687020E00663EEC /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				BB2B8B7926CC52EB00C482FD /* ResetPassword */,
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
@@ -355,6 +354,7 @@
 				BB38126A268749730008FDC6 /* Menu */,
 				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
+				BB2B8B7926CC52EB00C482FD /* ResetPassword */,
 				BB13A3B826BADE1600E0A7D5 /* ThemeDetails */,
 				BB1F1D092687022A00663EEC /* Splash */,
 			);
