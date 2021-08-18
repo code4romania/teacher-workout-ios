@@ -65,6 +65,17 @@ class GraphAPIService: DataProviderProtocol {
             }
         }
     }
+
+    func saveLesson(lessonId: String?) {
+        guard let lessonId = lessonId else {
+            return
+        }
+
+        apolloClient.perform(mutation: SaveMutation(input: LessonSaveInput(lessonId: lessonId))) { result in
+            guard let data = try? result.get().data else { return }
+            print(data)
+        }
+    }
 }
 
 class NetworkInterceptorProvider: DefaultInterceptorProvider {

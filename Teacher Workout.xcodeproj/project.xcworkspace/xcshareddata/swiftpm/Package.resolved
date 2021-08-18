@@ -2,7 +2,7 @@
   "object": {
     "pins": [
       {
-        "package": "apollo-ios",
+        "package": "Apollo",
         "repositoryURL": "https://github.com/apollographql/apollo-ios.git",
         "state": {
           "branch": null,
@@ -71,6 +71,15 @@
           "branch": null,
           "revision": "973e190edf5d09274e4a6bc2e636c86899ed84c3",
           "version": "0.14.1"
+        }
+      },
+      {
+        "package": "ViewInspector",
+        "repositoryURL": "https://github.com/nalexn/ViewInspector",
+        "state": {
+          "branch": null,
+          "revision": "a9b0d2af51b8afbbcb6a3e1005aabf8726852a77",
+          "version": "0.8.1"
         }
       }
     ]
