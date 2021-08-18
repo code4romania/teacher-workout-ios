@@ -7,7 +7,7 @@ protocol SignInViewDelegate {
 }
 
 struct SignInView: View {
-    @ObservedObject var viewModel = SignInViewModel()
+    @StateObject var viewModel = SignInViewModel()
     var delegate: SignInViewDelegate
 
     var body: some View {

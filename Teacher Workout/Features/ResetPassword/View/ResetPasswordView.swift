@@ -6,7 +6,7 @@ protocol ResetPasswordViewDelegate {
 }
 
 struct ResetPasswordView: View {
-    @ObservedObject var viewModel = ResetPasswordViewModel()
+    @StateObject var viewModel = ResetPasswordViewModel()
 
     var delegate: ResetPasswordViewDelegate?
 
