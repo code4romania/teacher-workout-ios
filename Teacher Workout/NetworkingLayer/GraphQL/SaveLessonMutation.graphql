@@ -1,0 +1,7 @@
+mutation Save($input: LessonSaveInput!) {
+  lessonSave(input: $input) {
+    lesson {
+      id
+    }
+  }
+}

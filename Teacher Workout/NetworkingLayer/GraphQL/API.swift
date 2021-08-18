@@ -4,6 +4,25 @@
 import Apollo
 import Foundation
 
+public struct LessonSaveInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  /// - Parameters:
+  ///   - lessonId
+  public init(lessonId: GraphQLID) {
+    graphQLMap = ["lessonId": lessonId]
+  }
+
+  public var lessonId: GraphQLID {
+    get {
+      return graphQLMap["lessonId"] as! GraphQLID
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "lessonId")
+    }
+  }
+}
+
 public final class LessonsQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
@@ -365,6 +384,142 @@ public final class LessonsQuery: GraphQLQuery {
                 resultMap.updateValue(newValue, forKey: "displayValue")
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class SaveMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation Save($input: LessonSaveInput!) {
+      lessonSave(input: $input) {
+        __typename
+        lesson {
+          __typename
+          id
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "Save"
+
+  public var input: LessonSaveInput
+
+  public init(input: LessonSaveInput) {
+    self.input = input
+  }
+
+  public var variables: GraphQLMap? {
+    return ["input": input]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("lessonSave", arguments: ["input": GraphQLVariable("input")], type: .nonNull(.object(LessonSave.selections))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(lessonSave: LessonSave) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "lessonSave": lessonSave.resultMap])
+    }
+
+    public var lessonSave: LessonSave {
+      get {
+        return LessonSave(unsafeResultMap: resultMap["lessonSave"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "lessonSave")
+      }
+    }
+
+    public struct LessonSave: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["LessonSavePayload"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("lesson", type: .nonNull(.object(Lesson.selections))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(lesson: Lesson) {
+        self.init(unsafeResultMap: ["__typename": "LessonSavePayload", "lesson": lesson.resultMap])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      /// The newly created lesson.
+      public var lesson: Lesson {
+        get {
+          return Lesson(unsafeResultMap: resultMap["lesson"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "lesson")
+        }
+      }
+
+      public struct Lesson: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["Lesson"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .scalar(GraphQLID.self)),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: GraphQLID? = nil) {
+          self.init(unsafeResultMap: ["__typename": "Lesson", "id": id])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: GraphQLID? {
+          get {
+            return resultMap["id"] as? GraphQLID
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
           }
         }
       }
