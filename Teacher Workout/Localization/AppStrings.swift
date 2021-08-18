@@ -74,7 +74,7 @@ enum AppStrings: String, Localizable {
     }
 
     enum Lesson: String, Localizable {
-        case continua = "Lesson.continue"
+        case continueText = "Lesson.continueText"
 
         enum Intro: String, Localizable {
             case startLesson = "Lesson.Intro.startLesson"
