@@ -49,3 +49,9 @@
 "Home.lessonsInProgress" = "Lessons in progress";
 
 "Home.newLessons" = "Newly added lessons";
+
+"Lesson.Intro.startLesson" = "Start lesson";
+
+"Lesson.Intro.saveLesson" = "Save lesson";
+
+"Lesson.continueText" = "Continue";
