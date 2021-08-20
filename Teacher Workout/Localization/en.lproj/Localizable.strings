@@ -50,6 +50,14 @@
 
 "Home.newLessons" = "Newly added lessons";
 
+"ForgotPassword.forgotIntro" = "Reset password";
+
+"ForgotPassword.resetButtonTitle" = "Reset";
+
+"ForgotPassword.confirmationIntro" = "Check your email";
+
+"ForgotPassword.confirmationDetails" = "An e-mail for password reset was sent to the entered email address.";
+
 "Lesson.Intro.startLesson" = "Start lesson";
 
 "Lesson.Intro.saveLesson" = "Save lesson";

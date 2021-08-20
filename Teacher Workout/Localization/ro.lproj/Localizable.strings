@@ -50,6 +50,14 @@
 
 "Home.newLessons" = "Lecții nou adăugate";
 
+"ForgotPassword.forgotIntro" = "Resetează-ți parola";
+
+"ForgotPassword.resetButtonTitle" = "Resetează";
+
+"ForgotPassword.confirmationIntro" = "Verifică-ți e-mailul";
+
+"ForgotPassword.confirmationDetails" = "Un e-mail pentru resetarea parolei a fost trimis la adresa de e-mail introdusă.";
+
 "Lesson.Intro.startLesson" = "Începe lecția";
 
 "Lesson.Intro.saveLesson" = "Salvează lecția";

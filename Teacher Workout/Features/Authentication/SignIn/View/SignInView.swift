@@ -3,10 +3,11 @@ import SwiftUI
 protocol SignInViewDelegate {
     func signInViewDidTapClose(_ view: SignInView)
     func signInViewDidTapSignIn(_ view: SignInView)
+    func signInViewDidTapForgotPassword(_ view: SignInView)
 }
 
 struct SignInView: View {
-    @ObservedObject var viewModel = SignInViewModel()
+    @StateObject var viewModel = SignInViewModel()
     var delegate: SignInViewDelegate
 
     var body: some View {
@@ -35,5 +36,9 @@ struct SignInView: View {
 extension SignInView: SignInFormViewDelegate {
     func signInFormViewDidTapSignIn(_: SignInFormView) {
         delegate.signInViewDidTapSignIn(self)
+    }
+
+    func signInFormViewDidTapForgotPassword(_: SignInFormView) {
+        delegate.signInViewDidTapForgotPassword(self)
     }
 }

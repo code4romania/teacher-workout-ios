@@ -11,6 +11,8 @@ final class SignInCoordinator: NSObject, Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
 
+    private var topNavigation: UINavigationController?
+
     weak var delegate: SignInCoordinatorDelegate?
 
     init(navigationController: UINavigationController) {
@@ -20,11 +22,13 @@ final class SignInCoordinator: NSObject, Coordinator {
 
     func start() {
         let viewController = UIHostingController(rootView: SignInView(delegate: self))
-        navigationController.present(viewController, animated: true)
+        let navigation = UINavigationController(rootViewController: viewController)
+        topNavigation = navigation
+        navigationController.present(navigation, animated: true)
     }
 }
 
-extension SignInCoordinator: SignInViewDelegate {
+extension SignInCoordinator: SignInViewDelegate, ResetPasswordViewDelegate, NoticeViewDelegate {
     func signInViewDidTapClose(_: SignInView) {
         navigationController.dismiss(animated: true)
         delegate?.signInCoordinatorDidClose(self)
@@ -33,5 +37,24 @@ extension SignInCoordinator: SignInViewDelegate {
     func signInViewDidTapSignIn(_: SignInView) {
         navigationController.dismiss(animated: true)
         delegate?.signInCoordinatorDidTapSignIn(self)
+    }
+
+    func signInViewDidTapForgotPassword(_: SignInView) {
+        let viewController = UIHostingController(rootView: ResetPasswordView(delegate: self))
+        topNavigation?.present(viewController, animated: true)
+    }
+
+    func resetPasswordViewDidTapClose(_: ResetPasswordView) {
+        topNavigation?.dismiss(animated: true)
+    }
+
+    func resetPasswordViewDidTapReset(_: ResetPasswordView, for _: String) {
+        topNavigation?.dismiss(animated: true)
+        let viewController = UIHostingController(rootView: NoticeView(delegate: self))
+        topNavigation?.present(viewController, animated: false)
+    }
+
+    func noticeViewDidTapClose(_: NoticeView) {
+        topNavigation?.dismiss(animated: true)
     }
 }

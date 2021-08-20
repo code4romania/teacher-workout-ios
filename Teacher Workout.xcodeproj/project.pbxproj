@@ -52,6 +52,8 @@
 		BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E6268772B60063C1A4 /* DiscoverCoordinator.swift */; };
 		BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E8268773FC0063C1A4 /* HomeCoordinator.swift */; };
 		BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3EA268774590063C1A4 /* ProfileCoordinator.swift */; };
+		BB2B8B7D26CC594100C482FD /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2B8B7C26CC594100C482FD /* ResetPasswordViewModel.swift */; };
+		BB2B8B7F26CC5A8C00C482FD /* NoticeView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2B8B7E26CC5A8C00C482FD /* NoticeView.swift.swift */; };
 		BB381255268726E70008FDC6 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BB381254268726E70008FDC6 /* Apollo */; };
 		BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381259268727A00008FDC6 /* DataProviderProtocol.swift */; };
 		BB38125D268728200008FDC6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38125C268728200008FDC6 /* Config.swift */; };
@@ -183,6 +185,8 @@
 		BB29A3E6268772B60063C1A4 /* DiscoverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoordinator.swift; sourceTree = "<group>"; };
 		BB29A3E8268773FC0063C1A4 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		BB29A3EA268774590063C1A4 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		BB2B8B7C26CC594100C482FD /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		BB2B8B7E26CC5A8C00C482FD /* NoticeView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift.swift; sourceTree = "<group>"; };
 		BB381259268727A00008FDC6 /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		BB38125C268728200008FDC6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		BB38125E268728440008FDC6 /* GraphAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphAPIService.swift; sourceTree = "<group>"; };
@@ -451,6 +455,7 @@
 				BB38126A268749730008FDC6 /* Menu */,
 				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
+				BB2B8B7926CC52EB00C482FD /* ResetPassword */,
 				BB13A3B826BADE1600E0A7D5 /* ThemeDetails */,
 				BB1F1D092687022A00663EEC /* Splash */,
 			);
@@ -493,6 +498,32 @@
 				BB29A3E426876C800063C1A4 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		BB2B8B7926CC52EB00C482FD /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				BB2B8B7A26CC52F500C482FD /* View */,
+				BB2B8B7B26CC593500C482FD /* ViewModel */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		BB2B8B7A26CC52F500C482FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */,
+				BB2B8B7E26CC5A8C00C482FD /* NoticeView.swift.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB2B8B7B26CC593500C482FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB2B8B7C26CC594100C482FD /* ResetPasswordViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BB3812562687272B0008FDC6 /* NetworkingLayer */ = {
@@ -857,7 +888,6 @@
 			isa = PBXGroup;
 			children = (
 				DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */,
-				DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */,
 				DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */,
 			);
 			path = View;
@@ -1157,7 +1187,9 @@
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
 				BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */,
 				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
+				BB2B8B7D26CC594100C482FD /* ResetPasswordViewModel.swift in Sources */,
 				DE85640226A0521B004A83BF /* LandingPageCoordinator.swift in Sources */,
+				BB2B8B7F26CC5A8C00C482FD /* NoticeView.swift.swift in Sources */,
 				DE85640626A05AA2004A83BF /* ExistingAccountFooterView.swift in Sources */,
 				BB381265268739580008FDC6 /* API.swift in Sources */,
 				BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */,
