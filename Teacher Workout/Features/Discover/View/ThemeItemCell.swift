@@ -18,6 +18,7 @@ struct ThemeItemCell: View {
                 .font(Font.custom("Mulish-Regular", size: 14))
             Spacer()
         }
+        .background(Color("backgroundColor"))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 8)

@@ -29,6 +29,7 @@ struct LessonItemCell: View {
             }
             Spacer()
         }
+        .background(Color("backgroundColor"))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 8)
