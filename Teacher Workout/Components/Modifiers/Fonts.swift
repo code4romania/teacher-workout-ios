@@ -24,14 +24,16 @@ extension View {
 struct BoldLargeFont: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .scaledFont(name: "Mulish-Bold", size: 20)
+            .scaledFont(name: "Mulish-Bold", size: 26)
     }
 }
 
 struct SemiBoldSmallFont: ViewModifier {
+    var size: CGFloat
+
     func body(content: Content) -> some View {
         content
-            .scaledFont(name: "Mulish-SemiBold", size: 12)
+            .scaledFont(name: "Mulish-SemiBold", size: size)
     }
 }
 
@@ -40,7 +42,7 @@ extension View {
         modifier(BoldLargeFont())
     }
 
-    func semiBoldSmallFont() -> some View {
-        modifier(SemiBoldSmallFont())
+    func semiBoldSmallFont(size: CGFloat = 12) -> some View {
+        modifier(SemiBoldSmallFont(size: size))
     }
 }

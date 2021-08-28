@@ -40,7 +40,7 @@ struct LessonIntroView: View {
                     Image(systemName: "clock")
                     Text(lesson.duration)
                 }
-                .semiBoldSmallFont()
+                .semiBoldSmallFont(size: 14)
                 .foregroundColor(Color("AccentColor"))
                 .padding(6)
 
