@@ -6,7 +6,6 @@ extension Text {
         font(Font.custom("Mulish-Regular", size: 15))
             .fontWeight(.bold)
             .tracking(1.25)
-            .foregroundColor(.white)
             .textCase(.uppercase)
             .padding()
             .frame(maxWidth: .infinity)
@@ -14,15 +13,17 @@ extension Text {
 
     func primaryButtonStyle() -> some View {
         baseButtonStyle()
+            .foregroundColor(.white)
             .background(Color.accentColor)
             .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
     }
 
     func secondaryButtonStyle() -> some View {
         baseButtonStyle()
+            .foregroundColor(Color("neutral"))
             .overlay(
                 RoundedRectangle(cornerRadius: 50)
-                    .stroke(Color.accentColor, lineWidth: 1)
+                    .stroke(Color("neutral"), lineWidth: 1)
             )
     }
 
