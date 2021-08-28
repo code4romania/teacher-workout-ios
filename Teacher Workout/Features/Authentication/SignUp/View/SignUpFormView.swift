@@ -10,23 +10,24 @@ struct SignUpFormView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            InputFieldView(label: AppStrings.Authentication.Email.inputLabel.rawValue.localized(),
+            InputFieldView(label: AppStrings.Authentication.Email.inputLabel.localized(),
                            iconName: "envelope",
-                           placeholder: AppStrings.Authentication.Email.inputPlaceholder.rawValue.localized(),
-                           errorMessage: AppStrings.Authentication.Email.invalidEmailMessage.rawValue.localized(),
+                           placeholder: AppStrings.Authentication.Email.inputPlaceholder.localized(),
+                           errorMessage: AppStrings.Authentication.Email.invalidEmailMessage.localized(),
                            fieldData: $viewModel.email,
                            showError: $viewModel.showEmailError)
 
-            InputFieldView(label: AppStrings.Authentication.Password.inputLabel.rawValue.localized(),
+            InputFieldView(label: AppStrings.Authentication.Password.inputLabel.localized(),
                            iconName: "lock",
-                           placeholder: AppStrings.Authentication.Password.inputPlaceholder.rawValue.localized(),
+                           placeholder: AppStrings.Authentication.Password.inputPlaceholder.localized(),
                            isSecureField: true,
+                           errorMessage: AppStrings.Authentication.Password.invalidMessage.localized(),
                            fieldData: $viewModel.password,
                            showError: $viewModel.showPasswordError)
 
             InputFieldView(label: AppStrings.Authentication.Password.inputConfirmLabel.localized(),
                            iconName: "lock",
-                           placeholder: AppStrings.Authentication.Password.inputPlaceholder.rawValue.localized(),
+                           placeholder: AppStrings.Authentication.Password.inputPlaceholder.localized(),
                            isSecureField: true,
                            fieldData: $viewModel.confirmPassword,
                            showError: $viewModel.showConfirmPasswordError)

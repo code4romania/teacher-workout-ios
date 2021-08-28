@@ -39,6 +39,7 @@ struct InputFieldView: View {
                showError {
                 Text(error)
                     .font(Font.custom("Mulish-Regular", size: 16))
+                    .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(.red)
             }
         }

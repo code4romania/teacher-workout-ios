@@ -11,17 +11,18 @@ struct SignInFormView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            InputFieldView(label: AppStrings.Authentication.Email.inputLabel.rawValue.localized(),
+            InputFieldView(label: AppStrings.Authentication.Email.inputLabel.localized(),
                            iconName: "envelope",
-                           placeholder: AppStrings.Authentication.Email.inputPlaceholder.rawValue.localized(),
-                           errorMessage: AppStrings.Authentication.Email.invalidEmailMessage.rawValue.localized(),
+                           placeholder: AppStrings.Authentication.Email.inputPlaceholder.localized(),
+                           errorMessage: AppStrings.Authentication.Email.invalidEmailMessage.localized(),
                            fieldData: $viewModel.email,
                            showError: $viewModel.showEmailError)
 
-            InputFieldView(label: AppStrings.Authentication.Password.inputLabel.rawValue.localized(),
+            InputFieldView(label: AppStrings.Authentication.Password.inputLabel.localized(),
                            iconName: "lock",
-                           placeholder: AppStrings.Authentication.Password.inputPlaceholder.rawValue.localized(),
+                           placeholder: AppStrings.Authentication.Password.inputPlaceholder.localized(),
                            isSecureField: true,
+                           errorMessage: AppStrings.Authentication.Password.invalidMessage.localized(),
                            fieldData: $viewModel.password,
                            showError: $viewModel.showPasswordError)
 
@@ -29,7 +30,7 @@ struct SignInFormView: View {
                 self.delegate.signInFormViewDidTapForgotPassword(self)
             }, label: {
                 VStack {
-                    Text(AppStrings.Authentication.signInForgotPasswordLabel.rawValue.localized())
+                    Text(AppStrings.Authentication.signInForgotPasswordLabel.localized())
                         .font(Font.custom("Mulish-Bold", size: 16))
                         .foregroundColor(.accentColor)
                 }
@@ -45,7 +46,7 @@ struct SignInFormView: View {
                 // TODO: Implement sign in action
                 self.delegate.signInFormViewDidTapSignIn(self)
             }, label: {
-                Text(AppStrings.Authentication.signInButtonTitle.rawValue.localized())
+                Text(AppStrings.Authentication.signInButtonTitle.localized())
                     .primaryButtonStyle()
             })
         }

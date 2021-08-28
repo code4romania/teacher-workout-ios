@@ -9,14 +9,14 @@ struct ExistingAccountFooterView: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            Text(AppStrings.Authentication.alreadyHaveAccountLabel.rawValue.localized())
+            Text(AppStrings.Authentication.alreadyHaveAccountLabel.localized())
                 .font(Font.custom("Mulish-SemiBold", size: 16))
                 .foregroundColor(.gray)
 
             Button(action: {
                 self.delegate.existingAccountFooterViewDidTapSignIn(self)
             }, label: {
-                Text(AppStrings.Authentication.signInButtonTitle.rawValue.localized())
+                Text(AppStrings.Authentication.signInButtonTitle.localized())
                     .font(Font.custom("Mulish-Bold", size: 16))
             })
         }

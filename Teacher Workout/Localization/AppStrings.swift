@@ -54,6 +54,7 @@ enum AppStrings: String, Localizable {
             case inputLabel = "Authentication.Password.inputLabel"
             case inputConfirmLabel = "Authentication.Password.inputConfirmLabel"
             case inputPlaceholder = "Authentication.Password.inputPlaceholder"
+            case invalidMessage = "Authentication.Password.invalidMessage"
         }
     }
 
