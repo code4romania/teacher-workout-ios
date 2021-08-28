@@ -36,6 +36,8 @@
 
 "Authentication.Password.inputPlaceholder" = "password";
 
+"Authentication.Password.invalidMessage" = "Your password should contain at least 1 lowercase letter, an uppercase letter, a number and it should be between 8-15 characters long.";
+
 "Discover.navigationTitle" = "Discover lessons";
 
 "Discover.listDescription" = "Lesson categories";

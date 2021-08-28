@@ -17,13 +17,13 @@ struct SignInView: View {
                     self.delegate.signInViewDidTapClose(self)
                 }
 
-                Text(AppStrings.Authentication.signInIntro.rawValue.localized())
+                Text(AppStrings.Authentication.signInIntro.localized())
                     .largeTitleStyle()
                     .padding(.bottom)
 
                 SignInFormView(viewModel: viewModel, delegate: self)
 
-                CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
+                CustomDividerView(label: AppStrings.dividerLabel.localized(), spacing: 10)
                 ProvidersView()
                 Spacer()
             }

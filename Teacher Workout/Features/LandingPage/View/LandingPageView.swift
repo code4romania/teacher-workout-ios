@@ -24,7 +24,7 @@ struct LandingPageView: View {
                     Button(action: {
                         self.delegate.landingPageViewDidTapSignUp(self)
                     }, label: {
-                        Text(AppStrings.Authentication.signUpButtonTitle.rawValue.localized())
+                        Text(AppStrings.Authentication.signUpButtonTitle.localized())
                             .primaryButtonStyle()
                     })
 

@@ -36,6 +36,8 @@
 
 "Authentication.Password.inputPlaceholder" = "parola";
 
+"Authentication.Password.invalidMessage" = "Parola trebuie să conțină cel puțin o literă mică, o literă majusculă, un număr și să aibă o lungime între 8 și 5 caractere.";
+
 "Discover.navigationTitle" = "Descoperă lecțiile";
 
 "Discover.listDescription" = "Categorii de lecții";

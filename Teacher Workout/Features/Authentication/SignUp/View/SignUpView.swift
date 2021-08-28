@@ -23,7 +23,7 @@ struct SignUpView: View {
 
                         SignUpFormView(delegate: self)
 
-                        CustomDividerView(label: AppStrings.dividerLabel.rawValue.localized(), spacing: 10)
+                        CustomDividerView(label: AppStrings.dividerLabel.localized(), spacing: 10)
                         ProvidersView()
                             .padding(.bottom, 20)
                         ExistingAccountFooterView(delegate: self)

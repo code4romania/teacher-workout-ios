@@ -48,7 +48,7 @@ struct LessonIntroView: View {
                     self.viewModel.saveLesson(lessonId: lesson.id)
                     self.delegate?.lessonIntroViewDidTapStartLesson(self)
                 }, label: {
-                    Text(AppStrings.Lesson.Intro.startLesson.rawValue.localized())
+                    Text(AppStrings.Lesson.Intro.startLesson.localized())
                         .primaryButtonStyle()
                         .padding()
                 })
@@ -56,7 +56,7 @@ struct LessonIntroView: View {
                     self.viewModel.saveLesson(lessonId: lesson.id)
                     self.delegate?.lessonIntroViewDidTapSaveLesson(self)
                 }, label: {
-                    Text(AppStrings.Lesson.Intro.saveLesson.rawValue.localized())
+                    Text(AppStrings.Lesson.Intro.saveLesson.localized())
                         .secondaryButtonStyle()
                         .padding(.horizontal)
                 })
