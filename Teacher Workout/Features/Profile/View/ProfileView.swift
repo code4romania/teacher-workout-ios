@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State private var isResultsSelected: Bool = false
+    @State private var isResultsSelected: Bool = true
 
     var delegate: SettingsListViewDelegate?
 

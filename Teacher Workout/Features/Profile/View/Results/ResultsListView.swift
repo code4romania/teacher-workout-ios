@@ -5,7 +5,7 @@ struct ResultsListView: View {
 
     var body: some View {
         List(viewModel.items) { item in
-            Text(item.title)
+            ResultsListItem(item: item)
         }
         .listStyle(.plain)
         .onAppear {

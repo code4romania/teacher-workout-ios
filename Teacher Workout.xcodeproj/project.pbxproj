@@ -132,6 +132,8 @@
 		DEEEA92926FF50410067A2BC /* ResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92826FF50410067A2BC /* ResultsListView.swift */; };
 		DEEEA92B26FF51FF0067A2BC /* ResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92A26FF51FF0067A2BC /* ResultsListViewModel.swift */; };
 		DEEEA92E26FF52890067A2BC /* ResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92D26FF52890067A2BC /* ResultItem.swift */; };
+		DEEEA93026FF548A0067A2BC /* ResultsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92F26FF548A0067A2BC /* ResultsListItem.swift */; };
+		DEEEA93226FF5F210067A2BC /* CustomProgressBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +277,8 @@
 		DEEEA92826FF50410067A2BC /* ResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListView.swift; sourceTree = "<group>"; };
 		DEEEA92A26FF51FF0067A2BC /* ResultsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListViewModel.swift; sourceTree = "<group>"; };
 		DEEEA92D26FF52890067A2BC /* ResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItem.swift; sourceTree = "<group>"; };
+		DEEEA92F26FF548A0067A2BC /* ResultsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListItem.swift; sourceTree = "<group>"; };
+		DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBarStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				9178189E26C6353A00106835 /* Fonts.swift */,
+				DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -981,6 +986,7 @@
 			isa = PBXGroup;
 			children = (
 				DEEEA92826FF50410067A2BC /* ResultsListView.swift */,
+				DEEEA92F26FF548A0067A2BC /* ResultsListItem.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -1237,6 +1243,7 @@
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,
 				DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */,
 				BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */,
+				DEEEA93026FF548A0067A2BC /* ResultsListItem.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
 				DEEEA92E26FF52890067A2BC /* ResultItem.swift in Sources */,
@@ -1247,6 +1254,7 @@
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
 				BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */,
+				DEEEA93226FF5F210067A2BC /* CustomProgressBarStyle.swift in Sources */,
 				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
 				BB2B8B7D26CC594100C482FD /* ResetPasswordViewModel.swift in Sources */,
 				DE85640226A0521B004A83BF /* LandingPageCoordinator.swift in Sources */,

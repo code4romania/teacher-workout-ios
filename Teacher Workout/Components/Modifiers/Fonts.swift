@@ -22,9 +22,10 @@ extension View {
 // MARK: - Common fonts and sizes
 
 struct BoldLargeFont: ViewModifier {
+    var size: CGFloat = 26
     func body(content: Content) -> some View {
         content
-            .scaledFont(name: "Mulish-Bold", size: 26)
+            .scaledFont(name: "Mulish-Bold", size: size)
     }
 }
 
