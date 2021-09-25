@@ -16,7 +16,7 @@ struct ResultsListView: View {
                     self.delegate?.resultsListView(self, didSelect: item)
                 }
         }
-        .listStyle(.plain)
+        .listStyle(PlainListStyle())
         .onAppear {
             viewModel.loadData()
         }
