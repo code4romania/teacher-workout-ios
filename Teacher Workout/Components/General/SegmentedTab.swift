@@ -12,10 +12,14 @@ struct PickerTab: View {
                 .padding(.horizontal, 16)
                 .padding(.bottom, 10)
                 .frame(maxWidth: .infinity)
-                .foregroundColor(isSelected ? selectedTextColor : textColor)
+                .foregroundColor(componentColor)
             Rectangle()
-                .fill(isSelected ? selectedTextColor : textColor)
+                .fill(componentColor)
                 .frame(height: 4)
         }
+    }
+
+    private var componentColor: Color {
+        isSelected ? selectedTextColor : textColor
     }
 }
