@@ -125,6 +125,7 @@
 		DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */; };
 		DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */; };
 		DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */; };
+		DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,6 +262,7 @@
 		DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersView.swift; sourceTree = "<group>"; };
 		DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDividerView.swift; sourceTree = "<group>"; };
 		DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormView.swift; sourceTree = "<group>"; };
+		DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -670,6 +672,7 @@
 			children = (
 				DE28A9CA26FF0F74008B1096 /* ProfileView.swift */,
 				DE28A9CE26FF1D71008B1096 /* ProfileHeaderView.swift */,
+				DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1180,6 +1183,7 @@
 				BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */,
 				BB13A3BA26BAE03100E0A7D5 /* ThemeDetails.swift in Sources */,
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,
+				DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */,
 				BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
