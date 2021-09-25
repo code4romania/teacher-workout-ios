@@ -38,4 +38,10 @@ extension Text {
             .foregroundColor(Color("neutral"))
             .lineSpacing(8)
     }
+
+    func largeBoldText() -> Text {
+        font(Font.custom("Mulish-Bold", size: 32))
+            .fontWeight(.bold)
+            .foregroundColor(.accentColor)
+    }
 }
