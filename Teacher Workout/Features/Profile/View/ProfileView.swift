@@ -3,7 +3,8 @@ import SwiftUI
 struct ProfileView: View {
     @State private var isResultsSelected: Bool = true
 
-    var delegate: SettingsListViewDelegate?
+    var resultsDelegate: ResultsListViewDelegate?
+    var settingsDelegate: SettingsListViewDelegate?
 
     var body: some View {
         GeometryReader { geometry in
@@ -11,9 +12,9 @@ struct ProfileView: View {
                 ProfileHeaderView(width: geometry.size.width)
                 ProfilePickerView(isResultsSelected: $isResultsSelected)
                 if isResultsSelected {
-                    ResultsListView()
+                    ResultsListView(delegate: self.resultsDelegate)
                 } else {
-                    SettingsListView(delegate: self.delegate)
+                    SettingsListView(delegate: self.settingsDelegate)
                         .padding(.top, 50)
                 }
             }
