@@ -2,13 +2,17 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Color.blue
-            .ignoresSafeArea()
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
+        GeometryReader { geometry in
+            VStack(alignment: .center) {
+                Image("profile_image")
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.25)
+                    .clipShape(Circle())
+                Text("XP")
+            }
+            .frame(width: geometry.size.width)
+        }
+        .navigationBarTitle(AppStrings.Menu.profile.localized())
     }
 }

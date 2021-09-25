@@ -77,6 +77,7 @@
 		BBC3A22426B55BAC009C6DDE /* ThemeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A22326B55BAC009C6DDE /* ThemeItemCell.swift */; };
 		BBC3A22726B5789F009C6DDE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BBC3A22626B5789F009C6DDE /* Kingfisher */; };
 		DE28A9CB26FF0F74008B1096 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9CA26FF0F74008B1096 /* ProfileView.swift */; };
+		DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */; };
 		DE28F3AA26A03EEA00D93BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE28F3A926A03EEA00D93BDD /* Assets.xcassets */; };
 		DE28F3BD26A043D200D93BDD /* Mulish-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE28F3AD26A043D100D93BDD /* Mulish-LightItalic.ttf */; };
 		DE28F3BE26A043D200D93BDD /* Mulish-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE28F3AE26A043D100D93BDD /* Mulish-ExtraBoldItalic.ttf */; };
@@ -208,6 +209,7 @@
 		BBC3A22126B54988009C6DDE /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		BBC3A22326B55BAC009C6DDE /* ThemeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeItemCell.swift; sourceTree = "<group>"; };
 		DE28A9CA26FF0F74008B1096 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
 		DE28F3A926A03EEA00D93BDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE28F3AD26A043D100D93BDD /* Mulish-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-LightItalic.ttf"; sourceTree = "<group>"; };
 		DE28F3AE26A043D100D93BDD /* Mulish-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -294,18 +296,10 @@
 		9178187126C296B100106835 /* Lessons */ = {
 			isa = PBXGroup;
 			children = (
-				9178187326C296D500106835 /* Model */,
 				9178187426C296DA00106835 /* View */,
 				9178187526C296DF00106835 /* ViewModel */,
 			);
 			path = Lessons;
-			sourceTree = "<group>";
-		};
-		9178187326C296D500106835 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9178187426C296DA00106835 /* View */ = {
@@ -775,6 +769,7 @@
 			children = (
 				DEDDCCAC269E273900E64AAE /* Extensions */,
 				DECD7A0C269F1179004FE9E3 /* Validator.swift */,
+				DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1160,6 +1155,7 @@
 				BB13A3BE26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift in Sources */,
 				DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
+				DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */,
 				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
 				9178189F26C6353A00106835 /* Fonts.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,

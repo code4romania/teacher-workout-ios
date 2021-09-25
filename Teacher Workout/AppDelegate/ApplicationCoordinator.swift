@@ -11,7 +11,11 @@ final class ApplicationCoordinator: NSObject, Coordinator, OnboardingCoordinator
     }
 
     func start() {
-        showLandingPage()
+        if FeatureFlags.isLoginEnabled {
+            showLandingPage()
+        } else {
+            showMenu()
+        }
     }
 
     private func showLandingPage() {
