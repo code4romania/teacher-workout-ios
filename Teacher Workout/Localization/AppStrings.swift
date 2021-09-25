@@ -89,4 +89,9 @@ enum AppStrings: String, Localizable {
             case saveLesson = "Lesson.Intro.saveLesson"
         }
     }
+
+    enum Profile: String, Localizable {
+        case resultsTabLabel = "Profile.resultsTabLabel"
+        case settingsTabLabel = "Profile.settingsTabLabel"
+    }
 }
