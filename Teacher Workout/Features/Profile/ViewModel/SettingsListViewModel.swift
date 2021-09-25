@@ -1,6 +1,6 @@
 import Foundation
 
-enum SettingsList: String {
+enum SettingsListOption: String {
     case changeImage
     case changePassword
     case deleteAccount
@@ -24,7 +24,7 @@ enum SettingsList: String {
 }
 
 class SettingsListViewModel {
-    var availableActions: [SettingsList] {
+    var availableActions: [SettingsListOption] {
         [.changeImage, .changePassword, .notifications, .logOut, .deleteAccount]
     }
 }
