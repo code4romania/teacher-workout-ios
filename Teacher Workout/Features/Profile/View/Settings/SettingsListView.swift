@@ -15,6 +15,6 @@ struct SettingsListView: View {
                 .onTapGesture {
                     delegate?.settingsListView(self, didSelect: item)
                 }
-        }.listStyle(.plain)
+        }.listStyle(PlainListStyle())
     }
 }
