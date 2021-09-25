@@ -65,7 +65,6 @@
 		BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */; };
 		BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127026874CFA0008FDC6 /* Coordinator.swift */; };
 		BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */; };
-		BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB381283268751CD0008FDC6 /* ProfileViewController.swift */; };
 		BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */; };
 		BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990B26B9DD35007B44F9 /* SearchBar.swift */; };
 		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
@@ -77,6 +76,10 @@
 		BBC3A22226B54988009C6DDE /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A22126B54988009C6DDE /* DiscoverView.swift */; };
 		BBC3A22426B55BAC009C6DDE /* ThemeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A22326B55BAC009C6DDE /* ThemeItemCell.swift */; };
 		BBC3A22726B5789F009C6DDE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BBC3A22626B5789F009C6DDE /* Kingfisher */; };
+		DE28A9CB26FF0F74008B1096 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9CA26FF0F74008B1096 /* ProfileView.swift */; };
+		DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */; };
+		DE28A9CF26FF1D71008B1096 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9CE26FF1D71008B1096 /* ProfileHeaderView.swift */; };
+		DE28A9D126FF22F5008B1096 /* SegmentedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9D026FF22F5008B1096 /* SegmentedTab.swift */; };
 		DE28F3AA26A03EEA00D93BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE28F3A926A03EEA00D93BDD /* Assets.xcassets */; };
 		DE28F3BD26A043D200D93BDD /* Mulish-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE28F3AD26A043D100D93BDD /* Mulish-LightItalic.ttf */; };
 		DE28F3BE26A043D200D93BDD /* Mulish-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE28F3AE26A043D100D93BDD /* Mulish-ExtraBoldItalic.ttf */; };
@@ -122,6 +125,7 @@
 		DEDDCCB3269E2B5400E64AAE /* ProvidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */; };
 		DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */; };
 		DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */; };
+		DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,7 +201,6 @@
 		BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BB38127026874CFA0008FDC6 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
-		BB381283268751CD0008FDC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		BB6E990B26B9DD35007B44F9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		BB7699AB26875430009DF26F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +211,10 @@
 		BBC3A21F26B545E6009C6DDE /* ThemesNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemesNode.swift; sourceTree = "<group>"; };
 		BBC3A22126B54988009C6DDE /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		BBC3A22326B55BAC009C6DDE /* ThemeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeItemCell.swift; sourceTree = "<group>"; };
+		DE28A9CA26FF0F74008B1096 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
+		DE28A9CE26FF1D71008B1096 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		DE28A9D026FF22F5008B1096 /* SegmentedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTab.swift; sourceTree = "<group>"; };
 		DE28F3A926A03EEA00D93BDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE28F3AD26A043D100D93BDD /* Mulish-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-LightItalic.ttf"; sourceTree = "<group>"; };
 		DE28F3AE26A043D100D93BDD /* Mulish-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -255,6 +262,7 @@
 		DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersView.swift; sourceTree = "<group>"; };
 		DEDDCCB4269E2BCD00E64AAE /* CustomDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDividerView.swift; sourceTree = "<group>"; };
 		DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormView.swift; sourceTree = "<group>"; };
+		DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,18 +302,10 @@
 		9178187126C296B100106835 /* Lessons */ = {
 			isa = PBXGroup;
 			children = (
-				9178187326C296D500106835 /* Model */,
 				9178187426C296DA00106835 /* View */,
 				9178187526C296DF00106835 /* ViewModel */,
 			);
 			path = Lessons;
-			sourceTree = "<group>";
-		};
-		9178187326C296D500106835 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9178187426C296DA00106835 /* View */ = {
@@ -670,7 +670,9 @@
 		BB38127E26874F720008FDC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB381283268751CD0008FDC6 /* ProfileViewController.swift */,
+				DE28A9CA26FF0F74008B1096 /* ProfileView.swift */,
+				DE28A9CE26FF1D71008B1096 /* ProfileHeaderView.swift */,
+				DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -775,6 +777,7 @@
 			children = (
 				DEDDCCAC269E273900E64AAE /* Extensions */,
 				DECD7A0C269F1179004FE9E3 /* Validator.swift */,
+				DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -926,6 +929,7 @@
 				BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */,
 				BB6E990B26B9DD35007B44F9 /* SearchBar.swift */,
 				DEDDCCAA269E22BE00E64AAE /* TrailingCloseButton.swift */,
+				DE28A9D026FF22F5008B1096 /* SegmentedTab.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1157,9 +1161,11 @@
 				BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */,
 				BB38125D268728200008FDC6 /* Config.swift in Sources */,
 				DE96A06F26B56CF30071188D /* CheckboxFieldView.swift in Sources */,
+				DE28A9D126FF22F5008B1096 /* SegmentedTab.swift in Sources */,
 				BB13A3BE26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift in Sources */,
 				DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
+				DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */,
 				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
 				9178189F26C6353A00106835 /* Fonts.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
@@ -1177,10 +1183,12 @@
 				BB13A3AC26BAAD5A00E0A7D5 /* HomeViewModel.swift in Sources */,
 				BB13A3BA26BAE03100E0A7D5 /* ThemeDetails.swift in Sources */,
 				BBC3A21D26B5444E009C6DDE /* DiscoverViewModel.swift in Sources */,
+				DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */,
 				BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */,
 				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
 				DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */,
+				DE28A9CB26FF0F74008B1096 /* ProfileView.swift in Sources */,
 				DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */,
 				DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
@@ -1196,6 +1204,7 @@
 				DE96A06A26B5454E0071188D /* SignUpFormView.swift in Sources */,
 				DECD7A0B269EFA70004FE9E3 /* SignInViewModel.swift in Sources */,
 				BBC3A22426B55BAC009C6DDE /* ThemeItemCell.swift in Sources */,
+				DE28A9CF26FF1D71008B1096 /* ProfileHeaderView.swift in Sources */,
 				DE9C0A912689CB3E00B6AFA0 /* OnboardingCoordinator.swift in Sources */,
 				DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,
@@ -1208,7 +1217,6 @@
 				BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */,
 				BB13A3A926BAAC4400E0A7D5 /* HomeView.swift in Sources */,
 				BBC3A21726B54418009C6DDE /* NetworkingConstants.swift in Sources */,
-				BB381284268751CD0008FDC6 /* ProfileViewController.swift in Sources */,
 				BB13A3AF26BAB3B300E0A7D5 /* Lesson.swift in Sources */,
 				BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */,
 				BBC3A21C26B5444E009C6DDE /* Theme.swift in Sources */,

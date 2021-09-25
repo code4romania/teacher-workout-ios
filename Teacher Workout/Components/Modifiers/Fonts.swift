@@ -37,6 +37,14 @@ struct SemiBoldSmallFont: ViewModifier {
     }
 }
 
+struct TextSemibold: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(Font.custom("Mulish-SemiBold", size: 16))
+            .foregroundColor(.accentColor)
+    }
+}
+
 extension View {
     func boldLargeFont() -> some View {
         modifier(BoldLargeFont())
