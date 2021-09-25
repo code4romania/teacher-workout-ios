@@ -12,5 +12,11 @@ final class ProfileCoordinator: NSObject, Coordinator {
         viewController.tabBarItem.image = UIImage(systemName: "person.circle")
         navigationController = UINavigationController(rootViewController: viewController)
         navigationController.setNavigationBarHidden(true, animated: false)
+
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithOpaqueBackground()
+        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "neutral")!, .font: UIFont(name: "Mulish-SemiBold", size: 18)!]
+        navigationController.navigationBar.standardAppearance = coloredAppearance
+        navigationController.navigationBar.scrollEdgeAppearance = coloredAppearance
     }
 }
