@@ -65,6 +65,9 @@
 		BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */; };
 		BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127026874CFA0008FDC6 /* Coordinator.swift */; };
 		BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */; };
+		BB6C72ED26FF41AA0063CAAC /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72EC26FF41AA0063CAAC /* SettingsListView.swift */; };
+		BB6C72F026FF42E70063CAAC /* SettingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */; };
+		BB6C72F226FF48D10063CAAC /* SettingsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72F126FF48D10063CAAC /* SettingsListItem.swift */; };
 		BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */; };
 		BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990B26B9DD35007B44F9 /* SearchBar.swift */; };
 		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
@@ -201,6 +204,9 @@
 		BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BB38127026874CFA0008FDC6 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		BB6C72EC26FF41AA0063CAAC /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
+		BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListViewModel.swift; sourceTree = "<group>"; };
+		BB6C72F126FF48D10063CAAC /* SettingsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListItem.swift; sourceTree = "<group>"; };
 		BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		BB6E990B26B9DD35007B44F9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		BB7699AB26875430009DF26F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -637,6 +643,7 @@
 			children = (
 				BB38127D26874F6D0008FDC6 /* Coordinator */,
 				BB38127E26874F720008FDC6 /* View */,
+				BB6C72EE26FF42D70063CAAC /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -673,8 +680,18 @@
 				DE28A9CA26FF0F74008B1096 /* ProfileView.swift */,
 				DE28A9CE26FF1D71008B1096 /* ProfileHeaderView.swift */,
 				DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */,
+				BB6C72EC26FF41AA0063CAAC /* SettingsListView.swift */,
+				BB6C72F126FF48D10063CAAC /* SettingsListItem.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BB6C72EE26FF42D70063CAAC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BBC3A21826B5444E009C6DDE /* Model */ = {
@@ -1171,6 +1188,7 @@
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
 				DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */,
 				BB13A3B526BABF0800E0A7D5 /* LessonsList.swift in Sources */,
+				BB6C72F226FF48D10063CAAC /* SettingsListItem.swift in Sources */,
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
 				DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */,
@@ -1199,6 +1217,7 @@
 				DE85640226A0521B004A83BF /* LandingPageCoordinator.swift in Sources */,
 				BB2B8B7F26CC5A8C00C482FD /* NoticeView.swift.swift in Sources */,
 				DE85640626A05AA2004A83BF /* ExistingAccountFooterView.swift in Sources */,
+				BB6C72ED26FF41AA0063CAAC /* SettingsListView.swift in Sources */,
 				BB381265268739580008FDC6 /* API.swift in Sources */,
 				BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */,
 				DE96A06A26B5454E0071188D /* SignUpFormView.swift in Sources */,
@@ -1225,6 +1244,7 @@
 				BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */,
 				DE4B86CD269DBEC100D7636E /* InputFieldView.swift in Sources */,
 				BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */,
+				BB6C72F026FF42E70063CAAC /* SettingsListViewModel.swift in Sources */,
 				BBC3A21626B54418009C6DDE /* APIError.swift in Sources */,
 				BB13A3B726BABF8100E0A7D5 /* ThemesGrid.swift in Sources */,
 			);
