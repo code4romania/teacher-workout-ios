@@ -5,9 +5,9 @@ struct ProfileView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            VStack(spacing: 0) {
                 ProfileHeaderView(width: geometry.size.width)
-                HStack {
+                HStack(spacing: 0) {
                     PickerTab(isSelected: isResultsSelected, title: AppStrings.Profile.resultsTabLabel.localized())
                         .onTapGesture {
                             isResultsSelected = true
@@ -17,7 +17,7 @@ struct ProfileView: View {
                             isResultsSelected = false
                         }
                 }
-                .padding(.horizontal)
+                .padding(.top, 22)
                 .frame(maxWidth: .infinity)
                 .modifier(TextSemibold())
             }

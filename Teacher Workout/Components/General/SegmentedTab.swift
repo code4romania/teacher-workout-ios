@@ -7,9 +7,15 @@ struct PickerTab: View {
     var selectedTextColor: Color = .accentColor
 
     var body: some View {
-        Text(title)
-            .padding()
-            .frame(maxWidth: .infinity)
-            .foregroundColor(isSelected ? selectedTextColor : textColor)
+        VStack {
+            Text(title)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 10)
+                .frame(maxWidth: .infinity)
+                .foregroundColor(isSelected ? selectedTextColor : textColor)
+            Rectangle()
+                .fill(isSelected ? selectedTextColor : textColor)
+                .frame(height: 4)
+        }
     }
 }
