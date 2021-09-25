@@ -10,8 +10,9 @@ struct ProfileView: View {
             VStack(spacing: 0) {
                 ProfileHeaderView(width: geometry.size.width)
                 ProfilePickerView(isResultsSelected: $isResultsSelected)
-
-                if !isResultsSelected {
+                if isResultsSelected {
+                    ResultsListView()
+                } else {
                     SettingsListView(delegate: self.delegate)
                         .padding(.top, 50)
                 }
