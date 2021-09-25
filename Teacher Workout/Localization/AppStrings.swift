@@ -94,4 +94,12 @@ enum AppStrings: String, Localizable {
         case resultsTabLabel = "Profile.resultsTabLabel"
         case settingsTabLabel = "Profile.settingsTabLabel"
     }
+
+    enum Settings: String, Localizable {
+        case changeImage = "Settings.changeImage"
+        case changePassword = "Settings.changePassword"
+        case notifications = "Settings.notifications"
+        case logOut = "Settings.logOut"
+        case deleteAccount = "Settings.deleteAccount"
+    }
 }

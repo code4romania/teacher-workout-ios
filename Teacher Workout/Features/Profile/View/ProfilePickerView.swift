@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ProfilePickerView: View {
-    @State private var isResultsSelected: Bool = false
+    @Binding var isResultsSelected: Bool
 
     var body: some View {
         HStack(spacing: 0) {

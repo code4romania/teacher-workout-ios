@@ -69,3 +69,13 @@
 "Profile.resultsTabLabel" = "Rezultate";
 
 "Profile.settingsTabLabel" = "Setări";
+
+"Settings.changeImage" = "Schimbă fotografie";
+
+"Settings.changePassword" = "Schimbă parola";
+
+"Settings.notifications" = "Notificări";
+
+"Settings.logOut" = "Log out";
+
+"Settings.deleteAccount" = "Șterge cont";

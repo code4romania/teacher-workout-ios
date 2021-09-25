@@ -69,3 +69,13 @@
 "Profile.resultsTabLabel" = "Results";
 
 "Profile.settingsTabLabel" = "Settings";
+
+"Settings.changeImage" = "Change profile image";
+
+"Settings.changePassword" = "Change password";
+
+"Settings.notifications" = "Notifications";
+
+"Settings.logOut" = "Log out";
+
+"Settings.deleteAccount" = "Delete account";
