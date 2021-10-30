@@ -118,7 +118,6 @@
 		DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */; };
 		DE943E1F269D8D6000DD2EC3 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E1E269D8D6000DD2EC3 /* SignUpCoordinator.swift */; };
 		DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */; };
-		DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */; };
 		DE96A06A26B5454E0071188D /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96A06926B5454E0071188D /* SignUpFormView.swift */; };
 		DE96A06D26B545E40071188D /* SignUpFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96A06C26B545E40071188D /* SignUpFormViewModel.swift */; };
 		DE96A06F26B56CF30071188D /* CheckboxFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96A06E26B56CF30071188D /* CheckboxFieldView.swift */; };
@@ -265,7 +264,6 @@
 		DE943E1C269D8D3800DD2EC3 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		DE943E1E269D8D6000DD2EC3 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		DE943E21269D8EB100DD2EC3 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
-		DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DE96A06926B5454E0071188D /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		DE96A06C26B545E40071188D /* SignUpFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewModel.swift; sourceTree = "<group>"; };
 		DE96A06E26B56CF30071188D /* CheckboxFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxFieldView.swift; sourceTree = "<group>"; };
@@ -934,7 +932,6 @@
 		DE943E20269D8E7D00DD2EC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DE943E23269D8EC700DD2EC3 /* CreateNewPasswordView.swift */,
 				DEDDCCB2269E2B5400E64AAE /* ProvidersView.swift */,
 			);
 			path = View;
@@ -1258,7 +1255,6 @@
 				DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */,
 				BB13A3B326BABDC400E0A7D5 /* LessonItemCell.swift in Sources */,
 				DEEEA93026FF548A0067A2BC /* ResultsListItem.swift in Sources */,
-				DE943E24269D8EC700DD2EC3 /* CreateNewPasswordView.swift in Sources */,
 				DE60B19F2687476200EB01F8 /* OnboardingPageViewController.swift in Sources */,
 				DEEEA92E26FF52890067A2BC /* ResultItem.swift in Sources */,
 				DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */,
