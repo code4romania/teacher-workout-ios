@@ -18,6 +18,13 @@ extension Text {
             .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
     }
 
+    func dangerButtonStyle() -> some View {
+        baseButtonStyle()
+            .foregroundColor(.white)
+            .background(Color("danger"))
+            .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
+    }
+
     func secondaryButtonStyle() -> some View {
         baseButtonStyle()
             .foregroundColor(Color("neutral"))

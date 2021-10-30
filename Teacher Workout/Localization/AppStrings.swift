@@ -23,6 +23,7 @@ extension String {
 enum AppStrings: String, Localizable {
     case dummy = ""
     case dividerLabel
+    case cancel
 
     enum Menu: String, Localizable {
         case home = "Menu.home"
@@ -107,5 +108,9 @@ enum AppStrings: String, Localizable {
         case notifications = "Settings.notifications"
         case logOut = "Settings.logOut"
         case deleteAccount = "Settings.deleteAccount"
+        case changeImageAlertTitle = "Settings.changeImageAlertTitle"
+        case uploadImage = "Settings.uploadImage"
+        case deleteAccountAlertTitle = "Settings.deleteAccountAlertTitle"
+        case deleteAccountAlertDescription = "Settings.deleteAccountAlertDescription"
     }
 }

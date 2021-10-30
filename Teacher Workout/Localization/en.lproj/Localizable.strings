@@ -1,5 +1,7 @@
 "dividerLabel" = "or";
 
+"cancel" = "CANCEL";
+
 "Menu.home" = "Home";
 
 "Menu.discover" = "Discover";
@@ -85,3 +87,11 @@
 "Settings.logOut" = "Log out";
 
 "Settings.deleteAccount" = "Delete account";
+
+"Settings.changeImageAlertTitle" = "Do you want to change your profile image?";
+
+"Settings.uploadImage" = "Upload image";
+
+"Settings.deleteAccountAlertTitle" = "Are you sure that you want to delete your account?";
+
+"Settings.deleteAccountAlertDescription" = "This action is irreversible. If you delete your account you will lose all your lesson history.";
