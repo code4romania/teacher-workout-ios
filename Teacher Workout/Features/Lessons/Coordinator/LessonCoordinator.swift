@@ -27,11 +27,10 @@ class LessonCoordinator: Coordinator {
 extension LessonCoordinator: LessonIntroViewDelegate {
     func lessonIntroViewDidTapClose(_: LessonIntroView) {
         navigationController.dismiss(animated: true)
-        // TODO:
     }
 
     func lessonIntroViewDidTapStartLesson(_ view: LessonIntroView, lesson _: Lesson) {
-        let view = LessonFinishedView()
+        let view = LessonFinishedView(delegate: self)
         let hostingController = UIHostingController(rootView: view)
         internalNavigation?.pushViewController(hostingController, animated: true)
     }
@@ -39,5 +38,11 @@ extension LessonCoordinator: LessonIntroViewDelegate {
     func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
         navigationController.dismiss(animated: true)
         // TODO:
+    }
+}
+
+extension LessonCoordinator: LessonFinishedViewDelegate {
+    func lessonFinishedViewDidTapClose(_: LessonFinishedView) {
+        navigationController.dismiss(animated: true)
     }
 }

@@ -64,5 +64,6 @@ struct LessonIntroView: View {
                 Spacer()
             }
         }
+        .navigationBarHidden(true)
     }
 }
