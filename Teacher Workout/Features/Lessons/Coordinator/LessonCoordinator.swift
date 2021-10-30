@@ -7,6 +7,7 @@ class LessonCoordinator: Coordinator {
     var navigationController: UINavigationController
 
     private var lesson: Lesson
+    private var internalNavigation: UINavigationController?
 
     init(navigationController: UINavigationController, lesson: Lesson) {
         self.navigationController = navigationController
@@ -16,8 +17,10 @@ class LessonCoordinator: Coordinator {
     func start() {
         let introView = LessonIntroView(lesson: lesson, delegate: self)
         let viewController = UIHostingController(rootView: introView)
-        viewController.modalPresentationStyle = .fullScreen
-        navigationController.present(viewController, animated: true)
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.modalPresentationStyle = .fullScreen
+        internalNavigation = navController
+        navigationController.present(navController, animated: true)
     }
 }
 
@@ -27,9 +30,10 @@ extension LessonCoordinator: LessonIntroViewDelegate {
         // TODO:
     }
 
-    func lessonIntroViewDidTapStartLesson(_: LessonIntroView, lesson _: Lesson) {
-        navigationController.dismiss(animated: true)
-        // TODO:
+    func lessonIntroViewDidTapStartLesson(_ view: LessonIntroView, lesson _: Lesson) {
+        let view = LessonFinishedView()
+        let hostingController = UIHostingController(rootView: view)
+        internalNavigation?.pushViewController(hostingController, animated: true)
     }
 
     func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
