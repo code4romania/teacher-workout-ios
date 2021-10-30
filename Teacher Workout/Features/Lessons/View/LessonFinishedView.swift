@@ -28,12 +28,12 @@ struct LessonFinishedView: View {
             Spacer()
 
             VStack(spacing: 18) {
-                Text("Curs complet!")
+                Text(AppStrings.Lesson.Finished.titleText.localized())
                     .foregroundColor(Color("neutral"))
                     .boldLargeFont(size: 20)
                     .padding(.horizontal)
 
-                Text("În fiecare zi poți deveni un profesor mai bun pentru toți elevii tăi!")
+                Text(AppStrings.Lesson.Finished.subtitleText.localized())
                     .foregroundColor(Color("neutral"))
                     .semiBoldSmallFont(size: 16)
                     .multilineTextAlignment(.center)
