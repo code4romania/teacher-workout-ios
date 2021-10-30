@@ -92,6 +92,7 @@ enum AppStrings: String, Localizable {
         enum Finished: String, Localizable {
             case titleText = "Lesson.Finished.titleText"
             case subtitleText = "Lesson.Finished.subtitleText"
+            case share = "Lesson.Finished.share"
         }
     }
 

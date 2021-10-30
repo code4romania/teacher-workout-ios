@@ -2,6 +2,7 @@ import SwiftUI
 
 protocol LessonFinishedViewDelegate {
     func lessonFinishedViewDidTapClose(_ view: LessonFinishedView)
+    func lessonFinishedViewDidTapShare(_ view: LessonFinishedView)
 }
 
 struct LessonFinishedView: View {
@@ -42,13 +43,25 @@ struct LessonFinishedView: View {
 
             Spacer()
 
-            Button(action: {
-                self.delegate?.lessonFinishedViewDidTapClose(self)
-            }, label: {
-                Text(AppStrings.Lesson.continueText.localized())
-                    .primaryButtonStyle()
-                    .padding()
-            })
+            Group {
+                Button(action: {
+                    self.delegate?.lessonFinishedViewDidTapClose(self)
+                }, label: {
+                    Text(AppStrings.Lesson.continueText.localized())
+                        .primaryButtonStyle()
+                        .padding()
+                })
+
+                Button(action: {
+                    self.delegate?.lessonFinishedViewDidTapShare(self)
+                }, label: {
+                    HStack {
+                        Image(systemName: "square.and.arrow.up")
+                        Text(AppStrings.Lesson.Finished.share.localized())
+                    }.foregroundColor(Color("AccentColor"))
+                        .boldLargeFont(size: 16)
+                })
+            }
 
             Spacer()
         }.navigationBarHidden(true)

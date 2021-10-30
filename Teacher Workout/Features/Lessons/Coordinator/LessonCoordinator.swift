@@ -45,4 +45,10 @@ extension LessonCoordinator: LessonFinishedViewDelegate {
     func lessonFinishedViewDidTapClose(_: LessonFinishedView) {
         navigationController.dismiss(animated: true)
     }
+
+    func lessonFinishedViewDidTapShare(_: LessonFinishedView) {
+        let url = URL(string: "https://code4.ro")
+        let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
+        internalNavigation?.present(activityController, animated: true, completion: nil)
+    }
 }

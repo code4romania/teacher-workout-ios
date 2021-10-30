@@ -68,6 +68,8 @@
 
 "Lesson.Finished.subtitleText" = "Every day you can become a better teacher for all your students!";
 
+"Lesson.Finished.share" = "Share";
+
 "Lesson.continueText" = "Continue";
 
 "Profile.resultsTabLabel" = "Results";
