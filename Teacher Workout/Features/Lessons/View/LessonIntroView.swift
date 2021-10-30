@@ -1,8 +1,8 @@
 import SwiftUI
 
-protocol LessonIntroViewDelegate {
+protocol LessonIntroViewDelegate: AnyObject {
     func lessonIntroViewDidTapClose(_ view: LessonIntroView)
-    func lessonIntroViewDidTapStartLesson(_ view: LessonIntroView)
+    func lessonIntroViewDidTapStartLesson(_ view: LessonIntroView, lesson: Lesson)
     func lessonIntroViewDidTapSaveLesson(_ view: LessonIntroView)
 }
 
@@ -46,7 +46,7 @@ struct LessonIntroView: View {
 
                 Button(action: {
                     self.viewModel.saveLesson(lessonId: lesson.id)
-                    self.delegate?.lessonIntroViewDidTapStartLesson(self)
+                    self.delegate?.lessonIntroViewDidTapStartLesson(self, lesson: self.lesson)
                 }, label: {
                     Text(AppStrings.Lesson.Intro.startLesson.localized())
                         .primaryButtonStyle()
@@ -64,5 +64,6 @@ struct LessonIntroView: View {
                 Spacer()
             }
         }
+        .navigationBarHidden(true)
     }
 }

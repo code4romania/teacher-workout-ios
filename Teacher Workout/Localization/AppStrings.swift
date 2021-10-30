@@ -88,6 +88,12 @@ enum AppStrings: String, Localizable {
             case startLesson = "Lesson.Intro.startLesson"
             case saveLesson = "Lesson.Intro.saveLesson"
         }
+
+        enum Finished: String, Localizable {
+            case titleText = "Lesson.Finished.titleText"
+            case subtitleText = "Lesson.Finished.subtitleText"
+            case share = "Lesson.Finished.share"
+        }
     }
 
     enum Profile: String, Localizable {
