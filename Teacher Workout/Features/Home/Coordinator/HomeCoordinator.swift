@@ -23,10 +23,9 @@ final class HomeCoordinator: NSObject, Coordinator {
     // MARK: - LessonIntroView Interaction
 
     func presentLessonIntroView(_ lesson: Lesson) {
-        let introView = LessonIntroView(lesson: lesson, delegate: self)
-        let viewController = UIHostingController(rootView: introView)
-        viewController.modalPresentationStyle = .fullScreen
-        navigationController.present(viewController, animated: true)
+        let coordinator = LessonCoordinator(navigationController: navigationController, lesson: lesson)
+        addChildCoordinator(coordinator)
+        coordinator.start()
     }
 }
 
@@ -41,20 +40,6 @@ extension HomeCoordinator: HomeViewDelegate {
 
     func homeView(_: HomeView, didSelectLesson lesson: Lesson) {
         presentLessonIntroView(lesson)
-    }
-}
-
-extension HomeCoordinator: LessonIntroViewDelegate {
-    func lessonIntroViewDidTapClose(_: LessonIntroView) {
-        navigationController.dismiss(animated: true)
-    }
-
-    func lessonIntroViewDidTapStartLesson(_: LessonIntroView) {
-        navigationController.dismiss(animated: true)
-    }
-
-    func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
-        navigationController.dismiss(animated: true)
     }
 }
 
