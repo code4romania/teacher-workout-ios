@@ -25,10 +25,56 @@ final class ProfileCoordinator: NSObject, Coordinator {
 }
 
 extension ProfileCoordinator: SettingsListViewDelegate {
-    func settingsListView(_: SettingsListView, didSelect _: SettingsListOption) {
+    func settingsListView(_: SettingsListView, didSelect item: SettingsListOption) {
         #warning("Implement redirect for every setting list option")
-        let viewController = UIHostingController(rootView: Text("Not implemented yet"))
-        navigationController.pushViewController(viewController, animated: true)
+
+        switch item {
+        case .changeImage:
+            presentChangeImageAlert()
+        case .deleteAccount:
+            presentDeleteAccountAlert()
+        default:
+            navigationController.pushViewController(UIHostingController(rootView: Text("Not implemented")), animated: true)
+        }
+    }
+
+    private func presentChangeImageAlert() {
+        let alertView = CustomAlertView(alertImage: "photo",
+                                        alertTitle: AppStrings.Settings.changeImageAlertTitle.localized(),
+                                        primaryButtonTitle: AppStrings.Settings.uploadImage.localized(),
+                                        primaryButtonAction: primaryAction,
+                                        closeAction: closeAlert)
+
+        let viewController = UIHostingController(rootView: alertView)
+        presentViewControllerAsAlert(viewController: viewController)
+    }
+
+    private func presentDeleteAccountAlert() {
+        let alertView = CustomAlertView(alertTitle: AppStrings.Settings.deleteAccountAlertTitle.localized(),
+                                        alertDescription: AppStrings.Settings.deleteAccountAlertDescription.localized(),
+                                        primaryButtonTitle: AppStrings.Settings.deleteAccount.localized(),
+                                        type: .danger,
+                                        primaryButtonAction: primaryAction,
+                                        closeAction: closeAlert)
+
+        let viewController = UIHostingController(rootView: alertView)
+        presentViewControllerAsAlert(viewController: viewController)
+    }
+
+    private func presentViewControllerAsAlert(viewController: UIViewController) {
+        viewController.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+        navigationController.present(viewController, animated: true)
+    }
+
+    private func primaryAction() {
+        #warning("Implement required primary action")
+        print("Hello")
+    }
+
+    private func closeAlert() {
+        navigationController.dismiss(animated: false, completion: nil)
     }
 }
 
