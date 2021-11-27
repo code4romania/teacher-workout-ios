@@ -19,7 +19,7 @@ struct NoticeView: View {
 
             Image(systemName: "envelope.fill")
                 .font(.system(size: 48))
-                .foregroundColor(.accentColor)
+                .foregroundColor(.accent)
                 .padding(.bottom, 26)
 
             Text(AppStrings.ForgotPassword.confirmationDetails.localized())

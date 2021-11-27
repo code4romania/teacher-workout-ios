@@ -4,7 +4,7 @@ struct PickerTab: View {
     var isSelected: Bool
     var title: String
     var textColor: Color = .secondary
-    var selectedTextColor: Color = .accentColor
+    var selectedTextColor: Color = .accent
 
     var body: some View {
         VStack {

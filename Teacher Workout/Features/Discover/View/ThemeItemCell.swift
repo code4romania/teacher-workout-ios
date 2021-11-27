@@ -18,11 +18,11 @@ struct ThemeItemCell: View {
                 .font(Font.custom("Mulish-Regular", size: 14))
             Spacer()
         }
-        .background(Color("backgroundColor"))
+        .background(Color.background)
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(Color("AccentColor"), lineWidth: 0.5)
+                .stroke(Color.accent, lineWidth: 0.5)
         )
     }
 }

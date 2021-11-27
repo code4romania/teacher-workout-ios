@@ -73,6 +73,8 @@
 		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
 		BB8032CA272D35DB000F6746 /* LessonFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */; };
 		BB8032CD272D3754000F6746 /* LessonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8032CC272D3754000F6746 /* LessonCoordinator.swift */; };
+		BB9C099E2752263600BE1B58 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C099D2752263600BE1B58 /* Color+Extensions.swift */; };
+		BB9C099F27522E8D00BE1B58 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C099D2752263600BE1B58 /* Color+Extensions.swift */; };
 		BBC3A21626B54418009C6DDE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21426B54418009C6DDE /* APIError.swift */; };
 		BBC3A21726B54418009C6DDE /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21526B54418009C6DDE /* NetworkingConstants.swift */; };
 		BBC3A21C26B5444E009C6DDE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21926B5444E009C6DDE /* Theme.swift */; };
@@ -219,6 +221,7 @@
 		BB7699AB26875430009DF26F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonFinishedView.swift; sourceTree = "<group>"; };
 		BB8032CC272D3754000F6746 /* LessonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
+		BB9C099D2752263600BE1B58 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		BBC3A21426B54418009C6DDE /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		BBC3A21526B54418009C6DDE /* NetworkingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
 		BBC3A21926B5444E009C6DDE /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -488,6 +491,7 @@
 		BB1F1D082687021A00663EEC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BB9C099C2752261A00BE1B58 /* Colors */,
 				DE28F3AB26A043D100D93BDD /* Fonts */,
 				DE28F3A926A03EEA00D93BDD /* Assets.xcassets */,
 				BB1F1CE4268701B500663EEC /* Info.plist */,
@@ -719,6 +723,14 @@
 				BB8032CC272D3754000F6746 /* LessonCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BB9C099C2752261A00BE1B58 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				BB9C099D2752263600BE1B58 /* Color+Extensions.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		BBC3A21826B5444E009C6DDE /* Model */ = {
@@ -1303,6 +1315,7 @@
 				DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */,
 				BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */,
 				DE4B86CD269DBEC100D7636E /* InputFieldView.swift in Sources */,
+				BB9C099E2752263600BE1B58 /* Color+Extensions.swift in Sources */,
 				BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */,
 				BB6C72F026FF42E70063CAAC /* SettingsListViewModel.swift in Sources */,
 				BBC3A21626B54418009C6DDE /* APIError.swift in Sources */,
@@ -1333,6 +1346,7 @@
 				917818DD26C65EC400106835 /* Config.swift in Sources */,
 				917818F126C65F0000106835 /* LessonNode.swift in Sources */,
 				917818E926C65EF100106835 /* APIError.swift in Sources */,
+				BB9C099F27522E8D00BE1B58 /* Color+Extensions.swift in Sources */,
 				917818D126C65E9900106835 /* Text+Styling.swift in Sources */,
 				917818C926C65E7600106835 /* DataProviderProtocol.swift in Sources */,
 				917818D526C65EAD00106835 /* Fonts.swift in Sources */,

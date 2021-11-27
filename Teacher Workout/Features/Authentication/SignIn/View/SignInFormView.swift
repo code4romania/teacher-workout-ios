@@ -32,7 +32,7 @@ struct SignInFormView: View {
                 VStack {
                     Text(AppStrings.Authentication.signInForgotPasswordLabel.localized())
                         .font(Font.custom("Mulish-Bold", size: 16))
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(.accent)
                 }
             })
 

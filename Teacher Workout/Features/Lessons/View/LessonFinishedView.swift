@@ -22,7 +22,7 @@ struct LessonFinishedView: View {
             Spacer()
 
             Text("+ 10 XP")
-                .foregroundColor(Color("AccentColor"))
+                .foregroundColor(Color.accent)
                 .boldLargeFont(size: 32)
                 .padding(.horizontal)
 
@@ -30,12 +30,12 @@ struct LessonFinishedView: View {
 
             VStack(spacing: 18) {
                 Text(AppStrings.Lesson.Finished.titleText.localized())
-                    .foregroundColor(Color("neutral"))
+                    .foregroundColor(Color.neutral)
                     .boldLargeFont(size: 20)
                     .padding(.horizontal)
 
                 Text(AppStrings.Lesson.Finished.subtitleText.localized())
-                    .foregroundColor(Color("neutral"))
+                    .foregroundColor(Color.neutral)
                     .semiBoldSmallFont(size: 16)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 48)
@@ -58,7 +58,7 @@ struct LessonFinishedView: View {
                     HStack {
                         Image(systemName: "square.and.arrow.up")
                         Text(AppStrings.Lesson.Finished.share.localized())
-                    }.foregroundColor(Color("AccentColor"))
+                    }.foregroundColor(Color.accent)
                         .boldLargeFont(size: 16)
                 })
             }
