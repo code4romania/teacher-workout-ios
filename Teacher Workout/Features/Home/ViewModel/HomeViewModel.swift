@@ -31,7 +31,7 @@ final class HomeViewModel: ObservableObject {
             switch result {
             case let .success(value):
                 // TODO: Get proper data from API when ready
-                self.inProgressLessons = Array(value.prefix(upTo: 2))
+                self.inProgressLessons = Array(value.prefix(2))
                 self.newLessons = Array(value.suffix(3))
             default:
                 break
