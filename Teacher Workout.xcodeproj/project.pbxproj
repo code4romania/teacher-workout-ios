@@ -74,6 +74,7 @@
 		BB8032CA272D35DB000F6746 /* LessonFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */; };
 		BB8032CD272D3754000F6746 /* LessonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8032CC272D3754000F6746 /* LessonCoordinator.swift */; };
 		BB9C099E2752263600BE1B58 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C099D2752263600BE1B58 /* Color+Extensions.swift */; };
+		BB9C099F27522E8D00BE1B58 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C099D2752263600BE1B58 /* Color+Extensions.swift */; };
 		BBC3A21626B54418009C6DDE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21426B54418009C6DDE /* APIError.swift */; };
 		BBC3A21726B54418009C6DDE /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21526B54418009C6DDE /* NetworkingConstants.swift */; };
 		BBC3A21C26B5444E009C6DDE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21926B5444E009C6DDE /* Theme.swift */; };
@@ -1345,6 +1346,7 @@
 				917818DD26C65EC400106835 /* Config.swift in Sources */,
 				917818F126C65F0000106835 /* LessonNode.swift in Sources */,
 				917818E926C65EF100106835 /* APIError.swift in Sources */,
+				BB9C099F27522E8D00BE1B58 /* Color+Extensions.swift in Sources */,
 				917818D126C65E9900106835 /* Text+Styling.swift in Sources */,
 				917818C926C65E7600106835 /* DataProviderProtocol.swift in Sources */,
 				917818D526C65EAD00106835 /* Fonts.swift in Sources */,
