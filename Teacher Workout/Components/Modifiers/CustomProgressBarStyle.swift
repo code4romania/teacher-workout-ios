@@ -11,12 +11,12 @@ struct CustomProgressBarStyle: ProgressViewStyle {
                 .frame(width: width, height: 8)
                 .overlay(
                     RoundedRectangle(cornerRadius: 4)
-                        .stroke(Color.accentColor, lineWidth: 1)
+                        .stroke(Color.accent, lineWidth: 1)
                 )
 
             RoundedRectangle(cornerRadius: 4)
                 .frame(width: CGFloat(configuration.fractionCompleted ?? 0) * width, height: 8)
-                .foregroundColor(.accentColor)
+                .foregroundColor(Color.accent)
         }
     }
 }

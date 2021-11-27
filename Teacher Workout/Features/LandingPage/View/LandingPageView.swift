@@ -10,7 +10,7 @@ struct LandingPageView: View {
 
     var body: some View {
         ZStack {
-            Color("emeraldFaded")
+            Color.emeraldFaded
                 .ignoresSafeArea()
 
             VStack {

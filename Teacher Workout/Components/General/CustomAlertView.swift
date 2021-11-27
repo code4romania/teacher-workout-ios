@@ -21,7 +21,7 @@ struct CustomAlertView: View {
             VStack(spacing: 32) {
                 ZStack {
                     Circle()
-                        .fill(type == .danger ? Color.red : Color.accentColor)
+                        .fill(type == .danger ? Color.red : Color.accent)
                         .frame(width: 56, height: 56)
                     Image(systemName: type == .danger ? "exclamationmark.triangle.fill" : alertImage)
                         .padding(10)
@@ -55,7 +55,7 @@ struct CustomAlertView: View {
                     Button(action: self.closeAction) {
                         Text(AppStrings.cancel.localized())
                             .boldLargeFont(size: 15)
-                            .foregroundColor(type == .danger ? Color.accentColor : Color.red)
+                            .foregroundColor(type == .danger ? Color.accent : Color.red)
                             .padding(8)
                     }
                 }

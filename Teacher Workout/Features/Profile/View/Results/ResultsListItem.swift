@@ -13,7 +13,7 @@ struct ResultsListItem: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text(item.title)
                         .modifier(BoldLargeFont(size: 20))
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(.accent)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Text(item.progress)
                         .modifier(SemiBoldSmallFont(size: 16))
@@ -25,8 +25,8 @@ struct ResultsListItem: View {
             }
             Spacer()
             Image(systemName: "chevron.right")
-        }.background(Color("backgroundColor"))
+        }.background(Color.background)
             .padding(.vertical, 10)
-            .foregroundColor(Color("neutral"))
+            .foregroundColor(Color.neutral)
     }
 }

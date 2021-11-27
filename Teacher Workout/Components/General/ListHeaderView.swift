@@ -8,7 +8,7 @@ struct ListHeaderView: View {
             Text(label)
                 .font(Font.custom("Mulish-Bold", size: 20))
                 .padding(16)
-                .foregroundColor(Color("cyan"))
+                .foregroundColor(Color.cyanTheme)
             Spacer()
         }
     }

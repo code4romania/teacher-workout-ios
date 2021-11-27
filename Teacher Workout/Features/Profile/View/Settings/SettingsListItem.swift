@@ -9,8 +9,8 @@ struct SettingsListItem: View {
                 .modifier(SemiBoldSmallFont(size: 16))
             Spacer()
             Image(systemName: "chevron.right")
-        }.background(Color("backgroundColor"))
+        }.background(Color.background)
             .padding(.vertical, 10)
-            .foregroundColor(Color("neutral"))
+            .foregroundColor(Color.neutral)
     }
 }

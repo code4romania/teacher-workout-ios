@@ -14,7 +14,7 @@ struct LessonIntroView: View {
 
     var body: some View {
         ZStack {
-            Color("emeraldFaded")
+            Color.emeraldFaded
                 .ignoresSafeArea()
             VStack {
                 TrailingCloseButton {
@@ -32,7 +32,7 @@ struct LessonIntroView: View {
                     .foregroundColor(Color.black)
 
                 Text(lesson.themeTitle)
-                    .foregroundColor(Color("AccentColor"))
+                    .foregroundColor(Color.accent)
                     .semiBoldSmallFont()
                     .padding(.horizontal)
 
@@ -41,7 +41,7 @@ struct LessonIntroView: View {
                     Text(lesson.duration)
                 }
                 .semiBoldSmallFont(size: 14)
-                .foregroundColor(Color("AccentColor"))
+                .foregroundColor(Color.accent)
                 .padding(6)
 
                 Button(action: {

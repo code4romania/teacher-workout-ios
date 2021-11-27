@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func customizeAppearance() {
-        let accentColor = UIColor(named: "AccentColor")!
+        let accentColor = Color.accent.uiColor
 
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().tintColor = accentColor
-        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "secondaryColor")
+        UITabBar.appearance().unselectedItemTintColor = Color.secondary.uiColor
 
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: accentColor, .font: UIFont(name: "Mulish-Bold", size: 32)!]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: accentColor, .font: UIFont(name: "Mulish-SemiBold", size: 18)!]

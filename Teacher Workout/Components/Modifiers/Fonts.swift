@@ -42,7 +42,7 @@ struct TextSemibold: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(Font.custom("Mulish-SemiBold", size: 16))
-            .foregroundColor(.accentColor)
+            .foregroundColor(.accent)
     }
 }
 

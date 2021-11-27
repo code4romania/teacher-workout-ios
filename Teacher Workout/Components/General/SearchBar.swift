@@ -8,7 +8,7 @@ struct SearchBar: View {
     var body: some View {
         HStack {
             TextField(AppStrings.Search.placeholder.localized(), text: $text)
-                .foregroundColor(Color("AccentColor"))
+                .foregroundColor(Color.accent)
                 .font(Font.custom("Mulish-SemiBold", size: 16))
                 .frame(height: 34)
                 .padding(7)
@@ -35,7 +35,7 @@ struct SearchBar: View {
                     }
                 )
 
-                .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(Color("secondaryColor"), style: StrokeStyle(lineWidth: 1.0)))
+                .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(Color.secondary, style: StrokeStyle(lineWidth: 1.0)))
                 .padding(.horizontal, 12)
                 .onTapGesture {
                     self.isEditing = true

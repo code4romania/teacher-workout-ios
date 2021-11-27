@@ -18,7 +18,7 @@ final class ProfileCoordinator: NSObject, Coordinator {
 
         let coloredAppearance = UINavigationBarAppearance()
         coloredAppearance.configureWithOpaqueBackground()
-        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "neutral")!, .font: UIFont(name: "Mulish-SemiBold", size: 18)!]
+        coloredAppearance.titleTextAttributes = [.foregroundColor: Color.neutral.uiColor, .font: UIFont(name: "Mulish-SemiBold", size: 18)!]
         navigationController.navigationBar.standardAppearance = coloredAppearance
         navigationController.navigationBar.scrollEdgeAppearance = coloredAppearance
     }

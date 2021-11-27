@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 protocol OnboardingViewControllerDelegate: AnyObject {
     func onboardingViewController(_ viewController: OnboardingViewController, didSelectPageIndex index: Int)
@@ -42,7 +43,7 @@ final class OnboardingViewController: UIViewController, OnboardingHeroViewDelega
         nextButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 20, bottom: 16, right: 20)
         nextButton.layer.cornerRadius = 24
         nextButton.layer.borderWidth = 0.5
-        nextButton.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
+        nextButton.layer.borderColor = Color.accent.cgColor
     }
 
     // MARK: - Actions
