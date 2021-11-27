@@ -1,5 +1,5 @@
-import UIKit
 import SwiftUI
+import UIKit
 
 protocol OnboardingViewControllerDelegate: AnyObject {
     func onboardingViewController(_ viewController: OnboardingViewController, didSelectPageIndex index: Int)

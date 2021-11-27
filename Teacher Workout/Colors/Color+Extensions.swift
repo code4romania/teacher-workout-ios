@@ -3,38 +3,38 @@ import SwiftUI
 
 extension Color {
     static var accent: Color {
-        return Color("AccentColor")
+        Color("AccentColor")
     }
-    
+
     static var cyanTheme: Color {
-        return Color("cyan")
+        Color("cyan")
     }
-    
+
     static var danger: Color {
-        return Color("danger")
+        Color("danger")
     }
-    
+
     static var emeraldFaded: Color {
-        return Color("emeraldFaded")
+        Color("emeraldFaded")
     }
-    
+
     static var neutral: Color {
-        return Color("neutral")
+        Color("neutral")
     }
-    
+
     static var secondary: Color {
-        return Color("secondaryColor")
+        Color("secondaryColor")
     }
-    
+
     static var background: Color {
-        return Color("backgroundColor")
+        Color("backgroundColor")
     }
-    
+
     var uiColor: UIColor {
-        return UIColor(self)
+        UIColor(self)
     }
-    
+
     var cgColor: CGColor {
-        return uiColor.cgColor
+        uiColor.cgColor
     }
 }
