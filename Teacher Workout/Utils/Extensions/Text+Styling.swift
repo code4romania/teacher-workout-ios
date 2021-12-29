@@ -17,8 +17,7 @@ extension Text {
             .background(Color.accent)
             .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
     }
-
-<<<<<<< HEAD
+    
     func dangerButtonStyle() -> some View {
         baseButtonStyle()
             .foregroundColor(.white)
@@ -26,13 +25,6 @@ extension Text {
             .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
     }
 
-    func secondaryButtonStyle() -> some View {
-        baseButtonStyle()
-            .foregroundColor(.neutral)
-            .overlay(
-                RoundedRectangle(cornerRadius: 50)
-                    .stroke(Color.neutral, lineWidth: 1)
-=======
     func secondaryButtonStyle() -> some View {
         font(Font.custom("Mulish-Regular", size: 15))
             .fontWeight(.bold)
@@ -44,7 +36,6 @@ extension Text {
             .overlay(
                 RoundedRectangle(cornerRadius: 50)
                     .stroke(Color.accentColor, lineWidth: 1)
->>>>>>> 790ea9c (#8 - Lesson Intro Screen - UI)
             )
     }
 

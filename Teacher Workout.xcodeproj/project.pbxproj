@@ -75,8 +75,10 @@
 		BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */; };
 		BB6E990C26B9DD35007B44F9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E990B26B9DD35007B44F9 /* SearchBar.swift */; };
 		BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7699AB26875430009DF26F /* SceneDelegate.swift */; };
-		BB8032CA272D35DB000F6746 /* LessonFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */; };
-		BB8032CD272D3754000F6746 /* LessonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8032CC272D3754000F6746 /* LessonCoordinator.swift */; };
+		BB968C9B277C6D50009AAD4D /* LessonFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB968C9A277C6D50009AAD4D /* LessonFinishedView.swift */; };
+		BB968C9E277C6D55009AAD4D /* LessonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB968C9D277C6D55009AAD4D /* LessonCoordinator.swift */; };
+		BB968CA0277C6DD1009AAD4D /* CustomProgressBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB968C9F277C6DD0009AAD4D /* CustomProgressBarStyle.swift */; };
+		BB968CA1277C6DDD009AAD4D /* ResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92A26FF51FF0067A2BC /* ResultsListViewModel.swift */; };
 		BB9C099E2752263600BE1B58 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C099D2752263600BE1B58 /* Color+Extensions.swift */; };
 		BB9C099F27522E8D00BE1B58 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C099D2752263600BE1B58 /* Color+Extensions.swift */; };
 		BBC3A21626B54418009C6DDE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A21426B54418009C6DDE /* APIError.swift */; };
@@ -138,10 +140,8 @@
 		DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDDCCB6269E2C3B00E64AAE /* SignInFormView.swift */; };
 		DEEEA92526FF2DB50067A2BC /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92426FF2DB50067A2BC /* ProfilePickerView.swift */; };
 		DEEEA92926FF50410067A2BC /* ResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92826FF50410067A2BC /* ResultsListView.swift */; };
-		DEEEA92B26FF51FF0067A2BC /* ResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92A26FF51FF0067A2BC /* ResultsListViewModel.swift */; };
 		DEEEA92E26FF52890067A2BC /* ResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92D26FF52890067A2BC /* ResultItem.swift */; };
 		DEEEA93026FF548A0067A2BC /* ResultsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA92F26FF548A0067A2BC /* ResultsListItem.swift */; };
-		DEEEA93226FF5F210067A2BC /* CustomProgressBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +229,9 @@
 		BB7699AB26875430009DF26F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonFinishedView.swift; sourceTree = "<group>"; };
 		BB8032CC272D3754000F6746 /* LessonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
+		BB968C9A277C6D50009AAD4D /* LessonFinishedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonFinishedView.swift; sourceTree = "<group>"; };
+		BB968C9D277C6D55009AAD4D /* LessonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
+		BB968C9F277C6DD0009AAD4D /* CustomProgressBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressBarStyle.swift; sourceTree = "<group>"; };
 		BB9C099D2752263600BE1B58 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		BBC3A21426B54418009C6DDE /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		BBC3A21526B54418009C6DDE /* NetworkingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
@@ -333,27 +336,21 @@
 		9178187126C296B100106835 /* Lessons */ = {
 			isa = PBXGroup;
 			children = (
-				9178187326C296D500106835 /* Model */,
+				BB968C9C277C6D55009AAD4D /* Coordinator */,
 				9178187426C296DA00106835 /* View */,
 				9178187526C296DF00106835 /* ViewModel */,
 			);
 			path = Lessons;
 			sourceTree = "<group>";
 		};
-		9178187326C296D500106835 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		9178187426C296DA00106835 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9178192C26C6848800106835 /* LessonCardView.swift */,
+				BB968C9A277C6D50009AAD4D /* LessonFinishedView.swift */,
 				9178187B26C2975D00106835 /* LessonIntroView.swift */,
 				9178192026C66A5C00106835 /* LessonSlideView.swift */,
 				9178192826C67EA700106835 /* LessonTitleView.swift */,
-				9178192C26C6848800106835 /* LessonCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,6 +366,7 @@
 		9178189D26C633B900106835 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				BB968C9F277C6DD0009AAD4D /* CustomProgressBarStyle.swift */,
 				9178189E26C6353A00106835 /* Fonts.swift */,
 			);
 			path = Modifiers;
@@ -431,6 +429,7 @@
 				DE60B19226871D7400EB01F8 /* BuildTools */,
 				BB1F1CD4268701B400663EEC /* Products */,
 				917818F526C65F7F00106835 /* Frameworks */,
+				BB968C99277C6C2E009AAD4D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -498,7 +497,6 @@
 				DE60B1962687373A00EB01F8 /* Onboarding */,
 				BB38127A26874F510008FDC6 /* Profile */,
 				BB2B8B7926CC52EB00C482FD /* ResetPassword */,
-				BB13A3B826BADE1600E0A7D5 /* ThemeDetails */,
 				BB1F1D092687022A00663EEC /* Splash */,
 				BB13A3B826BADE1600E0A7D5 /* ThemeDetails */,
 			);
@@ -734,10 +732,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		BB8032CB272D3745000F6746 /* Coordinator */ = {
+		BB968C99277C6C2E009AAD4D /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */,
+				DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */,
 				BB8032CC272D3754000F6746 /* LessonCoordinator.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		BB968C9C277C6D55009AAD4D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BB968C9D277C6D55009AAD4D /* LessonCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1050,7 +1058,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB1F1CFD268701B500663EEC /* Build configuration list for PBXNativeTarget "Teacher Workout" */;
 			buildPhases = (
-				DE60B19526871DB300EB01F8 /* ShellScript */,
 				BB1F1CCF268701B400663EEC /* Sources */,
 				BB1F1CD0268701B400663EEC /* Frameworks */,
 				BB1F1CD1268701B400663EEC /* Resources */,
@@ -1234,23 +1241,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}/NetworkingLayer/GraphQL\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n\n";
 		};
-		DE60B19526871DB300EB01F8 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd BuildTools\nSDKROOT=macosx\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1267,6 +1257,7 @@
 				9178192926C67EA700106835 /* LessonTitleView.swift in Sources */,
 				BB1F1CD7268701B400663EEC /* AppDelegate.swift in Sources */,
 				DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */,
+				BB968C9B277C6D50009AAD4D /* LessonFinishedView.swift in Sources */,
 				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
 				9178189F26C6353A00106835 /* Fonts.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
@@ -1294,13 +1285,11 @@
 				DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */,
 				DE28A9CB26FF0F74008B1096 /* ProfileView.swift in Sources */,
 				DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */,
-				BB8032CA272D35DB000F6746 /* LessonFinishedView.swift in Sources */,
 				DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,
 				9178192D26C6848800106835 /* LessonCardView.swift in Sources */,
 				BB6E990A26B9DBCB007B44F9 /* ListHeaderView.swift in Sources */,
-				DEEEA93226FF5F210067A2BC /* CustomProgressBarStyle.swift in Sources */,
 				DE943E13269D8B9C00DD2EC3 /* SignInView.swift in Sources */,
 				BB2B8B7D26CC594100C482FD /* ResetPasswordViewModel.swift in Sources */,
 				DE85640226A0521B004A83BF /* LandingPageCoordinator.swift in Sources */,
@@ -1318,11 +1307,12 @@
 				DE943E1B269D8CFC00DD2EC3 /* SignUpView.swift in Sources */,
 				BB7699AC26875430009DF26F /* SceneDelegate.swift in Sources */,
 				DEEEA92926FF50410067A2BC /* ResultsListView.swift in Sources */,
+				BB968CA1277C6DDD009AAD4D /* ResultsListViewModel.swift in Sources */,
 				DE943E1D269D8D3800DD2EC3 /* SignInCoordinator.swift in Sources */,
 				9178189926C4E31A00106835 /* LessonIntroViewModel.swift in Sources */,
-				BB8032CD272D3754000F6746 /* LessonCoordinator.swift in Sources */,
 				BB13A3B126BAB45500E0A7D5 /* LessonNode.swift in Sources */,
 				DE85640426A0525A004A83BF /* LandingPageView.swift in Sources */,
+				BB968CA0277C6DD1009AAD4D /* CustomProgressBarStyle.swift in Sources */,
 				BB38126C268749CC0008FDC6 /* MenuTabBarController.swift in Sources */,
 				9178192126C66A5C00106835 /* LessonSlideView.swift in Sources */,
 				BBC3A22226B54988009C6DDE /* DiscoverView.swift in Sources */,
@@ -1334,6 +1324,7 @@
 				BBC3A21C26B5444E009C6DDE /* Theme.swift in Sources */,
 				BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */,
 				DE943E22269D8EB100DD2EC3 /* ResetPasswordView.swift in Sources */,
+				BB968C9E277C6D55009AAD4D /* LessonCoordinator.swift in Sources */,
 				BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */,
 				DE4B86CD269DBEC100D7636E /* InputFieldView.swift in Sources */,
 				BB9C099E2752263600BE1B58 /* Color+Extensions.swift in Sources */,
@@ -1565,6 +1556,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 2NYK4JQZ6U;
 				INFOPLIST_FILE = "Teacher Workout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1583,6 +1575,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 2NYK4JQZ6U;
 				INFOPLIST_FILE = "Teacher Workout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

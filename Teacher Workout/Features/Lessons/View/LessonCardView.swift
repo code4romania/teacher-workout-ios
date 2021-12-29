@@ -4,6 +4,7 @@ import SwiftUI
 struct LessonCardView: View {
     var imageURL: String?
     var description: String
+    var continueAction: ()->Void?
 
     var body: some View {
         VStack {
@@ -18,7 +19,9 @@ struct LessonCardView: View {
                 .regularDescriptionFont()
                 .padding(12)
 
-            Button(action: {}, label: {
+            Button(action: {
+                continueAction()
+            }, label: {
                 Text(AppStrings.Lesson.continueText.localized())
                     .lightButtonStyle()
             })

@@ -1,8 +1,14 @@
 import Kingfisher
 import SwiftUI
 
+protocol LessonSlideViewDelegate {
+    func lessonSlideViewDidTapContinue(_ view: LessonSlideView)
+}
+
 struct LessonSlideView: View {
     var lesson: Lesson
+    var delegate: LessonSlideViewDelegate?
+    
     @State var stepValue: Float = 1
 
     var body: some View {
@@ -11,10 +17,16 @@ struct LessonSlideView: View {
 
             LessonTitleView(label: lesson.title)
 
-            LessonCardView(imageURL: lesson.imageURL, description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum")
+            LessonCardView(imageURL: lesson.imageURL,
+                           description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+                           continueAction: continueAction)
         }
         .padding()
         .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    func continueAction() {
+        self.delegate?.lessonSlideViewDidTapContinue(self)
     }
 
     // TEMP testing

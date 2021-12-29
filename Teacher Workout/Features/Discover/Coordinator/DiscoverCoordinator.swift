@@ -30,38 +30,9 @@ final class DiscoverCoordinator: NSObject, Coordinator {
 extension DiscoverCoordinator: DiscoverViewDelegate {
     func discoverView(_: DiscoverView, didSelectTheme theme: Theme) {
         let viewModel = ThemeDetailsViewModel(theme: theme)
-
-        viewModel.lessonSelected = { [weak self] lesson in
-            guard let self = self else { return }
-
-            let introView = LessonIntroView(lesson: lesson, delegate: self)
-            let viewController = UIHostingController(rootView: introView)
-            self.navigationController.present(viewController, animated: true)
-        }
-
         let viewDetails = ThemeDetails(viewModel: viewModel)
         let viewController = UIHostingController(rootView: viewDetails)
         navigationController.pushViewController(viewController, animated: true)
-    }
-}
-
-extension DiscoverCoordinator: LessonIntroViewDelegate {
-    func lessonIntroViewDidTapClose(_: LessonIntroView) {
-        navigationController.dismiss(animated: true)
-    }
-
-    func lessonIntroViewDidTapStartLesson(_: LessonIntroView, lesson: Lesson) {
-        navigationController.dismiss(animated: true)
-
-        // TODO: - make sure we don't need to do anything with the saveLesson mutation result
-        let viewDetails = LessonSlideView(lesson: lesson)
-        let viewController = UIHostingController(rootView: viewDetails)
-        viewController.navigationItem.largeTitleDisplayMode = .never
-        navigationController.pushViewController(viewController, animated: true)
-    }
-
-    func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
-        navigationController.dismiss(animated: true)
     }
 }
 

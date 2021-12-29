@@ -48,23 +48,3 @@ extension HomeCoordinator: ThemeDetailsDelegate {
         presentLessonIntroView(lesson)
     }
 }
-
-extension HomeCoordinator: LessonIntroViewDelegate {
-    func lessonIntroViewDidTapClose(_: LessonIntroView) {
-        navigationController.dismiss(animated: true)
-    }
-
-    func lessonIntroViewDidTapStartLesson(_: LessonIntroView, lesson: Lesson) {
-        navigationController.dismiss(animated: true)
-
-        // TODO: - make sure we don't need to do anything with the saveLesson mutation result
-        let viewDetails = LessonSlideView(lesson: lesson)
-        let viewController = UIHostingController(rootView: viewDetails)
-        viewController.navigationItem.largeTitleDisplayMode = .never
-        navigationController.pushViewController(viewController, animated: true)
-    }
-
-    func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
-        navigationController.dismiss(animated: true)
-    }
-}
