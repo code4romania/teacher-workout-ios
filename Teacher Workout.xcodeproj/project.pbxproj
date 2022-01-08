@@ -227,8 +227,6 @@
 		BB6E990926B9DBCB007B44F9 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		BB6E990B26B9DD35007B44F9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		BB7699AB26875430009DF26F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonFinishedView.swift; sourceTree = "<group>"; };
-		BB8032CC272D3754000F6746 /* LessonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
 		BB968C9A277C6D50009AAD4D /* LessonFinishedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonFinishedView.swift; sourceTree = "<group>"; };
 		BB968C9D277C6D55009AAD4D /* LessonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
 		BB968C9F277C6DD0009AAD4D /* CustomProgressBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressBarStyle.swift; sourceTree = "<group>"; };
@@ -296,7 +294,6 @@
 		DEEEA92A26FF51FF0067A2BC /* ResultsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListViewModel.swift; sourceTree = "<group>"; };
 		DEEEA92D26FF52890067A2BC /* ResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItem.swift; sourceTree = "<group>"; };
 		DEEEA92F26FF548A0067A2BC /* ResultsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListItem.swift; sourceTree = "<group>"; };
-		DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBarStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,7 +426,6 @@
 				DE60B19226871D7400EB01F8 /* BuildTools */,
 				BB1F1CD4268701B400663EEC /* Products */,
 				917818F526C65F7F00106835 /* Frameworks */,
-				BB968C99277C6C2E009AAD4D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -730,16 +726,6 @@
 				DEEEA92A26FF51FF0067A2BC /* ResultsListViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BB968C99277C6C2E009AAD4D /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				BB8032C9272D35DB000F6746 /* LessonFinishedView.swift */,
-				DEEEA93126FF5F210067A2BC /* CustomProgressBarStyle.swift */,
-				BB8032CC272D3754000F6746 /* LessonCoordinator.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		BB968C9C277C6D55009AAD4D /* Coordinator */ = {
@@ -1058,6 +1044,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB1F1CFD268701B500663EEC /* Build configuration list for PBXNativeTarget "Teacher Workout" */;
 			buildPhases = (
+				BB968CA2277C7293009AAD4D /* ShellScript */,
 				BB1F1CCF268701B400663EEC /* Sources */,
 				BB1F1CD0268701B400663EEC /* Frameworks */,
 				BB1F1CD1268701B400663EEC /* Resources */,
@@ -1240,6 +1227,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}/NetworkingLayer/GraphQL\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n\n";
+		};
+		BB968CA2277C7293009AAD4D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\nswift run -c release swiftformat \"$SRCROOT\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
