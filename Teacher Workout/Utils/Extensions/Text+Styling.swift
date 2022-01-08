@@ -17,7 +17,7 @@ extension Text {
             .background(Color.accent)
             .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
     }
-
+    
     func dangerButtonStyle() -> some View {
         baseButtonStyle()
             .foregroundColor(.white)
@@ -26,12 +26,25 @@ extension Text {
     }
 
     func secondaryButtonStyle() -> some View {
-        baseButtonStyle()
-            .foregroundColor(.neutral)
+        font(Font.custom("Mulish-Regular", size: 15))
+            .fontWeight(.bold)
+            .tracking(1.25)
+            .foregroundColor(Color.accentColor)
+            .textCase(.uppercase)
+            .padding()
+            .frame(maxWidth: .infinity)
             .overlay(
                 RoundedRectangle(cornerRadius: 50)
-                    .stroke(Color.neutral, lineWidth: 1)
+                    .stroke(Color.accentColor, lineWidth: 1)
             )
+    }
+
+    func lightButtonStyle() -> some View {
+        font(Font.custom("Mulish-Regular", size: 15))
+            .fontWeight(.bold)
+            .tracking(1.25)
+            .foregroundColor(Color.accentColor)
+            .textCase(.uppercase)
     }
 
     func largeTitleStyle() -> Text {

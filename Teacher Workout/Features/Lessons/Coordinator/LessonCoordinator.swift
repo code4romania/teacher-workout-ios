@@ -29,15 +29,26 @@ extension LessonCoordinator: LessonIntroViewDelegate {
         navigationController.dismiss(animated: true)
     }
 
-    func lessonIntroViewDidTapStartLesson(_ view: LessonIntroView, lesson _: Lesson) {
-        let view = LessonFinishedView(delegate: self)
-        let hostingController = UIHostingController(rootView: view)
-        internalNavigation?.pushViewController(hostingController, animated: true)
+    func lessonIntroViewDidTapStartLesson(_ view: LessonIntroView, lesson: Lesson) {
+        
+        // TODO: - make sure we don't need to do anything with the saveLesson mutation result
+        let viewDetails = LessonSlideView(lesson: lesson, delegate: self)
+        let viewController = UIHostingController(rootView: viewDetails)
+        viewController.navigationItem.largeTitleDisplayMode = .never
+        internalNavigation?.pushViewController(viewController, animated: true)
     }
 
     func lessonIntroViewDidTapSaveLesson(_: LessonIntroView) {
         navigationController.dismiss(animated: true)
         // TODO:
+    }
+}
+
+extension LessonCoordinator: LessonSlideViewDelegate {
+    func lessonSlideViewDidTapContinue(_ view: LessonSlideView) {
+        let view = LessonFinishedView(delegate: self)
+        let hostingController = UIHostingController(rootView: view)
+        internalNavigation?.pushViewController(hostingController, animated: true)
     }
 }
 

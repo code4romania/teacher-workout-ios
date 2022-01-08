@@ -30,7 +30,7 @@ final class DiscoverCoordinator: NSObject, Coordinator {
 extension DiscoverCoordinator: DiscoverViewDelegate {
     func discoverView(_: DiscoverView, didSelectTheme theme: Theme) {
         let viewModel = ThemeDetailsViewModel(theme: theme)
-        let viewDetails = ThemeDetails(viewModel: viewModel, delegate: self)
+        let viewDetails = ThemeDetails(viewModel: viewModel)
         let viewController = UIHostingController(rootView: viewDetails)
         navigationController.pushViewController(viewController, animated: true)
     }

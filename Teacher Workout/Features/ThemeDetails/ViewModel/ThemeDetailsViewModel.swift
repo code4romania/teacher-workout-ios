@@ -3,7 +3,7 @@ import Foundation
 class ThemeDetailsViewModel: ObservableObject {
     @Published var lessons: [Lesson] = []
 
-    private var theme: Theme
+    var theme: Theme
     private let dataProvider: DataProviderProtocol
 
     init(theme: Theme, dataProvider: DataProviderProtocol = Config.dataService) {
