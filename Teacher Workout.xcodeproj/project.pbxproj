@@ -69,6 +69,7 @@
 		BB38126E26874C930008FDC6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */; };
 		BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127026874CFA0008FDC6 /* Coordinator.swift */; };
 		BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */; };
+		BB4B4AF027A5574E00A7CBE1 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B4AEF27A5574E00A7CBE1 /* ChangePasswordView.swift */; };
 		BB6C72ED26FF41AA0063CAAC /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72EC26FF41AA0063CAAC /* SettingsListView.swift */; };
 		BB6C72F026FF42E70063CAAC /* SettingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */; };
 		BB6C72F226FF48D10063CAAC /* SettingsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72F126FF48D10063CAAC /* SettingsListItem.swift */; };
@@ -221,6 +222,7 @@
 		BB38126D26874C930008FDC6 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BB38127026874CFA0008FDC6 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		BB4B4AEF27A5574E00A7CBE1 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		BB6C72EC26FF41AA0063CAAC /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
 		BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListViewModel.swift; sourceTree = "<group>"; };
 		BB6C72F126FF48D10063CAAC /* SettingsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListItem.swift; sourceTree = "<group>"; };
@@ -715,6 +717,7 @@
 				DE28A9CA26FF0F74008B1096 /* ProfileView.swift */,
 				DEEEA92726FF501D0067A2BC /* Results */,
 				DEEEA92626FF50100067A2BC /* Settings */,
+				BB4B4AEF27A5574E00A7CBE1 /* ChangePasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1289,6 +1292,7 @@
 				DEDDCCAB269E22BE00E64AAE /* TrailingCloseButton.swift in Sources */,
 				DE28A9CB26FF0F74008B1096 /* ProfileView.swift in Sources */,
 				DE60B19B268745C200EB01F8 /* OnboardingViewController.swift in Sources */,
+				BB4B4AF027A5574E00A7CBE1 /* ChangePasswordView.swift in Sources */,
 				DEDDCCB5269E2BCD00E64AAE /* CustomDividerView.swift in Sources */,
 				BB38125F268728440008FDC6 /* GraphAPIService.swift in Sources */,
 				BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */,

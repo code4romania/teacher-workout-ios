@@ -101,6 +101,10 @@ enum AppStrings: String, Localizable {
         case resultsTabLabel = "Profile.resultsTabLabel"
         case settingsTabLabel = "Profile.settingsTabLabel"
     }
+    
+    enum ChangePassword: String, Localizable {
+        case navigationTitle = "ChangePassword.navigationTitle"
+    }
 
     enum Settings: String, Localizable {
         case changeImage = "Settings.changeImage"

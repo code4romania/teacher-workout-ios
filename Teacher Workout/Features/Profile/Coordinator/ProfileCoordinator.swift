@@ -33,6 +33,8 @@ extension ProfileCoordinator: SettingsListViewDelegate {
             presentChangeImageAlert()
         case .deleteAccount:
             presentDeleteAccountAlert()
+        case .changePassword:
+            presentChangePassword()
         default:
             navigationController.pushViewController(UIHostingController(rootView: Text("Not implemented")), animated: true)
         }
@@ -59,6 +61,12 @@ extension ProfileCoordinator: SettingsListViewDelegate {
 
         let viewController = UIHostingController(rootView: alertView)
         presentViewControllerAsAlert(viewController: viewController)
+    }
+    
+    private func presentChangePassword() {
+        let view = ChangePasswordView()
+        let hostingController = UIHostingController(rootView: view)
+        navigationController.pushViewController(hostingController, animated: true)
     }
 
     private func presentViewControllerAsAlert(viewController: UIViewController) {
