@@ -44,6 +44,14 @@
 
 "ChangePassword.ctaButtonTitle" = "Salvează parola nouă";
 
+"ChangePassword.sectionLabel" = "Schimbă parola";
+
+"ChangePassword.newPasswordLabel" = "Parola nouă";
+
+"ChangePassword.confirmPasswordLabel" = "Reintrodu parola";
+
+"ChangePassword.confirmPasswordError" = "Parola nu coincide.";
+
 "Discover.navigationTitle" = "Descoperă lecțiile";
 
 "Discover.listDescription" = "Categorii de lecții";

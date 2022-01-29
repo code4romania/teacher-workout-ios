@@ -38,8 +38,7 @@ struct SignInFormView: View {
 
             Button(action: {
                 guard viewModel.isValidEmail(),
-                      viewModel.isValidPassword()
-                else {
+                      viewModel.isValidPassword() else {
                     return
                 }
 
