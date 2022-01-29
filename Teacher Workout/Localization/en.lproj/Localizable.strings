@@ -42,6 +42,8 @@
 
 "ChangePassword.navigationTitle" = "Change password";
 
+"ChangePassword.ctaButtonTitle" = "Save new password";
+
 "Discover.navigationTitle" = "Discover lessons";
 
 "Discover.listDescription" = "Lesson categories";

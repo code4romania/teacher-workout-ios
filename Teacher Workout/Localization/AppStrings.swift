@@ -104,6 +104,7 @@ enum AppStrings: String, Localizable {
     
     enum ChangePassword: String, Localizable {
         case navigationTitle = "ChangePassword.navigationTitle"
+        case ctaButtonTitle = "ChangePassword.ctaButtonTitle"
     }
 
     enum Settings: String, Localizable {

@@ -64,11 +64,21 @@ extension ProfileCoordinator: SettingsListViewDelegate {
     }
     
     private func presentChangePassword() {
-        let view = ChangePasswordView()
+        let view = ChangePasswordView(primaryButtonAction: changePasswordAction,
+                                      closeAction: closeChangePassword)
         let hostingController = UIHostingController(rootView: view)
         navigationController.pushViewController(hostingController, animated: true)
     }
+    
+    private func closeChangePassword() {
+        navigationController.popViewController(animated: true)
+    }
 
+    private func changePasswordAction() {
+        #warning("Implement this method")
+        print("Change password!")
+    }
+    
     private func presentViewControllerAsAlert(viewController: UIViewController) {
         viewController.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
         viewController.modalPresentationStyle = .overFullScreen

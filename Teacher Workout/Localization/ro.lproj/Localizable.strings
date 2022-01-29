@@ -42,6 +42,8 @@
 
 "ChangePassword.navigationTitle" = "Schimbă parola";
 
+"ChangePassword.ctaButtonTitle" = "Salvează parola nouă";
+
 "Discover.navigationTitle" = "Descoperă lecțiile";
 
 "Discover.listDescription" = "Categorii de lecții";
