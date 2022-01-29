@@ -40,6 +40,18 @@
 
 "Authentication.Password.invalidMessage" = "Parola trebuie să conțină cel puțin o literă mică, o literă majusculă, un număr și să aibă o lungime între 8 și 5 caractere.";
 
+"ChangePassword.navigationTitle" = "Schimbă parola";
+
+"ChangePassword.ctaButtonTitle" = "Salvează parola nouă";
+
+"ChangePassword.sectionLabel" = "Schimbă parola";
+
+"ChangePassword.newPasswordLabel" = "Parola nouă";
+
+"ChangePassword.confirmPasswordLabel" = "Reintrodu parola";
+
+"ChangePassword.confirmPasswordError" = "Parola nu coincide.";
+
 "Discover.navigationTitle" = "Descoperă lecțiile";
 
 "Discover.listDescription" = "Categorii de lecții";

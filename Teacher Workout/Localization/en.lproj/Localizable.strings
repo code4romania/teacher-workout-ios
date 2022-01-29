@@ -40,6 +40,18 @@
 
 "Authentication.Password.invalidMessage" = "Your password should contain at least 1 lowercase letter, an uppercase letter, a number and it should be between 8-15 characters long.";
 
+"ChangePassword.navigationTitle" = "Change password";
+
+"ChangePassword.ctaButtonTitle" = "Save new password";
+
+"ChangePassword.sectionLabel" = "Change password";
+
+"ChangePassword.newPasswordLabel" = "New password";
+
+"ChangePassword.confirmPasswordLabel" = "Confirm password";
+
+"ChangePassword.confirmPasswordError" = "Password does not match.";
+
 "Discover.navigationTitle" = "Discover lessons";
 
 "Discover.listDescription" = "Lesson categories";

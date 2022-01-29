@@ -2,7 +2,7 @@ import SwiftUI
 
 struct InputFieldView: View {
     var label: String
-    var iconName: String
+    var iconName: String?
     var placeholder: String
     var isSecureField: Bool = false
     var errorMessage: String?
@@ -13,13 +13,17 @@ struct InputFieldView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(label)
-                .font(.caption)
+                .font(Font.custom("Mulish-ExtraBold", size: 12))
+                .foregroundColor(Color.neutral)
+                .tracking(1.5)
                 .textCase(.uppercase)
             HStack {
-                Image(systemName: iconName)
-                    .font(.system(size: 24))
-                    .foregroundColor(.secondary)
-
+                if let iconName = iconName {
+                    Image(systemName: iconName)
+                        .font(.system(size: 24))
+                        .foregroundColor(.secondary)
+                }
+            
                 if isSecureField {
                     SecureField(placeholder, text: $fieldData)
                         .autocapitalization(.none)
