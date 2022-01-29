@@ -70,6 +70,7 @@
 		BB38127126874CFA0008FDC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127026874CFA0008FDC6 /* Coordinator.swift */; };
 		BB38127626874D7D0008FDC6 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */; };
 		BB4B4AF027A5574E00A7CBE1 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B4AEF27A5574E00A7CBE1 /* ChangePasswordView.swift */; };
+		BB4B4AF227A55DA500A7CBE1 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B4AF127A55DA500A7CBE1 /* ChangePasswordViewModel.swift */; };
 		BB6C72ED26FF41AA0063CAAC /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72EC26FF41AA0063CAAC /* SettingsListView.swift */; };
 		BB6C72F026FF42E70063CAAC /* SettingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */; };
 		BB6C72F226FF48D10063CAAC /* SettingsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C72F126FF48D10063CAAC /* SettingsListItem.swift */; };
@@ -223,6 +224,7 @@
 		BB38127026874CFA0008FDC6 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BB38127526874D7D0008FDC6 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		BB4B4AEF27A5574E00A7CBE1 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		BB4B4AF127A55DA500A7CBE1 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		BB6C72EC26FF41AA0063CAAC /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
 		BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListViewModel.swift; sourceTree = "<group>"; };
 		BB6C72F126FF48D10063CAAC /* SettingsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListItem.swift; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 		BB6C72EE26FF42D70063CAAC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BB4B4AF127A55DA500A7CBE1 /* ChangePasswordViewModel.swift */,
 				BB6C72EF26FF42E70063CAAC /* SettingsListViewModel.swift */,
 				DEEEA92A26FF51FF0067A2BC /* ResultsListViewModel.swift */,
 			);
@@ -1256,6 +1259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */,
+				BB4B4AF227A55DA500A7CBE1 /* ChangePasswordViewModel.swift in Sources */,
 				BB38125D268728200008FDC6 /* Config.swift in Sources */,
 				DE96A06F26B56CF30071188D /* CheckboxFieldView.swift in Sources */,
 				DE28A9D126FF22F5008B1096 /* SegmentedTab.swift in Sources */,
