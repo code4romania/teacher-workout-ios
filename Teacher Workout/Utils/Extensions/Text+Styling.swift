@@ -17,7 +17,7 @@ extension Text {
             .background(Color.accent)
             .mask(RoundedRectangle(cornerRadius: 50, style: .continuous))
     }
-    
+
     func dangerButtonStyle() -> some View {
         baseButtonStyle()
             .foregroundColor(.white)

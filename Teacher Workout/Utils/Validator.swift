@@ -11,7 +11,7 @@ class Validator {
     private init() {}
 
     func isValidData(data: String, type: ValidationType) -> Bool {
-        var regExPattern: String = ""
+        var regExPattern = ""
 
         switch type {
         case .email:

@@ -23,7 +23,7 @@ struct InputFieldView: View {
                         .font(.system(size: 24))
                         .foregroundColor(.secondary)
                 }
-            
+
                 if isSecureField {
                     SecureField(placeholder, text: $fieldData)
                         .autocapitalization(.none)

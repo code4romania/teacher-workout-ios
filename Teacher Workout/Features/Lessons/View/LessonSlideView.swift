@@ -8,7 +8,7 @@ protocol LessonSlideViewDelegate {
 struct LessonSlideView: View {
     var lesson: Lesson
     var delegate: LessonSlideViewDelegate?
-    
+
     @State var stepValue: Float = 1
 
     var body: some View {
@@ -24,9 +24,9 @@ struct LessonSlideView: View {
         .padding()
         .navigationBarTitleDisplayMode(.inline)
     }
-    
+
     func continueAction() {
-        self.delegate?.lessonSlideViewDidTapContinue(self)
+        delegate?.lessonSlideViewDidTapContinue(self)
     }
 
     // TEMP testing
