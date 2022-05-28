@@ -17,4 +17,3 @@ final class ChangePasswordViewModel: ObservableObject {
         return isValidPassword && areSamePasswords
     }
 }
-
