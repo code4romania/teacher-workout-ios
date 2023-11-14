@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -91,6 +91,9 @@
 		BBC3A22226B54988009C6DDE /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A22126B54988009C6DDE /* DiscoverView.swift */; };
 		BBC3A22426B55BAC009C6DDE /* ThemeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3A22326B55BAC009C6DDE /* ThemeItemCell.swift */; };
 		BBC3A22726B5789F009C6DDE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BBC3A22626B5789F009C6DDE /* Kingfisher */; };
+		BC499B6C2B03F9A200440E83 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC499B6B2B03F9A200440E83 /* Exercise.swift */; };
+		BC499B6E2B03F9B500440E83 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC499B6D2B03F9B500440E83 /* Answer.swift */; };
+		BCE016602B0195A400CE053E /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0165F2B0195A400CE053E /* ExerciseView.swift */; };
 		DE1E4E81272D5EF200C8D741 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E4E80272D5EF200C8D741 /* CustomAlertView.swift */; };
 		DE28A9CB26FF0F74008B1096 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9CA26FF0F74008B1096 /* ProfileView.swift */; };
 		DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */; };
@@ -242,6 +245,9 @@
 		BBC3A21F26B545E6009C6DDE /* ThemesNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemesNode.swift; sourceTree = "<group>"; };
 		BBC3A22126B54988009C6DDE /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		BBC3A22326B55BAC009C6DDE /* ThemeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeItemCell.swift; sourceTree = "<group>"; };
+		BC499B6B2B03F9A200440E83 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		BC499B6D2B03F9B500440E83 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		BCE0165F2B0195A400CE053E /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		DE1E4E80272D5EF200C8D741 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		DE28A9CA26FF0F74008B1096 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DE28A9CC26FF191A008B1096 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
@@ -488,6 +494,7 @@
 		BB1F1D072687020E00663EEC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BCE0165E2B01956400CE053E /* Exercise */,
 				DE943E0C269D8A5300DD2EC3 /* Authentication */,
 				BB38127926874F4B0008FDC6 /* Discover */,
 				BB1F1D0A2687022F00663EEC /* Home */,
@@ -773,6 +780,24 @@
 				BB13A3B026BAB45500E0A7D5 /* LessonNode.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BC499B6A2B03F99600440E83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC499B6B2B03F9A200440E83 /* Exercise.swift */,
+				BC499B6D2B03F9B500440E83 /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCE0165E2B01956400CE053E /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				BC499B6A2B03F99600440E83 /* Model */,
+				BCE0165F2B0195A400CE053E /* ExerciseView.swift */,
+			);
+			path = Exercise;
 			sourceTree = "<group>";
 		};
 		DE28F3AB26A043D100D93BDD /* Fonts */ = {
@@ -1249,7 +1274,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\nswift run -c release swiftformat \"$SRCROOT\"\n";
+			shellScript = "# cd BuildTools\n# SDKROOT=(xcrun --sdk macosx --show-sdk-path)\n# swift run -c release swiftformat \"$SRCROOT\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1261,6 +1286,7 @@
 				BB38125A268727A00008FDC6 /* DataProviderProtocol.swift in Sources */,
 				BB4B4AF227A55DA500A7CBE1 /* ChangePasswordViewModel.swift in Sources */,
 				BB38125D268728200008FDC6 /* Config.swift in Sources */,
+				BC499B6E2B03F9B500440E83 /* Answer.swift in Sources */,
 				DE96A06F26B56CF30071188D /* CheckboxFieldView.swift in Sources */,
 				DE28A9D126FF22F5008B1096 /* SegmentedTab.swift in Sources */,
 				BB13A3BE26BAE09600E0A7D5 /* ThemeDetailsViewModel.swift in Sources */,
@@ -1270,10 +1296,12 @@
 				DE28A9CD26FF191A008B1096 /* FeatureFlags.swift in Sources */,
 				BB968C9B277C6D50009AAD4D /* LessonFinishedView.swift in Sources */,
 				DECD7A0D269F1179004FE9E3 /* Validator.swift in Sources */,
+				BCE016602B0195A400CE053E /* ExerciseView.swift in Sources */,
 				9178189F26C6353A00106835 /* Fonts.swift in Sources */,
 				DE60B1CC26875F9F00EB01F8 /* OnboardingPage.swift in Sources */,
 				DEDDCCB1269E292F00E64AAE /* Text+Styling.swift in Sources */,
 				BB13A3B526BABF0800E0A7D5 /* LessonsList.swift in Sources */,
+				BC499B6C2B03F9A200440E83 /* Exercise.swift in Sources */,
 				BB6C72F226FF48D10063CAAC /* SettingsListItem.swift in Sources */,
 				DEDDCCB7269E2C3C00E64AAE /* SignInFormView.swift in Sources */,
 				DE60B1A226874A2700EB01F8 /* NSObject+Extensions.swift in Sources */,
