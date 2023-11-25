@@ -918,7 +918,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Log out"
+            "value" : "Delogare"
           }
         }
       }
