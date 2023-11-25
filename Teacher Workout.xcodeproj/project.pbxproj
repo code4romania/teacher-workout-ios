@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90FDC6762B12074500911EEE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 90FDC6752B12074500911EEE /* Localizable.xcstrings */; };
 		9178187C26C2975D00106835 /* LessonIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178187B26C2975D00106835 /* LessonIntroView.swift */; };
 		9178189426C4DF6600106835 /* SaveLessonMutation.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9178189326C4DF6600106835 /* SaveLessonMutation.graphql */; };
 		9178189926C4E31A00106835 /* LessonIntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178189826C4E31A00106835 /* LessonIntroViewModel.swift */; };
@@ -52,7 +53,6 @@
 		BB1F1CEE268701B500663EEC /* Teacher_WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CED268701B500663EEC /* Teacher_WorkoutTests.swift */; };
 		BB1F1CF9268701B500663EEC /* Teacher_WorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F1CF8268701B500663EEC /* Teacher_WorkoutUITests.swift */; };
 		BB29A3DE26876C4F0063C1A4 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3DD26876C4F0063C1A4 /* AppStrings.swift */; };
-		BB29A3E226876C800063C1A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB29A3E426876C800063C1A4 /* Localizable.strings */; };
 		BB29A3E7268772B60063C1A4 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E6268772B60063C1A4 /* DiscoverCoordinator.swift */; };
 		BB29A3E9268773FC0063C1A4 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3E8268773FC0063C1A4 /* HomeCoordinator.swift */; };
 		BB29A3EB268774590063C1A4 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29A3EA268774590063C1A4 /* ProfileCoordinator.swift */; };
@@ -177,6 +177,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90FDC6752B12074500911EEE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9178187B26C2975D00106835 /* LessonIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonIntroView.swift; sourceTree = "<group>"; };
 		9178189326C4DF6600106835 /* SaveLessonMutation.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SaveLessonMutation.graphql; sourceTree = "<group>"; };
 		9178189826C4E31A00106835 /* LessonIntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonIntroViewModel.swift; sourceTree = "<group>"; };
@@ -206,8 +207,6 @@
 		BB1F1CFA268701B500663EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB29A3DD26876C4F0063C1A4 /* AppStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		BB29A3DF26876C6E0063C1A4 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		BB29A3E326876C800063C1A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BB29A3E526876C830063C1A4 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BB29A3E6268772B60063C1A4 /* DiscoverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoordinator.swift; sourceTree = "<group>"; };
 		BB29A3E8268773FC0063C1A4 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		BB29A3EA268774590063C1A4 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -537,7 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				BB29A3DD26876C4F0063C1A4 /* AppStrings.swift */,
-				BB29A3E426876C800063C1A4 /* Localizable.strings */,
+				90FDC6752B12074500911EEE /* Localizable.xcstrings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -1176,6 +1175,7 @@
 			files = (
 				DE28F3BF26A043D200D93BDD /* Mulish-Italic.ttf in Resources */,
 				DE28F3BE26A043D200D93BDD /* Mulish-ExtraBoldItalic.ttf in Resources */,
+				90FDC6762B12074500911EEE /* Localizable.xcstrings in Resources */,
 				DE28F3C126A043D200D93BDD /* Mulish-Black.ttf in Resources */,
 				DE28F3CB26A043D200D93BDD /* Mulish-SemiBold.ttf in Resources */,
 				DE28F3C626A043D200D93BDD /* Mulish-Light.ttf in Resources */,
@@ -1189,7 +1189,6 @@
 				DE28F3BD26A043D200D93BDD /* Mulish-LightItalic.ttf in Resources */,
 				DE28F3C426A043D200D93BDD /* Mulish-ExtraLightItalic.ttf in Resources */,
 				DE60B1992687376200EB01F8 /* Onboarding.storyboard in Resources */,
-				BB29A3E226876C800063C1A4 /* Localizable.strings in Resources */,
 				DE28F3CA26A043D200D93BDD /* Mulish-MediumItalic.ttf in Resources */,
 				DE28F3C226A043D200D93BDD /* Mulish-BlackItalic.ttf in Resources */,
 				BB381269268739A60008FDC6 /* LessonsQuery.graphql in Resources */,
@@ -1429,15 +1428,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		BB29A3E426876C800063C1A4 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB29A3E326876C800063C1A4 /* en */,
-				BB29A3E526876C830063C1A4 /* ro */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1576,6 +1566,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.TeacherWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1595,6 +1586,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.TeacherWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
