@@ -19,10 +19,6 @@ final class ExerciseViewModel: ObservableObject {
         selectedAnswer != nil
     }
     
-    var isSelectedAnswerCorrect: Bool {
-        selectedAnswer?.isCorrect ?? false
-    }
-    
     func handleAnswerState(answer: Answer) -> AnswerState {
         if answer.isCorrect {
             return .correctState
