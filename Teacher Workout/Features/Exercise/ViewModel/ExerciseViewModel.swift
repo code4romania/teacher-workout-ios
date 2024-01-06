@@ -21,15 +21,8 @@ final class ExerciseViewModel: ObservableObject {
         self.exercise = exercise
     }
     
-    // MARK: Helpers and computed properties
-    
     var isSelectedAnswerValid: Bool {
         selectedAnswer != nil
-    }
-    
-    var isAnswerCorrect: Bool {
-        guard let selectedAnswer else { return false }
-        return selectedAnswer.isCorrect
     }
     
     func handleAnswerState(answer: Answer) -> AnswerState {

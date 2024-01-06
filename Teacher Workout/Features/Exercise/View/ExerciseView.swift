@@ -47,7 +47,7 @@ extension ExerciseView {
     }
     
     private var questionAndProgressBar: some View {
-        VStack(spacing: 1) {
+        VStack(spacing: 10) {
             ProgressBar(
                 value: Binding<Float>.init(
                     get: { Float(viewModel.currentQuestionIndex) },
