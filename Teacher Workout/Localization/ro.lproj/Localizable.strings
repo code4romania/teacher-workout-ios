@@ -107,3 +107,7 @@
 "Settings.deleteAccountAlertTitle" = "Ești sigur că vrei să îți ștergi contul?";
 
 "Settings.deleteAccountAlertDescription" = "Această acțiune este ireversibilă. Dacă îți ștergi contul vei pierde tot istoricul de lecții.";
+
+"Exercise.navigationTitle" = "Exercițiu";
+
+"Exercise.continueButton" = "Continuă";

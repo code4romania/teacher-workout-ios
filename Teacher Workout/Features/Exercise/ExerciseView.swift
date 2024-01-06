@@ -1,70 +1,71 @@
 import SwiftUI
 
 struct ExerciseView: View {
-    @State private var stepValue: Float = 1
-    @State private var selectedAnswer: Answer?
-
-    var exercise: Exercise
+    @StateObject private var viewModel: ExerciseViewModel
     
+    init(exercise: Exercise) {
+        self._viewModel = .init(wrappedValue: ExerciseViewModel(exercise: exercise))
+    }
+        
     var body: some View {
         VStack {
-            header
-            Divider()
-                .overlay(Color.black)
-            
-            Group {
-                ProgressBar(value: $stepValue)
-                    .frame(height: 20)
-                question
-            }
-            .padding([.leading, .trailing], 20)
-            .padding(.top, 10)
-            
-            Spacer()
-            
-            selectAnswerButtons
-                .padding([.leading, .trailing], 20)
-            
-            Spacer()
+            topBar
+            questionAndProgressBar
+                .padding(.top, 10)
 
+            Spacer()
+            answerButtons
+            Spacer()
+            
             continueButton
-                .padding([.leading, .trailing], 20)
-
         }
+        .padding([.trailing, .leading], 10)
     }
-    
-    // MARK: - Views
-    
+}
+
+// MARK: - Views
+
+extension ExerciseView {
     @ViewBuilder
-    private var header: some View {
+    private var topBar: some View {
         HStack {
             Spacer()
-            Text("Exercitiu")
+            Text(AppStrings.Exercise.navigationTitle.localized())
                 .font(Font.custom("Mulish-Bold", size: 20))
             Spacer()
+
             Button {
-                stepValue += 1
+                print("Hello")
             } label: {
                 Text("X")
                     .font(Font.custom("Mulish-Bold", size: 25))
                     .foregroundColor(.gray)
             }
         }
-        .padding([.leading, .trailing], 20)
+        Divider()
+            .overlay(Color.black)
     }
     
-    @ViewBuilder
-    private var question: some View {
-        Text(exercise.question)
-            .font(Font.custom("mulish-Bold", size: 20))
+    private var questionAndProgressBar: some View {
+        VStack(spacing: 1) {
+            ProgressBar(
+                value: Binding<Float>.init(
+                    get: { Float(viewModel.currentQuestionIndex) },
+                    set: { newValue in
+                        viewModel.currentQuestionIndex = Int(newValue)
+                    })
+            )
+            .frame(height: 20)
+            Text(viewModel.exercise.question)
+                .font(Font.custom("Mulish-Bold", size: 20))
+        }
     }
     
-    @ViewBuilder
-    private var selectAnswerButtons: some View {
+    private var answerButtons: some View {
         VStack(spacing: 10) {
-            ForEach(exercise.answers, id: \.hashValue) { answer in
+            ForEach(viewModel.exercise.answers, id: \.hashValue) { answer in
                 Button(action: {
-                    selectedAnswer = answer
+                    viewModel.selectedAnswer = answer
                 }, label: {
                     makeAnswerButton(answer)
                 })
@@ -72,31 +73,30 @@ struct ExerciseView: View {
         }
     }
     
-    @ViewBuilder
-    private func makeAnswerButton(_ answer: Answer) -> some View {
-        if let selectedAnswer, selectedAnswer == answer {
-            if selectedAnswer.isCorrect {
-                Text(answer.description)
-                    .primaryButtonStyle()
-            } else {
-                Text(answer.description)
-                    .dangerButtonStyle()
-            }
-        } else {
-            Text(answer.description)
-                .secondaryButtonStyle()
-        }
-    }
-    
-    @ViewBuilder
     private var continueButton: some View {
         Button(action: {
             print("Continua")
         }, label: {
-            Text("Continua")
+            Text(AppStrings.Exercise.continueButton.localized())
                 .primaryButtonStyle()
         })
-        .disabled(selectedAnswer == nil)
+        .disabled(!viewModel.isSelectedAnswerValid)
+    }
+    
+    @ViewBuilder
+    private func makeAnswerButton(_ answer: Answer) -> some View {
+        let answerState = viewModel.handleAnswerState(answer: answer)
+        switch answerState {
+        case .correctState:
+            Text(answer.description)
+                .primaryButtonStyle()
+        case .failedState:
+            Text(answer.description)
+                .dangerButtonStyle()
+        case .defaultState:
+            Text(answer.description)
+                .secondaryButtonStyle()
+        }
     }
 }
 

@@ -107,3 +107,7 @@
 "Settings.deleteAccountAlertTitle" = "Are you sure that you want to delete your account?";
 
 "Settings.deleteAccountAlertDescription" = "This action is irreversible. If you delete your account you will lose all your lesson history.";
+
+"Exercise.navigationTitle" = "Exercise";
+
+"Exercise.continueButton" = "Continue";
