@@ -8,6 +8,7 @@ final class ExerciseViewModel: ObservableObject {
     
     @Published var selectedAnswer: Answer?
     @Published var currentQuestionIndex: Int = 10
+    @Published var isVerifying: Bool = false
     
     var exercise: Exercise
     init(exercise: Exercise) {
@@ -18,14 +19,17 @@ final class ExerciseViewModel: ObservableObject {
         selectedAnswer != nil
     }
     
+    var isSelectedAnswerCorrect: Bool {
+        selectedAnswer?.isCorrect ?? false
+    }
+    
     func handleAnswerState(answer: Answer) -> AnswerState {
-        if answer == selectedAnswer {
-            if answer.isCorrect {
-                return .correctState
-            } else {
-                return .failedState
-            }
+        if answer.isCorrect {
+            return .correctState
+        } else if answer == selectedAnswer, !answer.isCorrect {
+            return .failedState
+        } else {
+            return .defaultState
         }
-        return .defaultState
     }
 }

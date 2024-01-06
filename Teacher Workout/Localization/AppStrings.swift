@@ -126,5 +126,6 @@ enum AppStrings: String, Localizable {
     enum Exercise: String, Localizable {
         case navigationTitle = "Exercise.navigationTitle"
         case continueButton = "Exercise.continueButton"
+        case verifyButton = "Exercise.verifyButton"
     }
 }
