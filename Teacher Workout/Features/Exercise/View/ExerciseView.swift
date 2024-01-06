@@ -54,15 +54,9 @@ extension ExerciseView {
                     viewModel.selectedAnswer = answer
                 }, label: {
                     if viewModel.isVerifying {
-                        makeAnswerButton(answer)
+                        makeVerifiedAnswerButton(answer)
                     } else {
-                        if answer == viewModel.selectedAnswer {
-                            Text(answer.description)
-                                .primaryButtonStyle()
-                        } else {
-                            Text(answer.description)
-                                .secondaryButtonStyle()
-                        }
+                        makeAnswerButton(answer)
                     }
                 })
             }
@@ -86,7 +80,7 @@ extension ExerciseView {
     }
     
     @ViewBuilder
-    private func makeAnswerButton(_ answer: Answer) -> some View {
+    private func makeVerifiedAnswerButton(_ answer: Answer) -> some View {
         let answerState = viewModel.handleAnswerState(answer: answer)
         switch answerState {
         case .correctState:
@@ -96,6 +90,17 @@ extension ExerciseView {
             Text(answer.description)
                 .dangerButtonStyle()
         case .defaultState:
+            Text(answer.description)
+                .secondaryButtonStyle()
+        }
+    }
+    
+    @ViewBuilder
+    private func makeAnswerButton(_ answer: Answer) -> some View {
+        if answer == viewModel.selectedAnswer {
+            Text(answer.description)
+                .primaryButtonStyle()
+        } else {
             Text(answer.description)
                 .secondaryButtonStyle()
         }
