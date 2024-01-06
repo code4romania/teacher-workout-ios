@@ -10,19 +10,17 @@ final class ExerciseCoordinator: NSObject, Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
-    private var exercise: Exercise
     private var submittedAnswer: Answer?
     
     weak var delegate: ExerciseCoordinatorDelegate?
     
-    init(navigationController: UINavigationController, exercise: Exercise, delegate: ExerciseCoordinatorDelegate?) {
+    init(navigationController: UINavigationController, delegate: ExerciseCoordinatorDelegate?) {
         self.navigationController = navigationController
-        self.exercise = exercise
         self.delegate = delegate
     }
     
     func start() {
-        let exerciseView = ExerciseView(exercise: exercise, delegate: self)
+        let exerciseView = ExerciseView(delegate: self)
         let viewController = UIHostingController(rootView: exerciseView)
         navigationController.pushViewController(viewController, animated: true)
     }

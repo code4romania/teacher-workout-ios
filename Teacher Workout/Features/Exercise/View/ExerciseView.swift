@@ -5,14 +5,9 @@ protocol ExerciseViewDelegate {
 }
 
 struct ExerciseView: View {
-    @StateObject private var viewModel: ExerciseViewModel
+    @StateObject private var viewModel = ExerciseViewModel()
     var delegate: ExerciseViewDelegate?
-    
-    init(exercise: Exercise, delegate: ExerciseViewDelegate? = nil) {
-        self._viewModel = .init(wrappedValue: ExerciseViewModel(exercise: exercise))
-        self.delegate = delegate
-    }
-        
+
     var body: some View {
         VStack {
             questionAndProgressBar
@@ -26,31 +21,36 @@ struct ExerciseView: View {
         }
         .padding([.trailing, .leading], 20)
         .navigationTitle(Text(AppStrings.Exercise.navigationTitle.localized()))
+        .onAppear(perform: viewModel.loadExercise)
     }
 }
 
 // MARK: - Views
 
 extension ExerciseView {
+    @ViewBuilder
     private var questionAndProgressBar: some View {
-        VStack {
-            ProgressBar(
-                value: Binding<Float>.init(
-                    get: { Float(viewModel.currentQuestionIndex) },
-                    set: { newValue in
-                        viewModel.currentQuestionIndex = Int(newValue)
-                    })
-            )
-            .frame(height: 20)
-            Text(viewModel.exercise.question)
-                .font(Font.custom("Mulish-SemiBold", size: 20))
-                .padding(.top, 10)
+        if let exercise = viewModel.exercise {
+            VStack {
+                ProgressBar(
+                    value: Binding<Float>.init(
+                        get: { Float(viewModel.currentQuestionIndex) },
+                        set: { newValue in
+                            viewModel.currentQuestionIndex = Int(newValue)
+                        })
+                )
+                .frame(height: 20)
+                Text(exercise.question)
+                    .font(Font.custom("Mulish-SemiBold", size: 20))
+                    .padding(.top, 10)
+            }
         }
     }
     
+    @ViewBuilder
     private var answerButtons: some View {
-        VStack {
-            ForEach(viewModel.exercise.answers, id: \.hashValue) { answer in
+        if let exercise = viewModel.exercise {
+            ForEach(exercise.answers, id: \.hashValue) { answer in
                 Button(action: {
                     viewModel.selectedAnswer = answer
                 }, label: {
@@ -64,7 +64,7 @@ extension ExerciseView {
             }
         }
     }
-    
+
     private var continueButton: some View {
         Button(action: {
             if !viewModel.isVerifying {
@@ -84,15 +84,13 @@ extension ExerciseView {
     
     @ViewBuilder
     private func makeVerifiedAnswerButton(_ answer: Answer) -> some View {
-        let answerState = viewModel.handleAnswerState(answer: answer)
-        switch answerState {
-        case .correctState:
+        if answer.isCorrect {
             Text(answer.description)
                 .primaryButtonStyle()
-        case .failedState:
+        } else if answer == viewModel.selectedAnswer, !answer.isCorrect {
             Text(answer.description)
                 .dangerButtonStyle()
-        case .defaultState:
+        } else {
             Text(answer.description)
                 .secondaryButtonStyle()
         }
@@ -112,14 +110,6 @@ extension ExerciseView {
 
 struct ExerciseView_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        ExerciseView(exercise: mockExercise)
+        ExerciseView()
     }
 }
-
-private let mockExercise = Exercise(
-    question: "Aici este textul unei intrebari bazate pe informatii parcurse in ecranele anterioare",
-    answers: [
-        Answer(description: "Raspuns 1", isCorrect: false),
-        Answer(description: "Raspuns 2", isCorrect: true),
-        Answer(description: "Raspuns 3", isCorrect: false),
-    ])

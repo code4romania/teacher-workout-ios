@@ -45,16 +45,8 @@ extension LessonCoordinator: LessonIntroViewDelegate {
 
 extension LessonCoordinator: LessonSlideViewDelegate {
     func lessonSlideViewDidTapContinue(_: LessonSlideView) {
-        let mockExercise = Exercise(
-            question: "Aici este textul unei intrebari bazate pe informatii parcurse in ecranele anterioare",
-            answers: [
-                Answer(description: "Raspuns 1", isCorrect: false),
-                Answer(description: "Raspuns 2", isCorrect: true),
-                Answer(description: "Raspuns 3", isCorrect: false),
-            ])
-        
         guard let internalNavigation else { return }
-        let exerciseCoordinator = ExerciseCoordinator(navigationController: internalNavigation, exercise: mockExercise, delegate: self)
+        let exerciseCoordinator = ExerciseCoordinator(navigationController: internalNavigation, delegate: self)
         addChildCoordinator(exerciseCoordinator)
         exerciseCoordinator.start()
     }
