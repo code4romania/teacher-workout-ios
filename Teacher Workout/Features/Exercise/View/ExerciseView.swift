@@ -24,7 +24,7 @@ struct ExerciseView: View {
             
             continueButton
         }
-        .padding([.trailing, .leading], 10)
+        .padding([.trailing, .leading], 20)
         .navigationTitle(Text(AppStrings.Exercise.navigationTitle.localized()))
     }
 }
@@ -33,7 +33,7 @@ struct ExerciseView: View {
 
 extension ExerciseView {
     private var questionAndProgressBar: some View {
-        VStack(spacing: 10) {
+        VStack {
             ProgressBar(
                 value: Binding<Float>.init(
                     get: { Float(viewModel.currentQuestionIndex) },
@@ -43,12 +43,13 @@ extension ExerciseView {
             )
             .frame(height: 20)
             Text(viewModel.exercise.question)
-                .font(Font.custom("Mulish-Bold", size: 20))
+                .font(Font.custom("Mulish-SemiBold", size: 20))
+                .padding(.top, 10)
         }
     }
     
     private var answerButtons: some View {
-        VStack(spacing: 10) {
+        VStack {
             ForEach(viewModel.exercise.answers, id: \.hashValue) { answer in
                 Button(action: {
                     viewModel.selectedAnswer = answer
@@ -59,6 +60,7 @@ extension ExerciseView {
                         makeAnswerButton(answer)
                     }
                 })
+                .padding(.bottom, 10)
             }
         }
     }
@@ -77,6 +79,7 @@ extension ExerciseView {
                 .primaryButtonStyle()
         })
         .disabled(!viewModel.isSelectedAnswerValid)
+        .padding(.bottom, 5)
     }
     
     @ViewBuilder
@@ -113,8 +116,10 @@ struct ExerciseView_PreviewProvider: PreviewProvider {
     }
 }
 
-private let mockExercise = Exercise(question: "Aceasta este o intrebare pe baza careia vom desfasura acest exercitiu", answers: [
-    Answer(description: "Raspuns 1", isCorrect: false),
-    Answer(description: "Raspuns 2", isCorrect: true),
-    Answer(description: "Raspuns 3", isCorrect: false),
-])
+private let mockExercise = Exercise(
+    question: "Aici este textul unei intrebari bazate pe informatii parcurse in ecranele anterioare",
+    answers: [
+        Answer(description: "Raspuns 1", isCorrect: false),
+        Answer(description: "Raspuns 2", isCorrect: true),
+        Answer(description: "Raspuns 3", isCorrect: false),
+    ])

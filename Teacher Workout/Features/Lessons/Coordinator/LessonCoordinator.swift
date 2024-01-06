@@ -45,9 +45,18 @@ extension LessonCoordinator: LessonIntroViewDelegate {
 
 extension LessonCoordinator: LessonSlideViewDelegate {
     func lessonSlideViewDidTapContinue(_: LessonSlideView) {
-        let view = LessonFinishedView(delegate: self)
-        let hostingController = UIHostingController(rootView: view)
-        internalNavigation?.pushViewController(hostingController, animated: true)
+        let mockExercise = Exercise(
+            question: "Aici este textul unei intrebari bazate pe informatii parcurse in ecranele anterioare",
+            answers: [
+                Answer(description: "Raspuns 1", isCorrect: false),
+                Answer(description: "Raspuns 2", isCorrect: true),
+                Answer(description: "Raspuns 3", isCorrect: false),
+            ])
+        
+        guard let internalNavigation else { return }
+        let exerciseCoordinator = ExerciseCoordinator(navigationController: internalNavigation, exercise: mockExercise, delegate: self)
+        addChildCoordinator(exerciseCoordinator)
+        exerciseCoordinator.start()
     }
 }
 
@@ -60,5 +69,16 @@ extension LessonCoordinator: LessonFinishedViewDelegate {
         let url = URL(string: "https://code4.ro")
         let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
         internalNavigation?.present(activityController, animated: true, completion: nil)
+    }
+}
+
+extension LessonCoordinator: ExerciseCoordinatorDelegate {
+    func exerciseDidFinish(_ answer: Answer, coordinator: ExerciseCoordinator) {
+        // TODO: Do something with the answer
+        removeChildCoordinator(coordinator)
+        
+        let view = LessonFinishedView(delegate: self)
+        let hostingController = UIHostingController(rootView: view)
+        internalNavigation?.pushViewController(hostingController, animated: true)
     }
 }
