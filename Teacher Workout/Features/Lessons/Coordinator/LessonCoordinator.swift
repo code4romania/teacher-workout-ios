@@ -45,9 +45,10 @@ extension LessonCoordinator: LessonIntroViewDelegate {
 
 extension LessonCoordinator: LessonSlideViewDelegate {
     func lessonSlideViewDidTapContinue(_: LessonSlideView) {
-        let view = LessonFinishedView(delegate: self)
-        let hostingController = UIHostingController(rootView: view)
-        internalNavigation?.pushViewController(hostingController, animated: true)
+        guard let internalNavigation else { return }
+        let exerciseCoordinator = ExerciseCoordinator(navigationController: internalNavigation, delegate: self)
+        addChildCoordinator(exerciseCoordinator)
+        exerciseCoordinator.start()
     }
 }
 
@@ -60,5 +61,16 @@ extension LessonCoordinator: LessonFinishedViewDelegate {
         let url = URL(string: "https://code4.ro")
         let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
         internalNavigation?.present(activityController, animated: true, completion: nil)
+    }
+}
+
+extension LessonCoordinator: ExerciseCoordinatorDelegate {
+    func exerciseDidFinish(_ answer: Answer, coordinator: ExerciseCoordinator) {
+        // TODO: Do something with the answer
+        removeChildCoordinator(coordinator)
+        
+        let view = LessonFinishedView(delegate: self)
+        let hostingController = UIHostingController(rootView: view)
+        internalNavigation?.pushViewController(hostingController, animated: true)
     }
 }

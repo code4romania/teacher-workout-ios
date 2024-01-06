@@ -122,4 +122,10 @@ enum AppStrings: String, Localizable {
         case deleteAccountAlertTitle = "Settings.deleteAccountAlertTitle"
         case deleteAccountAlertDescription = "Settings.deleteAccountAlertDescription"
     }
+    
+    enum Exercise: String, Localizable {
+        case navigationTitle = "Exercise.navigationTitle"
+        case continueButton = "Exercise.continueButton"
+        case verifyButton = "Exercise.verifyButton"
+    }
 }
